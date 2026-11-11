@@ -1,0 +1,17 @@
+{
+  "name": "木铎声里 · 校史互动叙事",
+  "short_name": "木铎声里",
+  "description": "把北京师范大学的珍贵记忆做成可以重新经历的像素互动叙事。",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#11181d",
+  "theme_color": "#2f4a52",
+  "icons": [
+    {
+      "src": "assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

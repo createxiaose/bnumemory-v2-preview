@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#2f4a52">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="manifest.webmanifest">
+<script>
+if (location.protocol === 'http:' || location.protocol === 'https:') {
+  const preload = document.createElement('link');
+  preload.rel = 'preload';
+  preload.href = 'assets/fusion-pixel-12px-zh_hans.woff2';
+  preload.as = 'font';
+  preload.type = 'font/woff2';
+  preload.crossOrigin = 'anonymous';
+  document.head.appendChild(preload);
+  const fontStyle = document.createElement('style');
+  fontStyle.textContent = '@font-face{font-family:"FusionPixel";src:url("assets/fusion-pixel-12px-zh_hans.woff2") format("woff2");font-display:swap;}';
+  document.head.appendChild(fontStyle);
+}
+</script>
+<title>我的校史一日 · 木铎声里</title>
+<style>
+* { box-sizing: border-box; }
+html, body { margin: 0; min-height: 100%; background: #10171c; color: #2a1c12; font-family: "FusionPixel", "SimSun", serif; }
+body { display: flex; justify-content: center; padding: 18px; }
+.sheet { width: min(100%, 760px); min-height: calc(100vh - 36px); background: #f2e1be; border: 6px solid #2a1c12; box-shadow: 0 0 0 4px #6b4a2f, 0 18px 40px rgba(0,0,0,.45); display: flex; flex-direction: column; overflow: hidden; }
+header { padding: 28px 28px 24px; background: #2f4a52; color: #f6e6c4; border-bottom: 5px solid #2a1c12; }
+.kicker { font-size: 10px; letter-spacing: 4px; color: #d8b36e; }
+h1 { margin: 8px 0 6px; font-family: "STSong", "SimSun", serif; font-size: clamp(38px, 9vw, 64px); letter-spacing: 7px; font-weight: normal; }
+.sub { margin: 0; font-family: "KaiTi", "STKaiti", serif; font-size: 17px; color: #c6d8d0; }
+.meta { margin-top: 18px; display: flex; justify-content: space-between; color: #aac1b8; font-size: 11px; letter-spacing: 1px; }
+.timeline { flex: 1; padding: 28px 30px 32px; position: relative; }
+.timeline::before { content: ""; position: absolute; left: 54px; top: 42px; bottom: 54px; width: 2px; background: rgba(168,68,52,.35); }
+.entry { position: relative; padding: 0 0 28px 56px; min-height: 74px; }
+.entry::before { content: ""; position: absolute; left: 7px; top: 11px; width: 13px; height: 13px; border-radius: 50%; background: #a84234; box-shadow: 0 0 0 5px #f2e1be; }
+.entry .year { font-family: "STSong", "SimSun", serif; font-size: 32px; letter-spacing: 2px; }
+.entry .scene { margin-top: 2px; color: #7a5a3a; font-family: "KaiTi", "STKaiti", serif; font-size: 15px; }
+.entry .card { margin-top: 9px; font-size: 20px; letter-spacing: 1px; }
+.entry .line { height: 1px; margin-top: 15px; background: rgba(138,109,74,.28); }
+.quote { margin: 0; padding: 22px 30px 12px; font-family: "KaiTi", "STKaiti", serif; font-size: clamp(19px, 4vw, 26px); line-height: 1.65; color: #4b3425; }
+.actions { display: flex; flex-wrap: wrap; gap: 10px; padding: 18px 30px 30px; }
+.actions a, .actions button { font-family: inherit; font-size: 14px; text-decoration: none; padding: 10px 16px; color: #2a1c12; background: #e8b45a; border: 3px solid #2a1c12; box-shadow: inset 0 -4px 0 #b97a2e; cursor: pointer; }
+.actions .secondary { background: #9fb87a; box-shadow: inset 0 -4px 0 #6f8f5a; }
+.seal { align-self: flex-end; width: 58px; height: 58px; margin: 0 30px 18px; background: #a84234; color: #f6e6c4; border: 3px double #f6e6c4; display: grid; place-items: center; font-family: "STSong", "SimSun", serif; font-size: 19px; line-height: 1.05; text-align: center; transform: rotate(-7deg); }
+.privacy { margin: 0; padding: 0 30px 12px; color: #6f5e4c; font-size: 10px; line-height: 1.7; }
+footer { padding: 0 30px 22px; color: #7a6a58; font-size: 10px; letter-spacing: 2px; }
+.empty { padding: 40px 30px; color: #7a5a3a; font-family: "KaiTi", "STKaiti", serif; font-size: 20px; line-height: 1.7; }
+@media (max-width: 520px) {
+  body { padding: 0; }
+  .sheet { min-height: 100vh; border-width: 0; box-shadow: none; }
+  header { padding: 22px 20px 18px; }
+  .timeline { padding: 22px 18px 24px; }
+  .timeline::before { left: 34px; }
+  .entry { padding-left: 38px; }
+  .entry::before { left: -3px; }
+  .quote { padding: 18px 20px 8px; }
+  .actions { padding: 16px 20px 24px; }
+  .seal { margin-right: 20px; }
+  .privacy { padding: 0 20px 12px; }
+  footer { padding: 0 20px 20px; }
+}
+</style>
+</head>
+<body>
+<main class="sheet">
+  <header>
+    <div class="kicker">MUDUO MEMORY · 1902—2026</div>
+    <h1>我的校史一日</h1>
+    <p class="sub">我把这段记忆重新走了一遍。</p>
+    <div class="meta"><span>《木铎声里》</span><span id="shareDate"></span></div>
+  </header>
+  <section class="timeline" id="timeline"></section>
+  <p class="quote" id="quote">记忆不是被保存下来的，是被一次次重新经历的。</p>
+  <div class="seal">木铎<br>声里</div>
+  <div class="actions">
+    <a href="./index.html">走进校史馆 →</a>
+    <a class="secondary" href="./index.html?method=1">看看记忆可玩六问</a>
+    <button class="secondary" id="shareAgain">把这张页分享出去</button>
+  </div>
+  <p class="privacy">本站仅记录页面内行为计数（进入哪一幕、是否完成与分享），不记录姓名、学号与任何输入内容；数据只保存在当前浏览器，仅用于改进体验。</p>
+  <footer>北京师范大学校史互动叙事 · V1.1.1 · 情境对白待校史馆复核<br>本作美术与场景由 AI 辅助生成、人工策展校订。</footer>
+</main>
+<script src="telemetry.js?v=1.1.1"></script>
+<script>
+(() => {
+  const params = new URLSearchParams(location.search);
+  const encoded = params.get('d');
+  if (window.MuduoTelemetry) {
+    window.MuduoTelemetry.track('share_open', {
+      mode: 'share-open',
+      screen: 'share',
+      d_exists: Boolean(encoded),
+      src: params.get('src') || 'direct'
+    });
+  }
+  let data = null;
+  try {
+    if (encoded) {
+      const binary = atob(encoded.replace(/-/g, '+').replace(/_/g, '/'));
+      const bytes = Uint8Array.from(binary, char => char.charCodeAt(0));
+      data = JSON.parse(new TextDecoder().decode(bytes));
+    }
+  } catch (e) {
+    data = null;
+  }
+  if (!data || !Array.isArray(data.cards) || !data.cards.length) {
+    document.getElementById('timeline').innerHTML = '<div class="empty">这张分享页还没有读到一条记忆。<br>回到《木铎声里》，走完一段路线，再生成一次分享码。</div>';
+    return;
+  }
+  document.getElementById('shareDate').textContent = data.date || '';
+  const timeline = document.getElementById('timeline');
+  data.cards.forEach(card => {
+    const entry = document.createElement('article');
+    entry.className = 'entry';
+    const year = document.createElement('div');
+    year.className = 'year';
+    year.textContent = card.era || '记忆';
+    const scene = document.createElement('div');
+    scene.className = 'scene';
+    scene.textContent = card.scene || '';
+    const title = document.createElement('div');
+    title.className = 'card';
+    title.textContent = card.title || '';
+    const line = document.createElement('div');
+    line.className = 'line';
+    entry.append(year, scene, title, line);
+    timeline.appendChild(entry);
+  });
+  if (data.quote) document.getElementById('quote').textContent = data.quote;
+  document.getElementById('shareAgain').addEventListener('click', async () => {
+    const shareData = {
+      title: '我的校史一日 · 木铎声里',
+      text: '我把北京师范大学的一段校史，重新走了一遍。',
+      url: location.href
+    };
+    if (navigator.share) {
+      try { await navigator.share(shareData); } catch (e) {}
+    } else {
+      try { await navigator.clipboard.writeText(location.href); } catch (e) {}
+      const button = document.getElementById('shareAgain');
+      button.textContent = '链接已复制';
+    }
+  });
+})();
+</script>
+</body>
+</html>

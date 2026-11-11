@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><base href="../">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="theme-color" content="#2f4a52">
+<meta name="description" content="《木铎声里》北京师范大学校史互动叙事：把珍贵的故事做成可以走进去的像素游戏。">
+<meta property="og:title" content="木铎声里 · 校史互动叙事">
+<meta property="og:description" content="记忆不是被保存下来的，是被一次次重新经历的。">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="manifest.webmanifest">
+<script>
+if (location.protocol === 'http:' || location.protocol === 'https:') {
+  const preload = document.createElement('link');
+  preload.rel = 'preload';
+  preload.href = 'assets/fusion-pixel-12px-zh_hans.woff2';
+  preload.as = 'font';
+  preload.type = 'font/woff2';
+  preload.crossOrigin = 'anonymous';
+  document.head.appendChild(preload);
+  const fontStyle = document.createElement('style');
+  fontStyle.textContent = '@font-face{font-family:"FusionPixel";src:url("assets/fusion-pixel-12px-zh_hans.woff2") format("woff2");font-display:swap;}';
+  document.head.appendChild(fontStyle);
+}
+</script>
+<title>木铎声里 · 校史互动叙事</title>
+<style>
+* { box-sizing: border-box; }
+html, body { width: 100%; height: 100%; margin: 0; padding: 0; overflow: hidden; }
+body { display: flex; align-items: center; justify-content: center; background: #11181d; font-family: "FusionPixel", "SimHei", "Microsoft YaHei", sans-serif; color: #2a1c12; }
+#narration, .quote, .detail-inner p, .title-sub { font-family: "KaiTi", "STKaiti", serif; }
+.viewport { width: 1600px; height: 1000px; flex: none; transform-origin: center center; }
+.game { width: 1560px; height: 960px; margin: 20px auto; background: #f6e6c4; border: 6px solid #2a1c12; box-shadow: 0 0 0 4px #6b4a2f, 0 18px 46px rgba(0,0,0,.55); display: flex; flex-direction: column; position: relative; overflow: hidden; }
+.topbar { height: 64px; flex: none; background: #2f4a52; border-bottom: 4px solid #2a1c12; display: flex; align-items: center; gap: 16px; padding: 0 18px; }
+.brand { display: flex; align-items: center; gap: 10px; flex: none; }
+.seal { width: 36px; height: 36px; background: #c24a3a; border: 3px solid #2a1c12; color: #f6e6c4; font-family: "STKaiti", "KaiTi", serif; font-size: 13px; display: grid; place-items: center; box-shadow: inset 0 0 0 2px #c24a3a, inset 0 0 0 3px #f6e6c4; }
+.brand h1 { margin: 0; font-size: 25px; letter-spacing: 4px; color: #f6e6c4; text-shadow: 2px 2px 0 #1b2f34; line-height: 1; }
+.brand small { display: block; font-size: 8px; letter-spacing: 3px; color: #9fc0b6; margin-top: 3px; }
+.tabs { display: flex; gap: 3px; margin-left: 8px; }
+.tabs button { font-family: inherit; font-size: 11px; letter-spacing: 0; padding: 6px 6px; background: #1f343a; color: #b9d0c7; border: 2px solid #4d6b64; cursor: pointer; }
+.tabs button:hover { background: #2a474d; color: #ffd27a; }
+.tabs button.on, .tabs button.on.visited { background: #b94535; color: #fff3d6; border-color: #2a1c12; box-shadow: inset 0 -3px 0 #7e2d28; }
+.tabs button.visited { background: #1f343a; color: #ffd27a; border-color: #c79d55; }
+.memory { margin-left: auto; display: flex; align-items: center; gap: 5px; color: #d8e6df; font-size: 11px; letter-spacing: 0; }
+.memory b { color: #ffd27a; font-size: 19px; display: inline-block; }
+.memory b.pulse { animation: countPulse .45s ease; }
+@keyframes countPulse { 0% { transform: scale(1); } 40% { transform: scale(1.45); color: #fff3d6; } 100% { transform: scale(1); } }
+.memory em { font-style: normal; color: #9fc0b6; }
+.memory .explore-count { margin-left: 5px; color: #d8a756; font-size: 9px; letter-spacing: 0; }
+.slots { display: flex; gap: 3px; margin-left: 3px; }
+.slot { width: 13px; height: 13px; border: 2px solid #9fc0b6; background: #1f343a; }
+.slot.fill { background: #e8b45a; border-color: #ffd27a; box-shadow: inset 0 0 0 2px #c98a4b; }
+.stage { position: relative; height: 560px; flex: none; border-bottom: 4px solid #2a1c12; background: #10161b; overflow: hidden; }
+.stage.shake { animation: stageShake .45s ease; }
+.stage.push { animation: stagePush .42s cubic-bezier(.2,.75,.2,1); }
+@keyframes stagePush { 0% { transform: scale(1.025); filter: brightness(1.08); } 100% { transform: scale(1); filter: brightness(1); } }
+.stage.day-end { animation: dayEnd .72s ease; }
+@keyframes dayEnd { 0% { filter: sepia(.05) brightness(1); } 42% { filter: sepia(.28) brightness(.82) saturate(.88); } 100% { filter: sepia(0) brightness(1); } }
+@keyframes stageShake { 0%,100% { transform: translate(0,0); } 20% { transform: translate(-4px,2px); } 40% { transform: translate(4px,-2px); } 60% { transform: translate(-3px,1px); } 80% { transform: translate(3px,-1px); } }
+#scene { width: 100%; height: 100%; display: block; image-rendering: pixelated; }
+.stage-tag { position: absolute; left: 16px; top: 12px; background: rgba(20,17,16,.78); color: #ffd27a; border: 2px solid #e8b45a; padding: 3px 9px; font-size: 10px; letter-spacing: 3px; }
+.panel { height: 324px; flex: none; display: grid; grid-template-columns: 320px 1fr 300px; }
+.info { border-right: 4px solid #2a1c12; padding: 16px 18px; background: #efd9b4; display: flex; flex-direction: column; }
+.era { font-family: "STSong", "SimSun", serif; font-size: 44px; line-height: 1; color: #a84434; letter-spacing: 2px; }
+.info h2 { margin: 7px 0 2px; font-size: 25px; letter-spacing: 2px; display: flex; align-items: center; gap: 8px; }
+.info h2::before { content: "记"; width: 25px; height: 25px; flex: none; display: grid; place-items: center; background: #a84234; color: #f6e6c4; border: 2px solid #2a1c12; font-size: 13px; box-shadow: inset 0 0 0 1px #e2b77a; letter-spacing: 0; }
+.info .sub { margin: 0; font-size: 12px; color: #7a5a3a; letter-spacing: 1px; }
+.mini { margin-top: auto; font-size: 11px; line-height: 1.55; color: #6e5a44; border-top: 1px dashed #c9ae86; padding-top: 8px; }
+.dialogue { padding: 16px 20px 14px; display: flex; flex-direction: column; min-width: 0; position: relative; overflow: hidden; overflow-y: auto; }
+#narration { margin: 0 0 10px; max-width: 710px; font-size: 19px; line-height: 1.68; min-height: 92px; color: #2b2119; position: relative; z-index: 1; letter-spacing: .15px; }
+.choices { display: flex; gap: 10px; flex-wrap: wrap; margin-top: auto; position: relative; z-index: 1; }
+.choice { font-family: inherit; font-size: 14px; letter-spacing: .5px; min-height: 48px; padding: 10px 13px; background: #e8b45a; color: #2a1c12; border: 3px solid #2a1c12; box-shadow: inset 0 -5px 0 #b97a2e, 2px 3px 0 rgba(42,28,18,.22); cursor: pointer; text-align: left; }
+.choice:hover { transform: translateY(-2px); filter: brightness(1.06); }
+.choice small { display: block; margin-top: 2px; font-size: 10px; opacity: .72; }
+.choice.alt { background: #9fb87a; box-shadow: inset 0 -5px 0 #6f8f5a, 2px 3px 0 rgba(42,28,18,.22); }
+.choice.warn { background: #d86a4a; color: #fff3d6; box-shadow: inset 0 -5px 0 #a84434, 2px 3px 0 rgba(42,28,18,.22); }
+.choice.small { font-size: 13px; padding: 8px 10px; }
+.next { align-self: flex-end; margin-top: 10px; font-family: inherit; font-size: 15px; letter-spacing: 2px; padding: 8px 18px; background: #2f4a52; color: #f6e6c4; border: 3px solid #2a1c12; box-shadow: inset 0 -4px 0 #1b2f34; cursor: pointer; position: relative; z-index: 1; }
+.next.hide { display: none; }
+.btnrow { display: flex; gap: 8px; justify-content: flex-end; margin-top: 10px; position: relative; z-index: 1; }
+.btnrow .next { margin-top: 0; }
+.foot { margin-top: 8px; border-top: 1px dashed #c9ae86; padding-top: 6px; font-family: "KaiTi", "STKaiti", serif; font-size: 12px; color: #8a7a66; letter-spacing: .5px; position: relative; z-index: 1; }
+.wm { position: absolute; right: 24px; bottom: 10px; font-family: "STSong", "SimSun", serif; font-size: 154px; line-height: 1; color: rgba(168,68,52,.06); letter-spacing: -5px; pointer-events: none; z-index: 0; }
+.era-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 5px 7px; margin-top: 5px; position: relative; z-index: 1; }
+.era-btn { font-family: inherit; text-align: left; border: 2px solid #2a1c12; background: #efd9b4; padding: 3px 5px; cursor: pointer; box-shadow: inset 0 -3px 0 rgba(0,0,0,.12); }
+.era-btn:hover { background: #e8b45a; }
+.era-btn b { display: block; font-family: "STSong", "SimSun", serif; font-size: 14px; letter-spacing: .4px; line-height: 1.1; }
+.era-btn span { display: block; font-size: 8px; color: #7a5a3a; margin-top: 0; }
+.era-btn .era-dots { display: flex; gap: 2px; margin-top: 1px; }
+.era-btn .era-dots i { width: 7px; height: 7px; border: 1px solid #2a1c12; background: #c9ae86; }
+.era-btn .era-dots i.on { background: #c24a3a; }
+.era-preview { display: block; margin-top: 1px; font-size: 7.5px; line-height: 1.1; color: #8a6d4a; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.era-btn.done { background: #b8c894; }
+.reset-link { background: none; border: none; font-family: inherit; font-size: 10px; color: #8a7a66; text-decoration: underline; cursor: pointer; padding: 0; margin-top: 4px; }
+.sound { width: 26px; height: 26px; flex: none; border: 2px solid #9fc0b6; background: #1f343a; color: #ffd27a; font-family: inherit; font-size: 11px; cursor: pointer; }
+.sound.off { color: #5f7a72; border-color: #4d6b64; }
+.sound.on { background: #e8b45a; color: #2a1c12; border-color: #2a1c12; }
+.fade { position: absolute; inset: 0; background: #0d1114; opacity: 0; pointer-events: none; transition: opacity .18s ease; z-index: 50; }
+.fade.on { opacity: 1; }
+.scene-flash { position: absolute; left: 50%; top: 92px; transform: translateX(-50%) translateY(-10px); background: rgba(20,17,16,.92); border: 3px solid #e8b45a; color: #f6e6c4; padding: 8px 22px; font-family: "STSong", "SimSun", serif; font-size: 22px; letter-spacing: 4px; opacity: 0; z-index: 40; pointer-events: none; }
+.scene-flash.show { animation: flashIn 1.6s ease forwards; }
+@keyframes flashIn { 0% { opacity: 0; transform: translateX(-50%) translateY(-12px); } 15% { opacity: 1; transform: translateX(-50%) translateY(0); } 72% { opacity: 1; } 100% { opacity: 0; transform: translateX(-50%) translateY(5px); } }
+.card-toast { position: absolute; left: 50%; top: 44%; transform: translate(-50%,-50%) scale(.6); opacity: 0; z-index: 45; pointer-events: none; }
+.card-toast.show { animation: cardRise 1.5s cubic-bezier(.2,.8,.2,1) forwards; }
+.card-inner { width: 246px; background: #fff6dc; border: 4px solid #2a1c12; box-shadow: 8px 8px 0 rgba(0,0,0,.35); padding: 14px 16px; text-align: center; }
+.card-kicker { font-size: 10px; letter-spacing: 4px; color: #a84434; }
+.card-title { font-family: "STSong", "SimSun", serif; font-size: 28px; letter-spacing: 4px; margin: 6px 0 4px; color: #2a1c12; }
+.card-sub { font-family: "KaiTi", "STKaiti", serif; font-size: 12px; color: #7a5a3a; }
+@keyframes cardRise { 0% { opacity: 0; transform: translate(-50%,-40%) scale(.5) rotate(-6deg); } 18% { opacity: 1; transform: translate(-50%,-50%) scale(1.06) rotate(1deg); } 35% { transform: translate(-50%,-50%) scale(1) rotate(0); } 72% { opacity: 1; transform: translate(-50%,-50%) scale(1); } 100% { opacity: 0; transform: translate(-50%,-120%) scale(.9); } }
+.finale { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(8,12,14,.45); opacity: 0; pointer-events: none; z-index: 46; }
+.finale.show { animation: finaleIn 3s ease forwards; }
+.finale.static { opacity: 1; animation: none; }
+.finale-inner { text-align: center; font-family: "STSong", "SimSun", serif; font-size: 54px; letter-spacing: 12px; color: #ffd27a; text-shadow: 5px 5px 0 #2a1c12; }
+.finale-inner span { display: block; font-size: 18px; letter-spacing: 8px; color: #f6e6c4; margin-top: 12px; }
+@keyframes finaleIn { 0% { opacity: 0; } 15% { opacity: 1; } 70% { opacity: 1; } 100% { opacity: 0; } }
+.album { position: absolute; inset: 0; background: rgba(10,14,16,.72); display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity .2s ease; z-index: 47; }
+.album.show { opacity: 1; pointer-events: auto; }
+.album-inner { width: 1180px; height: 680px; max-height: calc(100% - 40px); background: #f6e6c4; border: 6px solid #2a1c12; box-shadow: 0 0 0 4px #6b4a2f, 0 18px 40px rgba(0,0,0,.5); padding: 20px 24px; display: flex; flex-direction: column; }
+.album.static { opacity: 1; transition: none; }
+.album-head { display: flex; align-items: center; justify-content: space-between; border-bottom: 3px solid #2a1c12; padding-bottom: 8px; }
+.album-head h2 { margin: 0; font-family: "STSong", "SimSun", serif; font-size: 28px; letter-spacing: 4px; }
+.album-close { font-family: inherit; font-size: 12px; border: 2px solid #2a1c12; background: #efd9b4; padding: 5px 10px; cursor: pointer; }
+.album-grid { flex: 1; min-height: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 12px; overflow: auto; }
+.album-era { border: 2px solid #2a1c12; background: #efd9b4; padding: 8px 10px; }
+.album-era.done { background: #d8e0b8; }
+.album-era h3 { margin: 0 0 5px; font-size: 13px; letter-spacing: 1px; }
+.album-card { font-size: 11.5px; padding: 3px 0; border-top: 1px dashed #c9ae86; color: #8a7a66; display: flex; align-items: center; gap: 6px; }
+.album-card.on { color: #2a1c12; }
+.album-card i { width: 8px; height: 8px; border: 1px solid #2a1c12; background: #c9ae86; flex: none; }
+.album-card.on i { background: #c24a3a; }
+button.album-card { width: 100%; background: none; border-left: none; border-right: none; border-bottom: none; text-align: left; font-family: inherit; cursor: pointer; }
+button.album-card:hover { color: #a84434; }
+.album-notes { grid-column: 1 / -1; }
+.album-note-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 5px 8px; }
+.album-note { border: none; border-top: 1px dashed #c9ae86; background: none; padding: 4px 0; text-align: left; font-family: inherit; font-size: 10px; color: #8a7a66; }
+.album-note.on { color: #2a1c12; cursor: pointer; }
+.album-note.on:hover { color: #a84434; }
+.album-foot { margin-top: 10px; text-align: right; font-size: 12px; color: #5a4028; }
+.album-link { margin-top: 6px; background: #2f4a52; color: #f6e6c4; border: 2px solid #2a1c12; padding: 5px 8px; font-family: inherit; font-size: 11px; cursor: pointer; }
+.card-detail { position: absolute; inset: 0; background: rgba(8,12,14,.55); display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity .18s ease; z-index: 48; }
+.card-detail.show { opacity: 1; pointer-events: auto; }
+.card-detail.static { opacity: 1; transition: none; }
+.detail-inner { width: 540px; background: #fff6dc; border: 5px solid #2a1c12; box-shadow: 0 0 0 4px #6b4a2f, 0 18px 40px rgba(0,0,0,.5); padding: 20px 24px; }
+.detail-era { font-size: 11px; letter-spacing: 3px; color: #a84434; }
+.detail-inner h2 { font-family: "STSong", "SimSun", serif; font-size: 32px; letter-spacing: 3px; margin: 6px 0 10px; }
+.detail-inner p { font-family: "KaiTi", "STKaiti", serif; font-size: 15px; line-height: 1.7; color: #4a3a2a; margin: 0 0 10px; }
+.detail-note { font-size: 11px !important; color: #8a7a66 !important; border-top: 1px dashed #c9ae86; padding-top: 8px; }
+.detail-source { font-size: 10px !important; color: #a84434 !important; margin-top: -2px; }
+.detail-inner button { font-family: inherit; padding: 6px 14px; border: 3px solid #2a1c12; background: #e8b45a; cursor: pointer; box-shadow: inset 0 -4px 0 #b97a2e; }
+.sources { position: absolute; inset: 0; background: rgba(8,12,14,.62); display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity .18s ease; z-index: 49; }
+.sources.show { opacity: 1; pointer-events: auto; }
+.sources.static { opacity: 1; transition: none; }
+.sources-inner { width: 760px; background: #fff6dc; border: 5px solid #2a1c12; box-shadow: 0 0 0 4px #6b4a2f, 0 18px 40px rgba(0,0,0,.5); padding: 20px 26px; }
+.sources-inner h2 { font-family: "STSong", "SimSun", serif; font-size: 28px; letter-spacing: 3px; margin: 0 0 8px; }
+.sources-inner p { font-family: "KaiTi", "STKaiti", serif; font-size: 14px; line-height: 1.7; color: #4a3a2a; margin: 0 0 8px; }
+.sources-inner ul { margin: 8px 0 10px; padding-left: 20px; font-family: "KaiTi", "STKaiti", serif; font-size: 13px; line-height: 1.7; color: #4a3a2a; }
+.sources-inner li { margin-bottom: 4px; }
+.sources-inner .small { font-size: 10px; color: #8a7a66; }
+.sources-inner button { font-family: inherit; padding: 6px 14px; border: 3px solid #2a1c12; background: #e8b45a; cursor: pointer; box-shadow: inset 0 -4px 0 #b97a2e; }
+#method { z-index: 62; }
+#feedback { z-index: 63; }
+.method-inner { width: 840px; max-height: 820px; overflow: auto; }
+.method-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px 12px; margin: 12px 0; }
+.method-card { border: 2px solid #2a1c12; background: #efd9b4; padding: 9px 11px; }
+.method-card b { display: block; margin-bottom: 3px; color: #a84434; font-family: "STSong", "SimSun", serif; font-size: 17px; letter-spacing: 1px; }
+.method-card span { display: block; font-family: "KaiTi", "STKaiti", serif; font-size: 12px; line-height: 1.55; color: #4a3a2a; }
+.method-formula { margin: 10px 0 12px; padding: 7px 10px; border-left: 4px solid #a84434; background: rgba(168,68,52,.07); }
+.share-progress { display: none; margin-left: auto; color: #ffd27a; font-size: 13px; letter-spacing: 2px; border: 2px solid #6f918a; background: #1f343a; padding: 5px 10px; }
+.share-progress.on { display: block; }
+.run-chip { display: none; margin-left: auto; color: #ffd27a; font-size: 12px; letter-spacing: 1px; border: 2px solid #6f918a; background: #1f343a; padding: 5px 9px; }
+.run-chip.on { display: block; }
+.run-end { position: absolute; inset: 0; background: rgba(8,12,14,.7); display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity .2s ease; z-index: 49; }
+.run-end.show { opacity: 1; pointer-events: auto; }
+.run-end.static { opacity: 1; transition: none; }
+.run-end-inner { width: 780px; background: #fff6dc; border: 6px solid #2a1c12; box-shadow: 0 0 0 4px #6b4a2f, 0 22px 50px rgba(0,0,0,.6); padding: 24px 28px; display: flex; gap: 24px; align-items: center; }
+.rank-stamp { width: 140px; height: 140px; flex: none; border: 7px double #a84434; border-radius: 50%; color: #a84434; display: grid; place-items: center; font-family: "STSong", "SimSun", serif; font-size: 44px; letter-spacing: 2px; transform: rotate(-8deg); }
+.run-end-copy { flex: 1; }
+.run-kicker { font-size: 10px; letter-spacing: 4px; color: #a84434; }
+.run-end h2 { margin: 4px 0 6px; font-family: "STSong", "SimSun", serif; font-size: 36px; letter-spacing: 4px; }
+.run-end p { margin: 0 0 10px; font-family: "KaiTi", "STKaiti", serif; font-size: 15px; color: #4a3a2a; }
+.run-end-cards { display: flex; flex-wrap: wrap; gap: 5px; max-height: 150px; overflow: auto; margin-bottom: 12px; }
+.run-end-cards span { background: #f6e6c4; border: 2px solid #2a1c12; padding: 3px 7px; font-size: 11px; }
+.run-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.run-actions button { font-family: inherit; padding: 8px 14px; border: 3px solid #2a1c12; background: #e8b45a; cursor: pointer; box-shadow: inset 0 -4px 0 #b97a2e; }
+.loadout { position: absolute; inset: 0; background: rgba(8,12,14,.72); display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity .18s ease; z-index: 49; }
+.loadout.show { opacity: 1; pointer-events: auto; }
+.loadout.static { opacity: 1; transition: none; }
+.loadout-inner { width: 1120px; height: 760px; background: #f6e6c4; border: 6px solid #2a1c12; box-shadow: 0 0 0 4px #6b4a2f, 0 18px 40px rgba(0,0,0,.5); padding: 18px 22px; display: flex; flex-direction: column; }
+.loadout-head { display: flex; align-items: center; justify-content: space-between; border-bottom: 3px solid #2a1c12; padding-bottom: 8px; }
+.loadout-head h2 { margin: 0; font-family: "STSong", "SimSun", serif; font-size: 26px; letter-spacing: 3px; }
+.loadout-head button { font-family: inherit; font-size: 12px; border: 2px solid #2a1c12; background: #efd9b4; padding: 5px 10px; cursor: pointer; }
+.loadout-slots { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+.loadout-slot { min-height: 58px; border: 2px dashed #b8a080; background: #efd9b4; padding: 8px 10px; font-size: 12px; color: #8a7a66; }
+.loadout-slot.on { border-style: solid; border-color: #2a1c12; background: #d8e0b8; color: #2a1c12; }
+.loadout-slot b { display: block; font-family: "STSong", "SimSun", serif; font-size: 16px; letter-spacing: 1px; }
+.loadout-grid { flex: 1; min-height: 0; overflow: auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.loadout-era { border: 2px solid #2a1c12; background: #efd9b4; padding: 6px 8px; }
+.loadout-era h3 { margin: 0 0 4px; font-size: 11px; color: #7d2d24; letter-spacing: 1px; }
+.loadout-card { width: 100%; text-align: left; border: none; border-top: 1px dashed #c9ae86; background: none; font-family: inherit; font-size: 10px; color: #6b5a4a; padding: 3px 0; cursor: pointer; }
+.loadout-card b { display: block; font-size: 12px; color: #2a1c12; }
+.loadout-card em { display: block; font-style: normal; color: #8a7a66; }
+.loadout-card.equipped { background: #d8e0b8; }
+.loadout-card.equipped b { color: #7d2d24; }
+.loadout-card:disabled { opacity: .45; cursor: default; }
+.loadout-foot { margin-top: 8px; font-size: 11px; color: #7a6a5a; text-align: right; }
+.title-screen { position: absolute; inset: 0; z-index: 60; background: rgba(8,12,14,.78); display: flex; align-items: center; justify-content: center; transition: opacity .25s ease; visibility: visible; }
+.title-screen.hide { opacity: 0; pointer-events: none; visibility: hidden; }
+.title-panel { width: 780px; background: #f6e6c4; border: 6px solid #2a1c12; box-shadow: 0 0 0 4px #6b4a2f, 0 22px 50px rgba(0,0,0,.6); padding: 30px 38px 24px; text-align: center; }
+.title-kicker { font-size: 11px; letter-spacing: 5px; color: #a84434; }
+.title-panel h1 { font-family: "STSong", "SimSun", serif; font-size: 76px; letter-spacing: 18px; margin: 8px 0 2px; line-height: 1; }
+.title-sub { font-family: "KaiTi", "STKaiti", serif; font-size: 19px; color: #5a4028; margin: 8px 0 14px; }
+.title-recommend { display: inline-flex; align-items: center; gap: 7px; margin: 0 0 16px; padding: 6px 12px; border: 2px solid #a84434; background: #fff6dc; color: #5a4028; font-size: 12px; letter-spacing: 1px; }
+.title-recommend b { color: #a84434; font-size: 13px; }
+.title-modes { display: grid; gap: 10px; }
+.title-modes button { font-family: inherit; display: flex; align-items: center; justify-content: space-between; padding: 12px 18px; border: 3px solid #2a1c12; background: #e8b45a; box-shadow: inset 0 -5px 0 #b97a2e; cursor: pointer; }
+.title-modes button:nth-child(2) { background: #9fb87a; box-shadow: inset 0 -5px 0 #6f8f5a; }
+.title-modes button:nth-child(3) { background: #8fb0a8; box-shadow: inset 0 -5px 0 #5f8078; }
+.title-modes b { font-size: 21px; letter-spacing: 3px; }
+.title-modes span { font-size: 11px; color: #4a3320; letter-spacing: 1px; }
+.title-privacy { margin: 14px 0 0; color: #6b5a4a; font-size: 10px; line-height: 1.65; letter-spacing: .5px; }
+.title-foot { margin-top: 7px; font-size: 10px; letter-spacing: 2px; color: #8a7a66; }
+.share-end { display: flex; flex-direction: column; gap: 8px; }
+.share-cards { display: flex; flex-wrap: wrap; gap: 6px; margin: 2px 0 4px; }
+.share-cards span { background: #fff6dc; border: 2px solid #2a1c12; padding: 4px 8px; font-size: 12px; }
+.share-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.share-actions button { font-family: inherit; padding: 8px 14px; border: 3px solid #2a1c12; background: #e8b45a; cursor: pointer; box-shadow: inset 0 -4px 0 #b97a2e; }
+.choice, .share-actions button, .album-link { transition: transform .12s ease; }
+.choice:active, .share-actions button:active, .album-link:active { transform: scale(.96); }
+.share-code { position: absolute; inset: 0; background: rgba(8,12,14,.74); display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity .18s ease; z-index: 50; }
+.share-code.show { opacity: 1; pointer-events: auto; }
+.share-code-inner { width: 560px; background: #fff6dc; border: 5px solid #2a1c12; box-shadow: 0 0 0 4px #6b4a2f, 0 18px 40px rgba(0,0,0,.5); padding: 20px 24px; text-align: center; }
+.share-code-inner h2 { margin: 0 0 6px; font-family: "STSong", "SimSun", serif; font-size: 28px; letter-spacing: 3px; }
+.share-code-copy { margin: 0 0 12px; color: #6b5a4a; font-size: 11px; line-height: 1.6; }
+#qrCanvas { width: 272px; height: 272px; margin: 0 auto 12px; display: grid; place-items: center; background: #fff; border: 3px solid #2a1c12; }
+#qrCanvas canvas { width: 256px; height: 256px; image-rendering: pixelated; }
+.share-code-inner button { font-family: inherit; padding: 7px 14px; margin: 3px; border: 3px solid #2a1c12; background: #e8b45a; cursor: pointer; box-shadow: inset 0 -4px 0 #b97a2e; }
+.sort-game { display: flex; flex-direction: column; gap: 8px; }
+.sort-game.shake { animation: stageShake .35s ease; }
+.sort-books { display: flex; gap: 8px; flex-wrap: wrap; }
+.sort-book { font-family: inherit; font-size: 13px; padding: 8px 10px; border: 3px solid #2a1c12; background: #fff6dc; cursor: pointer; }
+.sort-book:hover, .sort-bin:hover { border-color: #c24a3a; box-shadow: 0 0 0 2px rgba(194,74,58,.2); }
+.sort-book.sel { background: #e8b45a; box-shadow: inset 0 0 0 3px #b97a2e; }
+.sort-book.done { opacity: .45; text-decoration: line-through; cursor: default; }
+.sort-bins { display: flex; gap: 8px; }
+.sort-bin { flex: 1; font-family: inherit; font-size: 13px; padding: 9px 6px; border: 3px solid #2a1c12; background: #9fb87a; cursor: pointer; box-shadow: inset 0 -4px 0 #6f8f5a; }
+.sort-hint { font-size: 12px; color: #a84434; }
+.auto-badge { position: absolute; left: 50%; top: 80px; transform: translateX(-50%); background: #c24a3a; color: #fff3d6; border: 2px solid #2a1c12; padding: 5px 12px; font-size: 11px; letter-spacing: 2px; z-index: 42; }
+.auto-badge.hide { display: none; }
+.rotate-hint { display: none; position: fixed; inset: 0; z-index: 100; background: #11181d; color: #f6e6c4; align-items: center; justify-content: center; font-family: "STSong", "SimSun", serif; font-size: 20px; letter-spacing: 4px; text-align: center; padding: 24px; }
+@media (orientation: portrait) and (max-width: 900px) { .rotate-hint { display: flex; } }
+.aim-layer { position: absolute; left: 0; right: 0; top: 100px; height: 220px; pointer-events: none; z-index: 35; }
+.aim-layer.hide { display: none; }
+.aim-zone { position: absolute; left: 47%; width: 6%; top: 18px; bottom: 18px; background: rgba(120,180,120,.18); border: 2px dashed #6f8f5a; }
+.aim-marker { position: absolute; left: 50%; top: 8px; bottom: 8px; width: 4px; background: #c24a3a; box-shadow: 0 0 0 2px rgba(255,255,255,.55); }
+.frame-layer { position: absolute; left: 0; right: 0; top: 80px; height: 310px; pointer-events: none; z-index: 35; }
+.frame-layer.hide { display: none; }
+.frame-box { position: absolute; left: 35%; top: 6px; width: 30%; height: 290px; border: 3px solid rgba(255,243,214,.9); box-shadow: 0 0 0 2px #2a1c12, inset 0 0 0 2px rgba(42,28,18,.35); }
+.frame-box:before, .frame-box:after { content: ""; position: absolute; width: 24px; height: 24px; border: 4px solid #fff3d6; }
+.frame-box:before { left: -8px; top: -8px; border-right: none; border-bottom: none; }
+.frame-box:after { right: -8px; bottom: -8px; border-left: none; border-top: none; }
+.stage-hotspots { position: absolute; inset: 0; z-index: 34; pointer-events: none; }
+.hotspot { position: absolute; width: 34px; height: 34px; margin: -17px 0 0 -17px; border: 2px solid #c24a3a; border-radius: 50%; background: rgba(194,74,58,.08); box-shadow: 0 0 0 3px rgba(194,74,58,.14), inset 0 0 0 2px rgba(255,243,214,.34); color: transparent; cursor: pointer; pointer-events: auto; animation: hotspotPulse 2.2s ease-in-out infinite; }
+.hotspot::after { content: ""; position: absolute; left: 50%; top: 50%; width: 6px; height: 6px; margin: -3px; background: #c24a3a; transform: rotate(45deg); box-shadow: 0 0 0 2px #f6e6c4; }
+.hotspot:hover, .hotspot:focus-visible { background: rgba(194,74,58,.26); outline: none; transform: scale(1.18); }
+@keyframes hotspotPulse { 0%,100% { box-shadow: 0 0 0 3px rgba(194,74,58,.12), inset 0 0 0 2px rgba(255,243,214,.28); } 50% { box-shadow: 0 0 0 9px rgba(194,74,58,0), inset 0 0 0 2px rgba(255,243,214,.52); } }
+.stamp-fx { position: absolute; left: 50%; top: 344px; z-index: 46; width: 68px; height: 68px; display: grid; place-items: center; border: 5px double #c24a3a; color: #c24a3a; background: rgba(255,243,214,.92); font-family: "STSong", "SimSun", serif; font-size: 28px; transform: translate(-50%,-50%) rotate(-8deg) scale(.4); opacity: 0; pointer-events: none; }
+.stamp-fx.show { animation: stampDrop .34s cubic-bezier(.2,.9,.2,1) forwards; }
+@keyframes stampDrop { 0% { opacity: 0; transform: translate(-50%,-50%) rotate(-12deg) scale(1.8); } 55% { opacity: 1; transform: translate(-50%,-50%) rotate(-8deg) scale(.92); } 100% { opacity: 1; transform: translate(-50%,-50%) rotate(-8deg) scale(1); } }
+.side { border-left: 4px solid #2a1c12; padding: 14px 16px; background: #efd9b4; }
+.side h3 { margin: 0 0 8px; font-size: 12px; letter-spacing: 3px; color: #7a5a3a; }
+.fragline { display: flex; align-items: center; gap: 6px; font-size: 10.5px; margin: 2.5px 0; color: #5a4028; }
+.fragline .dot { width: 12px; height: 12px; border: 2px solid #2a1c12; background: #c9ae86; }
+.fragline .dot.on { background: #c24a3a; }
+.fgroup { margin: 7px 0 2px; font-size: 9px; letter-spacing: 1px; color: #8a7a66; }
+.quote { margin: 8px 0 0; font-family: "KaiTi", "STKaiti", serif; font-size: 12px; line-height: 1.55; color: #5a4028; border-left: 3px solid #c24a3a; padding-left: 9px; }
+.res { margin: 8px 0; }
+.res .row { display: flex; align-items: center; gap: 7px; font-size: 11px; margin: 6px 0; }
+.res .row span { width: 28px; color: #5a4028; }
+.res .bar { flex: 1; height: 8px; background: #c9ae86; border: 2px solid #2a1c12; }
+.res .bar i { display: block; height: 100%; }
+.res .row b { width: 24px; text-align: right; font-size: 11px; }
+.res-flash { margin: 2px 0 6px; font-size: 11px; letter-spacing: 1px; color: #a84434; animation: resFloat 1.5s ease forwards; }
+@keyframes resFloat { 0% { opacity: 0; transform: translateY(5px); } 20% { opacity: 1; transform: translateY(0); } 100% { opacity: 0; transform: translateY(-5px); } }
+.ending-reason { width: 100%; border-left: 4px solid #a84434; background: rgba(168,68,52,.07); padding: 7px 10px; margin-bottom: 2px; font-size: 12px; line-height: 1.55; color: #6b4a3a; }
+.memory-hint { width: 100%; border-left: 4px solid #6f8f5a; background: rgba(111,143,90,.1); padding: 7px 10px; margin-bottom: 2px; font-family: "KaiTi", "STKaiti", serif; font-size: 13px; line-height: 1.5; color: #4f653f; }
+.revisit-note { margin: 0 0 7px; padding: 4px 8px; border-left: 4px solid #c24a3a; background: rgba(194,74,58,.07); color: #8d4438; font-size: 10px; line-height: 1.45; letter-spacing: .5px; }
+.revisit-note.hide { display: none; }
+.log { margin-top: 8px; font-size: 10px; line-height: 1.55; color: #5a4028; border-top: 1px dashed #c9ae86; padding-top: 6px; max-height: 62px; overflow: hidden; }
+.alert { background: #c24a3a; color: #fff3d6; border: 2px solid #2a1c12; padding: 4px 7px; font-size: 11px; letter-spacing: 2px; display: inline-block; margin-bottom: 5px; }
+.endnote { margin-top: auto; font-size: 9px; color: #8a7a66; letter-spacing: 1px; }
+</style>
+<style>.title-screen,#sound,#methodBtn,.title-foot,[onclick*="openMethod"],[onclick*="openFeedback"]{display:none!important}</style></head>
+<body>
+<div class="viewport">
+<div class="game">
+  <div class="topbar">
+    <div class="brand">
+      <div class="seal">木铎</div>
+      <div><h1>木铎声里</h1><small>BNU MEMORY · 1902—2026</small></div>
+    </div>
+    <div class="tabs" id="tabs">
+      <button data-scene="intro">序 · 2026</button>
+      <button data-scene="y1902">1902</button>
+      <button data-scene="y1919">1919</button>
+      <button data-scene="y1938">1938</button>
+      <button data-scene="y1949">1949</button>
+      <button data-scene="y1952">1952</button>
+      <button data-scene="y1971">1971</button>
+      <button data-scene="y1991">1991</button>
+      <button data-scene="y1996">1996</button>
+      <button data-scene="y2002">2002</button>
+      <button data-scene="y2026">2026</button>
+    </div>
+    <div class="run-chip" id="runChip">闭馆 9 天 · 本局 0</div>
+    <div class="share-progress" id="shareProgress">分享模式 · 0/5</div>
+    <div class="memory" id="memory">
+      <span>档案卡</span><b id="fragCount">0</b><em>/27</em>
+      <em class="explore-count" id="exploreCount">注记 0/20</em>
+      <div class="slots" id="fragSlots"><i class="slot"></i><i class="slot"></i><i class="slot"></i><i class="slot"></i><i class="slot"></i><i class="slot"></i><i class="slot"></i><i class="slot"></i><i class="slot"></i></div>
+    </div>
+    <button class="sound" id="sound" title="声音">音</button>
+
+  </div>
+  <div class="stage">
+    <canvas id="scene" width="780" height="280"></canvas>
+    <div class="stage-hotspots" id="stageHotspots"></div>
+    <div class="stage-tag" id="stageTag">SCENE 01</div>
+  </div>
+  <div class="panel">
+    <div class="info">
+      <div class="era" id="era">2026</div>
+      <h2 id="title">校史馆</h2>
+      <p class="sub" id="subtitle">序 · 一段很轻的钟声</p>
+      <div class="mini" id="mini">点击场景标签，可以跳到任意年代。</div>
+    </div>
+    <div class="dialogue">
+      <div class="revisit-note hide" id="revisitNote"></div>
+      <p id="narration"></p>
+      <div class="choices" id="choices"></div>
+      <div class="btnrow">
+        <button class="next hide" id="replay">再进一次 ↺</button>
+        <button class="next hide" id="next">回档案室 →</button>
+      </div>
+      <div class="foot" id="foot">选择没有标准答案 · 每幕三张档案卡，集齐才算完成</div>
+      <div class="wm" id="wm">1902</div>
+    </div>
+    <div class="side" id="side"></div>
+  </div>
+  <div class="fade" id="fade"></div>
+  <div class="scene-flash" id="sceneFlash"></div>
+  <div class="auto-badge hide" id="autoBadge">自动演示中 · 点击任意处停止</div>
+  <div class="aim-layer hide" id="aimLayer"><div class="aim-zone" id="aimZone"></div><div class="aim-marker" id="aimMarker"></div></div>
+  <div class="frame-layer hide" id="frameLayer"><div class="frame-box" id="frameBox"></div></div>
+  <div class="stamp-fx" id="stampFx">记</div>
+  <div class="card-toast" id="cardToast"><div class="card-inner"><div class="card-kicker" id="toastKicker">档案卡</div><div class="card-title" id="toastTitle"></div><div class="card-sub" id="toastSub">已收入档案室</div></div></div>
+  <div class="finale" id="finale"><div class="finale-inner">档案完整<span>木铎声起</span></div></div>
+  <div class="album" id="album">
+    <div class="album-inner">
+      <div class="album-head"><h2>记忆档案册</h2><div style="display:flex;gap:8px;"><button class="album-close" id="methodBtn">记忆可玩 · 方法</button><button class="album-close" id="sourceBtn">史料说明</button><button class="album-close" id="albumClose">关闭 ×</button></div></div>
+      <div class="album-grid" id="albumGrid"></div>
+      <div class="album-foot">已收集 <b id="albumCount">0</b> / 27　·　馆藏注记 <b id="albumNoteCount">0</b> / 20</div>
+    </div>
+  </div>
+  <div class="card-detail" id="cardDetail">
+    <div class="detail-inner">
+      <div class="detail-era" id="detailEra"></div>
+      <h2 id="detailTitle"></h2>
+      <p id="detailText"></p>
+      <p class="detail-note" id="detailNote"></p>
+      <p class="detail-source" id="detailSource"></p>
+      <button id="detailClose">收起</button>
+    </div>
+  </div>
+  <div class="share-code" id="shareCode">
+    <div class="share-code-inner">
+      <h2>我的校史记忆码</h2>
+      <p class="share-code-copy" id="shareCodeCopy">这是离线可扫描的文字记忆码。部署到服务器后会自动生成可打开的线上分享链接。</p>
+      <div id="qrCanvas"></div>
+      <button id="downloadQrBtn">下载二维码 ↓</button>
+      <button id="shareCodeClose">收起</button>
+    </div>
+  </div>
+  <div class="sources" id="sources">
+    <div class="sources-inner">
+      <h2>史料说明</h2>
+      <p>游戏中的年份、机构与事件按公开资料核对；人物对白为情境创作，不是史料原文。正式使用前建议再由校史馆或档案馆老师复核。</p>
+      <ul>
+        <li>北京师范大学官网《校史沿革》：1949 年复名、1952 年辅仁大学主体并入、211/985/双一流等节点。</li>
+        <li>360 百科《启功》：启功生平、1952 年到北师大中文系任教、1957 年当选教授与被划右派、1991 年励耘奖学助学基金等。</li>
+        <li>光明日报《北京师范大学校训 学为人师行为世范》2011-02-28；共产党员网《校训是什么》2014-08-30：1996 年校训提出与 11 月 4 日校务会议。</li>
+        <li>北师大新闻网《“启功教育基金”颁奖仪式暨座谈会在北师大举办》2006：启功教育基金相关报道。</li>
+      </ul>
+      <p class="small">1938 城固、1949 新校牌、2002 百年校庆等场景为情境复原；具体日期、人物与器物细节以校史馆档案为准。</p>
+      <p class="small">本作美术与场景由 AI 辅助生成、人工策展校订。</p>
+      <button id="sourcesClose">收起</button>
+    </div>
+  </div>
+  <div class="sources" id="method">
+    <div class="sources-inner method-inner">
+      <h2>记忆可玩 · 六问</h2>
+      <p>从一张照片、一件旧物或一段文字开始，依次追问六件事，就能把材料从“被展示的内容”推进成“可以被玩家经历的场景”。</p>
+      <div class="method-grid">
+        <div class="method-card"><b>一、记忆锚点</b><span>照片里最不能被替代的物件是什么？它就是玩家进入这段记忆的把手。</span></div>
+        <div class="method-card"><b>二、人物处境</b><span>当时的人面对什么时间压力、资源限制或选择？先把处境说清楚，再设计玩法。</span></div>
+        <div class="method-card"><b>三、玩家动作</b><span>玩家能亲手做什么？挂校牌、搬书、取景，都比“看完一段说明”更能留下记忆。</span></div>
+        <div class="method-card"><b>四、世界反馈</b><span>动作完成后，场景、人物或物件是否真的改变？反馈要让玩家确认自己参与过。</span></div>
+        <div class="method-card"><b>五、余留物</b><span>玩家最后能带走什么？一张档案卡、一条路线、一张长图，都可以成为新的记忆入口。</span></div>
+        <div class="method-card"><b>六、可信边界</b><span>哪些内容有资料依据，哪些只是情境复原？把不确定留在明处，是互动叙事对历史的责任。</span></div>
+      </div>
+      <p class="small method-formula">原始记忆 → 具体处境 → 玩家动作 → 可见结果 → 可带走的新记忆</p>
+      <p class="small">《木铎声里》是这套方法的一次完整样本；同一方法也可以用于地方史、家族记忆、校园口述史与非遗项目。</p>
+      <button id="methodClose">收起</button>
+    </div>
+  </div>
+  <div class="run-end" id="runEnd">
+    <div class="run-end-inner">
+      <div class="rank-stamp" id="runRank">A</div>
+      <div class="run-end-copy">
+        <div class="run-kicker">CLOSING DAY · 闭馆结算</div>
+        <h2 id="runEnding">回声</h2>
+        <p id="runSummary"></p>
+        <div class="run-end-cards" id="runEndCards"></div>
+        <div style="margin:10px 0 0;padding-top:8px;border-top:1px dashed #c9b28c;font-family:KaiTi,STKaiti,serif;font-size:12px;line-height:1.8;color:#6b4a2f;text-align:left;">
+          <b>尾声 · 致谢</b><br>
+          木铎金声，学为人师，行为世范——一百余年的钟声没有停过。本作只是一块砖：愿更多珍贵的故事、记忆与旧照片被做成可以走进去的游戏，让记忆不只被保存，而是真实可触及。
+        </div>
+        <div class="run-actions">
+          <button onclick="window.newRun()">再开一局</button>
+          <button onclick="window.backToTitle()">回到标题</button>
+          <button onclick="window.downloadTelemetry(this)">导出试玩记录</button>
+          <button onclick="window.copyDiagnostics(this)">复制诊断</button>
+          <button onclick="window.openFeedback()">我有反馈</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="share-code" id="feedback">
+    <div class="share-code-inner" style="width:620px;max-width:92vw;text-align:left;">
+      <h2 style="text-align:center;">回声 · 反馈</h2>
+      <p class="small" style="text-align:center;">内容仅发送至项目负责人邮箱，用于改进体验；除你主动填写外，不采集姓名与学号。</p>
+      <div style="display:flex;gap:16px;margin:10px 0;">
+        <label>身份<br>
+          <select id="fbWho" style="font-family:inherit;font-size:14px;padding:4px 6px;border:2px solid #2a1c12;background:#fff6dc;">
+            <option>路人</option><option>在校生</option><option>校友</option><option>教师</option>
+          </select>
+        </label>
+        <label style="flex:1;">最喜欢的一幕<br>
+          <select id="fbFav" style="width:100%;font-family:inherit;font-size:14px;padding:4px 6px;border:2px solid #2a1c12;background:#fff6dc;">
+            <option value="">（可不选）</option><option>1902 第一课</option><option>1919 街头</option><option>1938 城固课堂</option><option>1949 新校牌</option><option>1952 两校合一</option><option>1971 点校</option><option>1991 励耘</option><option>1996 校训</option><option>2002 百年</option><option>2026 校史馆</option>
+          </select>
+        </label>
+      </div>
+      <div style="margin:6px 0 10px;display:flex;gap:14px;flex-wrap:wrap;">
+        <label><input type="radio" name="rating" value="想再经历一次"> 想再经历一次</label>
+        <label><input type="radio" name="rating" value="留下了印象"> 留下了印象</label>
+        <label><input type="radio" name="rating" value="有建议想说"> 有建议想说</label>
+      </div>
+      <label>一句话建议（≤200 字）<br>
+        <textarea id="fbText" rows="3" maxlength="200" style="width:100%;font-family:inherit;font-size:14px;padding:6px;border:2px solid #2a1c12;background:#fff6dc;"></textarea>
+      </label>
+      <label style="display:block;margin-top:8px;">联系方式（希望被回复时填）<br>
+        <input id="fbContact" style="width:100%;font-family:inherit;font-size:14px;padding:5px 6px;border:2px solid #2a1c12;background:#fff6dc;">
+      </label>
+      <p id="feedbackFoot" class="small" style="min-height:18px;color:#a84234;"></p>
+      <div class="share-actions">
+        <button onclick="window.submitFeedback()">送出反馈</button>
+        <button onclick="window.closeFeedback()">收起</button>
+      </div>
+    </div>
+  </div>
+  <div class="loadout" id="loadout">
+    <div class="loadout-inner">
+      <div class="loadout-head"><h2>记忆装配台</h2><button id="loadoutClose">关闭 ×</button></div>
+      <div class="loadout-slots" id="loadoutSlots"></div>
+      <div class="loadout-grid" id="loadoutGrid"></div>
+      <div class="loadout-foot" id="loadoutFoot">最多装配 3 张；卡面效果只在自由档案的一局内生效。</div>
+    </div>
+  </div>
+  <div class="title-screen" id="titleScreen">
+    <div class="title-panel">
+      <div class="title-kicker">1902—2026 · 校史互动叙事</div>
+      <h1>木铎声里</h1>
+      <p class="title-sub">把一段校史，做成一间可以走进去的教室。</p>
+      <p class="title-recommend"><b>第一次来？</b>从分享模式开始。</p>
+      <div class="title-modes">
+        <button onclick="window.startMode('share')"><b>分享模式</b><span>10 分钟 · 五站</span></button>
+        <button onclick="window.startMode('free')"><b>自由档案</b><span>9 天 · 装配 · 长期档案</span></button>
+        <button onclick="window.startMode('auto')"><b>自动演示</b><span>现场备用</span></button>
+      </div>
+      <p class="title-privacy">本站仅记录页面内行为计数（进入哪一幕、是否完成与分享），不记录姓名、学号与任何输入内容；数据只保存在当前浏览器，仅用于改进体验。</p>
+      <div class="title-foot">点击选项与按钮 · <a href="#" onclick="window.openMethod();return false;" style="color:#a84234;">记忆可玩方法</a> · <a href="#" onclick="window.openFeedback();return false;" style="color:#a84234;">我有反馈</a> · V1.1.1</div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="rotate-hint">请横屏体验 · 建议使用平板或电脑</div>
+<script src="demo-v2/player-telemetry.js?v=demo1"></script>
+<script src="assets/props-v3.js?v=1.1.1"></script>
+<script src="assets/qrcode.js?v=1.1.1"></script>
+<script src="assets/qrcode_UTF8.js?v=1.1.1"></script>
+<script src="scenes-v4.js?v=1.1.1&art=full-20261109"></script>
+<script src="demo-v2/player-ui.js?v=demo1"></script>
+</body>
+</html>

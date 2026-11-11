@@ -1,0 +1,173 @@
+{
+  "version": "v2-gray-20261111",
+  "local_base": "V1.1.1",
+  "files": [
+    {
+      "path": ".github/workflows/pages.yml",
+      "bytes": 628,
+      "sha256": "2c189cccf59e17d85a624cc7a0fae5126e523f895a0d33105a28c6b2dab9ac36"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 29,
+      "sha256": "51f56924f641b11740eafbae6f952acc0d34c122b8a1350e0ab29c03052fe219"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1247,
+      "sha256": "a47a487376761b07c28c391aa7cfa6028de9360e1fbab2415a59b42a2ac7203e"
+    },
+    {
+      "path": "site/.nojekyll",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "site/assets/characters-v5-full-20261109.json",
+      "bytes": 32980,
+      "sha256": "eb9d132ab759508b1a257d0f2be4c3b1015ce76a5d05139b65151009046721fc"
+    },
+    {
+      "path": "site/assets/characters-v5-full-20261109.png",
+      "bytes": 34448,
+      "sha256": "862cda979f76218b4fe8d3ef57122afdff8f4b013caa38c4977af99cb1e10e5a"
+    },
+    {
+      "path": "site/assets/favicon.svg",
+      "bytes": 362,
+      "sha256": "5e22d103644973cbdc53337aaa205d1a3a60f4dea85206ae2ab37bdbe804b867"
+    },
+    {
+      "path": "site/assets/fusion-pixel-12px-zh_hans.woff2",
+      "bytes": 945344,
+      "sha256": "04e18ed9d94a9cb7a58850d4270d91d6b1879c4a9212eb6f84623698db2d908f"
+    },
+    {
+      "path": "site/assets/OFL.txt",
+      "bytes": 4418,
+      "sha256": "bc518cf64b8032c07690f33cc270c35c179255a6ac8efa7c165ebae7e8f76a63"
+    },
+    {
+      "path": "site/assets/props-v3.js",
+      "bytes": 3715,
+      "sha256": "507228bd5416693f04232329d61750704d82dfe3d431b4d61cc01f1de9b68d89"
+    },
+    {
+      "path": "site/assets/props-v3.json",
+      "bytes": 13379,
+      "sha256": "08d1efdfbf687b72504130afbd33983d6c3550f06f1e52a7406ba9cef1a55040"
+    },
+    {
+      "path": "site/assets/props-v3.png",
+      "bytes": 22220,
+      "sha256": "230b7f0c466c2510d357f90aa7dff9470b3bb54ca6ce64b3941fa190d396d01a"
+    },
+    {
+      "path": "site/assets/qrcode.js",
+      "bytes": 56694,
+      "sha256": "18ae399f81182bc9de916e9c77b195df20cc58d6f2d55a62b085a299f1bf1780"
+    },
+    {
+      "path": "site/assets/qrcode_UTF8.js",
+      "bytes": 793,
+      "sha256": "e522d64003b332e29271fdce4993ed3ae2934c8947f41654bd324ddcfa2de301"
+    },
+    {
+      "path": "site/assets/THIRD-PARTY.md",
+      "bytes": 391,
+      "sha256": "390cc79b6e5d8e3bf2290e3a9d9c3920f03eba5ae14dfd13a5046c046c261532"
+    },
+    {
+      "path": "site/assets/tileset-v3.png",
+      "bytes": 3859,
+      "sha256": "2e3140b843a332bbf2fa657d507db3987b6393c1460982a4218eb54fa43653fc"
+    },
+    {
+      "path": "site/demo-v2/demo.css",
+      "bytes": 13038,
+      "sha256": "ce6ad3f2b1486cc2b0f884b6afa73c69ad48e2bafa42a0ddc1a019d164f1d759"
+    },
+    {
+      "path": "site/demo-v2/demo.js",
+      "bytes": 30023,
+      "sha256": "70987c93fcef3634da58d3f44c25755f88a21b108acecd7943c513de400227ca"
+    },
+    {
+      "path": "site/demo-v2/index.html",
+      "bytes": 10272,
+      "sha256": "0d4dc5b9fd27bb0497f06a3fe2f0d8364ce55f8e5c0f420cecfdc4be41d283df"
+    },
+    {
+      "path": "site/demo-v2/media/celebration.png",
+      "bytes": 236852,
+      "sha256": "7ecbfc54daa7e2cd75afa321a675ce862b052fe32647a9514a2bd5daccde1293"
+    },
+    {
+      "path": "site/demo-v2/media/classroom.png",
+      "bytes": 306357,
+      "sha256": "37af7cf1fcbc650bfebe040a51a8b5b44fefd3390f63e6c06978b97712d38e6e"
+    },
+    {
+      "path": "site/demo-v2/media/editor.png",
+      "bytes": 301725,
+      "sha256": "d11d1caeb4d0895b8bec3accd7f3dab197324952628a4c71a860f730cc5f51ed"
+    },
+    {
+      "path": "site/demo-v2/media/plaque.png",
+      "bytes": 264386,
+      "sha256": "2a1b6a80a65f8f9d71c521e3ce4d7c69471dc731eeac7f1c0972a6cef933f023"
+    },
+    {
+      "path": "site/demo-v2/player-telemetry.js",
+      "bytes": 8635,
+      "sha256": "86c0eb0a01bb8a4550147115ab0964b2d5bd98047db0e7b24ab0a2cecac5b272"
+    },
+    {
+      "path": "site/demo-v2/player-ui.js",
+      "bytes": 107225,
+      "sha256": "d7cb4b73999ea252bdf32df37d9cfc172be2f162d7ab7b74d4ac622b346b7efb"
+    },
+    {
+      "path": "site/demo-v2/player.html",
+      "bytes": 46237,
+      "sha256": "696d9e1152d8d200c4ac92a47872510e4e125b0154b8e74ccb5c0157b0138e0a"
+    },
+    {
+      "path": "site/demo-v2/share.html",
+      "bytes": 8113,
+      "sha256": "aa36ba3323ff27464fa7d67f22397b32d118d25613d5cbd8e5b2db0c958a48e1"
+    },
+    {
+      "path": "site/index.html",
+      "bytes": 288,
+      "sha256": "461eb864c2f695956ff183f2af01620bae69d2f84c72058e4b8b848b56fdf4bd"
+    },
+    {
+      "path": "site/manifest.webmanifest",
+      "bytes": 457,
+      "sha256": "18b3b072ac247e654522b43d2acc98cfd4471813bb96ce07b3653a6329dd8e8d"
+    },
+    {
+      "path": "site/robots.txt",
+      "bytes": 28,
+      "sha256": "a8f31103361fca68bef71fc69cff844b7c23bd3d64d2b872d74690cbda656bfc"
+    },
+    {
+      "path": "site/scenes-v4.js",
+      "bytes": 53815,
+      "sha256": "6a05b9d5aa4329f2de96d76a26ebee9a2c9528fa247622f4736f73652190a7ca"
+    },
+    {
+      "path": "site/share.html",
+      "bytes": 8099,
+      "sha256": "d7f441eaedd286883a27aee08084b37e3576a4d88d83a24fb633b6833a96c4c0"
+    },
+    {
+      "path": "site/telemetry.js",
+      "bytes": 8585,
+      "sha256": "bfd7f87c1b442f8d54af0b45e755bb703a5e48c6256ee4a4f421f08bfc3db954"
+    }
+  ],
+  "public_access_authorized": true,
+  "published": false
+}
