@@ -20,19 +20,19 @@
       ]
     },
     y1919: {
-      era: '1919', title: '北平街头', subtitle: '第二幕 · 那一天', stage: 'SCENE 03', next: 'y1938',
+      era: '1919', title: '北京街头', subtitle: '第二幕 · 那一天', stage: 'SCENE 03', next: 'y1938',
       mini: '1919 年 5 月 4 日，北京高师学生参与了五四运动。游戏不评判选择，只让你承担它。',
       narration: '五月四日，消息从北大传到高师。操场上有人喊“上街”，也有人主张先上课，还有人想写信回乡。你站在人群里。',
       choices: [
         { key: 'march', label: '走上街头', text: '你和同学一起走出校门。那天之后，很多事都不一样了。' },
         { key: 'stay', label: '留在学校', text: '你留在教室，把讲义收好。后来你才知道，缺的那一课，在街上。' },
-        { key: 'letter', label: '写信回乡', text: '你给家里写信，说北平的春天很乱。信寄出后，你在校门口站了很久。' }
+        { key: 'letter', label: '写信回乡', text: '你给家里写信，说北京的春天很乱。信寄出后，你在校门口站了很久。' }
       ]
     },
     y1938: {
       era: '1938', title: '城固临时课堂', subtitle: '第三幕 · 一箱书', stage: 'SCENE 04', next: 'y1949',
-      mini: '1938 年，学校南迁汉中城固。具体日期与空袭事件为情境复原，史实以校史馆档案为准。',
-      narration: '学校南迁城固，教室借的是祠堂。书箱只剩七只，粮食也不多了。今天你只有两件事要做。',
+      mini: '1938 年，西迁师生转至陕西城固，在西北联大继续办学。课堂、书箱和空袭细节为情境创作。',
+      narration: '师生辗转到城固。故事里的临时课堂借在祠堂。书箱只剩七只，粮食也不多了。今天你只有两件事要做。',
       choices: []
     },
     y1949: {
@@ -49,8 +49,8 @@
     },
     y1971: {
       era: '1971', title: '点校', subtitle: '第六站 · 一个字', stage: 'SCENE 07', next: 'y1991',
-      mini: '1957 年启功全票当选教授，随后被划为右派；1970 年代初参与中华书局《清史稿》点校。',
-      narration: '1971 年，启功参与《清史稿》点校。窗外很吵，屋里只有翻书声。一个字的用法，他们查了整整一个下午。',
+      mini: '启功曾参与《二十四史》《清史稿》的校对整理。本幕以 1971 为叙事坐标，具体工作日期仍待档案复核；对白为创作。',
+      narration: '20 世纪 70 年代的点校工作中，屋里只有翻书声。这是根据治学事迹创作的一幕。一个字的用法，他们查了整整一个下午。',
       choices: [
         { key: 'check', label: '再查一遍原书', text: '你翻到原书那一页，发现抄本漏了一个字。启功先生说：“一个字，也是一段历史。”' },
         { key: 'doubt', label: '先把疑问记下来', text: '你在卡片上写下疑问，夹进书里。先生说：“存疑，也是一种认真。”' },
@@ -59,8 +59,8 @@
     },
     y1991: {
       era: '1991', title: '励耘', subtitle: '第七站 · 一碗面', stage: 'SCENE 08', next: 'y1996',
-      mini: '1991 年 11 月，启功在香港义卖，所得 163 万元全部捐给北师大，以陈垣“励耘书室”命名设立励耘奖学助学基金。',
-      narration: '1991 年 11 月，启功把在香港义卖书画所得的 163 万元，全部捐给学校，设立“励耘奖学助学基金”。',
+      mini: '1990 年启功在香港举办书画义展；1991 年将义卖所得 163 万余元捐给北师大，设立励耘奖学助学基金。对白与生活细节为创作。',
+      narration: '1991 年，启功把此前义卖书画所得的 163 万余元，全部捐给学校，设立“励耘奖学助学基金”。',
       choices: [
         { key: 'ask', label: '问他为什么不留一点', text: '他说：“钱够吃饭就行。”桌上是一碗面条，几根黄瓜。' },
         { key: 'scrolls', label: '帮他整理画作', text: '你替他把画一卷卷收好。每一卷的签条上，都写着陈垣先生的书斋名：励耘。' },
@@ -456,7 +456,7 @@
     y1919: {
       march: '你和同学一起走出校门。那天之后，很多事都不一样了。',
       stay: '你留在教室，把讲义收好。后来你才知道，缺的那一课，在街上。',
-      letter: '你给家里写信，说北平的春天很乱。信寄出后，你在校门口站了很久。'
+      letter: '你给家里写信，说北京的春天很乱。信寄出后，你在校门口站了很久。'
     },
     y1938: {
       move: '你带着学生和书箱走进夜色。第二天，课在另一间祠堂继续。',
@@ -646,6 +646,7 @@
   function addCard(scene, key) {
     if (!CARD_TITLES[scene] || !CARD_TITLES[scene][key]) return;
     const id = cardId(scene, key);
+    parent.postMessage({type:'muduo-demo-event',event:'card_action',details:{card_id:id}},location.origin);
     const globalNew = !state.cards.has(id);
     if (globalNew) {
       state.cards.add(id);
@@ -1900,7 +1901,7 @@
         hideDone();
       } else {
         const left = 2 - state.actions1938;
-        narration.textContent = `学校南迁城固，教室借的是祠堂。书箱只剩七只，粮食也不多了。今天还可以做 ${left} 件事。`;
+        narration.textContent = `师生辗转到城固。故事里的临时课堂借在祠堂。书箱只剩七只，粮食也不多了。今天还可以做 ${left} 件事。`;
         choices.innerHTML = `
           <button class="choice" onclick="window.doAction('class')">上课 <small>士气 +2 / 体力 -10</small></button>
           <button class="choice alt" onclick="window.doAction('box')">整理书箱 <small>书箱 +1 / 体力 -6</small></button>

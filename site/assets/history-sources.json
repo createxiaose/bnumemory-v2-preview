@@ -1,0 +1,167 @@
+{
+  "version": 1,
+  "updatedAt": "2026-11-14",
+  "notice": "公开资料只支持所列基本事实；游戏对白、器物、行动与场景为创作。尚未完成校史专业人员逐幕审校。",
+  "periods": [
+    {
+      "id": "y1902",
+      "title": "京师大学堂师范馆",
+      "summary": "1902 年创立的师范馆是学校前身；课堂问答为创作。",
+      "reviewStatus": "基础资料已附；专业审校待完成",
+      "sources": [
+        {
+          "title": "北师大官网《校史沿革》",
+          "url": "https://www.bnu.edu.cn/xxgk/xsyg/"
+        },
+        {
+          "title": "北京师范大学章程（2024 年修订）",
+          "url": "https://zwb.bnu.edu.cn/gzzd/xxgz/1412cb80af0947f98f6595c3c28d0ab4.htm"
+        }
+      ],
+      "dialogueLabel": "情境创作，非史料原话",
+      "cover": "assets/scene-covers/y1902.webp"
+    },
+    {
+      "id": "y1919",
+      "title": "北京街头",
+      "summary": "北京高师学生参加五四运动；游戏中的个人选择为情境叙事。",
+      "reviewStatus": "基础资料已附；专业审校待完成",
+      "sources": [
+        {
+          "title": "北师大官网·五四纪念碑",
+          "url": "https://www.bnu.edu.cn/tt/87490.htm"
+        }
+      ],
+      "dialogueLabel": "情境创作，非史料原话",
+      "cover": "assets/scene-covers/y1919.webp"
+    },
+    {
+      "id": "y1938",
+      "title": "城固临时课堂",
+      "summary": "西迁师生在陕西城固参与西北联大办学；祠堂与七只书箱未据档案复原。",
+      "reviewStatus": "基础资料已附；专业审校待完成",
+      "sources": [
+        {
+          "title": "北师大官网《校史沿革》",
+          "url": "https://www.bnu.edu.cn/xxgk/xsyg/"
+        },
+        {
+          "title": "西北大学·西北联大城固办学旧址",
+          "url": "https://news.nwu.edu.cn/info/1002/1209.htm"
+        }
+      ],
+      "dialogueLabel": "情境创作，非史料原话",
+      "cover": "assets/scene-covers/y1938.webp"
+    },
+    {
+      "id": "y1949",
+      "title": "新校牌",
+      "summary": "1949 年学校复用北京师范大学校名；挂校牌小游戏为创作。",
+      "reviewStatus": "基础资料已附；专业审校待完成",
+      "sources": [
+        {
+          "title": "北师大官网《校史沿革》",
+          "url": "https://www.bnu.edu.cn/xxgk/xsyg/"
+        },
+        {
+          "title": "北京师范大学章程（2024 年修订）",
+          "url": "https://zwb.bnu.edu.cn/gzzd/xxgz/1412cb80af0947f98f6595c3c28d0ab4.htm"
+        }
+      ],
+      "dialogueLabel": "情境创作，非史料原话",
+      "cover": "assets/scene-covers/y1949.webp"
+    },
+    {
+      "id": "y1952",
+      "title": "辅仁并入",
+      "summary": "院系调整中辅仁大学主体并入；搬书、分拣与课堂活动为创作。",
+      "reviewStatus": "基础资料已附；专业审校待完成",
+      "sources": [
+        {
+          "title": "北师大官网《校史沿革》",
+          "url": "https://www.bnu.edu.cn/xxgk/xsyg/"
+        },
+        {
+          "title": "北京师范大学章程（2024 年修订）",
+          "url": "https://zwb.bnu.edu.cn/gzzd/xxgz/1412cb80af0947f98f6595c3c28d0ab4.htm"
+        },
+        {
+          "title": "北师大图书馆·京师学人：启功",
+          "url": "https://wenku.bnu.edu.cn/xrinfo.action?num=bnuqig1912"
+        }
+      ],
+      "dialogueLabel": "情境创作，非史料原话",
+      "cover": "assets/scene-covers/y1952.webp"
+    },
+    {
+      "id": "y1971",
+      "title": "点校",
+      "summary": "启功参与古籍点校有据；1971 为当前叙事坐标，具体日期待查。",
+      "reviewStatus": "点校事实有据；1971 具体年份待核",
+      "sources": [
+        {
+          "title": "北师大图书馆·京师学人：启功",
+          "url": "https://wenku.bnu.edu.cn/xrinfo.action?num=bnuqig1912"
+        }
+      ],
+      "dialogueLabel": "情境创作，非史料原话",
+      "cover": "assets/scene-covers/y1971.webp"
+    },
+    {
+      "id": "y1991",
+      "title": "励耘",
+      "summary": "按启功年谱，1990 年义展、1991 年捐资设基金；饭桌对白为创作。",
+      "reviewStatus": "基础资料已附；专业审校待完成",
+      "sources": [
+        {
+          "title": "北师大民俗典籍文字研究中心·启功年谱",
+          "url": "https://mdw.bnu.edu.cn/xzcq/34e82e1773bf427984d26f173f38e896.htm"
+        }
+      ],
+      "dialogueLabel": "情境创作，非史料原话",
+      "cover": "assets/scene-covers/y1991.webp"
+    },
+    {
+      "id": "y1996",
+      "title": "校训",
+      "summary": "1996 年校训确定；研墨与现场问答为创作。",
+      "reviewStatus": "基础资料已附；专业审校待完成",
+      "sources": [
+        {
+          "title": "北师大官网·校训的演变经过",
+          "url": "https://www.bnu.edu.cn/bsgs/ehw/87244.htm"
+        }
+      ],
+      "dialogueLabel": "情境创作，非史料原话",
+      "cover": "assets/scene-covers/y1996.webp"
+    },
+    {
+      "id": "y2002",
+      "title": "百年",
+      "summary": "2002 年为建校百年；碑前合影与人群细节为创作。",
+      "reviewStatus": "基础资料已附；专业审校待完成",
+      "sources": [
+        {
+          "title": "北京师范大学章程（2024 年修订）",
+          "url": "https://zwb.bnu.edu.cn/gzzd/xxgz/1412cb80af0947f98f6595c3c28d0ab4.htm"
+        }
+      ],
+      "dialogueLabel": "情境创作，非史料原话",
+      "cover": "assets/scene-covers/y2002.webp"
+    },
+    {
+      "id": "y2026",
+      "title": "校史馆",
+      "summary": "连接各年代的虚构叙事空间，不代表现实展陈的测绘复原。",
+      "reviewStatus": "基础资料已附；专业审校待完成",
+      "sources": [
+        {
+          "title": "北师大档案馆·参观导览（现实展陈参考）",
+          "url": "https://dag.bnu.edu.cn/xsg/cgdl/index.htm"
+        }
+      ],
+      "dialogueLabel": "情境创作，非史料原话",
+      "cover": "assets/scene-covers/y2026.webp"
+    }
+  ]
+}
