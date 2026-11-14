@@ -35,7 +35,7 @@
     {
       "path": "site/assets/campuses/campus-picker.js",
       "bytes": 5995,
-      "sha256": "aed10b6dff8342cc2127a69865215f93d37d5182f271540b853e76a655f435ad"
+      "sha256": "bd6b366cf757214690685e450575cf7229db6a1bb693c9cbd5dae2d98f9b2aa8"
     },
     {
       "path": "site/assets/campuses/campuses.json",
@@ -189,8 +189,8 @@
     },
     {
       "path": "site/campus-atlas.html",
-      "bytes": 625,
-      "sha256": "78f732c70b74d7bf452936701d3d4a275cbc8f3b963d65fa8db1cf9290b438d0"
+      "bytes": 638,
+      "sha256": "3b29b3c5f88df892eb05de2a01ae282fefba1caf1cc851a0dbbfa2c94a5db0e4"
     },
     {
       "path": "site/demo-v2/demo.css",
@@ -204,8 +204,8 @@
     },
     {
       "path": "site/demo-v2/index.html",
-      "bytes": 10899,
-      "sha256": "f5ca42d415fc5c5134612ddefe02766f9f1d8becf9fb0a729c32f071333f268c"
+      "bytes": 10912,
+      "sha256": "bd8039236fb6e138be3df04ed4b2857c8ba7b325727df02f5062e1a00b774f7b"
     },
     {
       "path": "site/demo-v2/media/celebration.png",
