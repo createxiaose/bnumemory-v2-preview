@@ -1,6 +1,6 @@
 {
-  "version": "v2-gray-20261111",
-  "local_base": "V1.1.1",
+  "version": "v2-gray-20261114",
+  "local_base": "V1.2.0",
   "files": [
     {
       "path": ".github/workflows/pages.yml",
@@ -21,6 +21,111 @@
       "path": "site/.nojekyll",
       "bytes": 0,
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "site/assets/campuses/ATTRIBUTION.md",
+      "bytes": 1862,
+      "sha256": "eaca7d616b9e91f58f3217ea50679d328d85da28c7b00de26af3eaaec7efd37e"
+    },
+    {
+      "path": "site/assets/campuses/bell.webp",
+      "bytes": 747656,
+      "sha256": "c1620cea69361e64eb2be899468aec517c1bec6197ad60c5e283eafd87bae003"
+    },
+    {
+      "path": "site/assets/campuses/campus-picker.js",
+      "bytes": 5995,
+      "sha256": "aed10b6dff8342cc2127a69865215f93d37d5182f271540b853e76a655f435ad"
+    },
+    {
+      "path": "site/assets/campuses/campuses.json",
+      "bytes": 9387,
+      "sha256": "314cad96ed3e31d747efacf1dd0d7eda505f127c576d764b06069d3eb6ccd244"
+    },
+    {
+      "path": "site/assets/campuses/changping-map.png",
+      "bytes": 6185,
+      "sha256": "13e1902ec94bb8f523498e2fc6d34aeb79563ab43abc645348e6c6afd9797535"
+    },
+    {
+      "path": "site/assets/campuses/changping-panel.webp",
+      "bytes": 77672,
+      "sha256": "a1af2afc23f0d02ebcef1fae5a784d2f1774712ed2ad76e2e5182f51d7824bf0"
+    },
+    {
+      "path": "site/assets/campuses/changping-vista.webp",
+      "bytes": 886420,
+      "sha256": "fec7b1841b97394395fcc9739a71d5d41b4279ef91193801bbf38902dfb4df8a"
+    },
+    {
+      "path": "site/assets/campuses/corridor.webp",
+      "bytes": 839320,
+      "sha256": "abbc7b5543283c2070966c39c726e2d0aafeceda844d8e10e51a4c825bd78298"
+    },
+    {
+      "path": "site/assets/campuses/furen-map.png",
+      "bytes": 5873,
+      "sha256": "c2caf6aa11091cc67dd0fd31fba4589a170f75e0ed92c01693c6e62e08384927"
+    },
+    {
+      "path": "site/assets/campuses/furen-panel.webp",
+      "bytes": 87550,
+      "sha256": "7f1688783e468a58b79e592602e38b36d7a2c6bc166c29374b43d4b31d4a699b"
+    },
+    {
+      "path": "site/assets/campuses/furen-vista.webp",
+      "bytes": 1041902,
+      "sha256": "d8a80632539c709eeb50baeb554dd32cb4d9b63f144477c176473f93b74f103b"
+    },
+    {
+      "path": "site/assets/campuses/furen.webp",
+      "bytes": 921950,
+      "sha256": "4644203b34a6bf568065952272943b79bea075854b89ffd1a024d5be57465912"
+    },
+    {
+      "path": "site/assets/campuses/haidian-map.png",
+      "bytes": 7324,
+      "sha256": "028fc29b055d9b08bf2623a09226c0780fe43b4610c07e12bf4b731d3278e5cb"
+    },
+    {
+      "path": "site/assets/campuses/haidian-panel.webp",
+      "bytes": 80010,
+      "sha256": "d260c00c3704b94ddeb3bb19dacf4be03cd7f0ce7e26aeed1ba369642ffca5e0"
+    },
+    {
+      "path": "site/assets/campuses/haidian-vista.webp",
+      "bytes": 905556,
+      "sha256": "2e2827adf378ececcdedb8cbd7dc56ac1a0902d1dc77250d01ff3d392f63d252"
+    },
+    {
+      "path": "site/assets/campuses/main.webp",
+      "bytes": 854820,
+      "sha256": "bc0140d106d5bdadbbcffdd0c775b8b2132e043801db2faa081a2bab520c685f"
+    },
+    {
+      "path": "site/assets/campuses/motto.webp",
+      "bytes": 695500,
+      "sha256": "d9fb552a48cf91df92eebf6ae18695a93ae34bf841188d86e89b2467a23f0cd9"
+    },
+    {
+      "path": "site/assets/campuses/stone.webp",
+      "bytes": 793058,
+      "sha256": "982b84557452a8ddb4cf1d99eda208cead8c0d5c2055ce71ed8f82b058c65d20"
+    },
+    {
+      "path": "site/assets/campuses/zhuhai-map.png",
+      "bytes": 9885,
+      "sha256": "f3b1ff1e7ffc608646daf0860df4c7eb9ea7c30287370d2ba5be985743e49c37"
+    },
+    {
+      "path": "site/assets/campuses/zhuhai-panel.webp",
+      "bytes": 78138,
+      "sha256": "fe3fe4c942ea59245aff98038f5fae8c71d40016b5235479c74ae8b98da97db8"
+    },
+    {
+      "path": "site/assets/campuses/zhuhai-vista.webp",
+      "bytes": 885032,
+      "sha256": "98afd902dd04e2628fbbbcc1346cec1f8f13c4b0e53f400b6fe6fda0207fbc84"
     },
     {
       "path": "site/assets/characters-v5-full-20261109.json",
@@ -83,19 +188,24 @@
       "sha256": "2e3140b843a332bbf2fa657d507db3987b6393c1460982a4218eb54fa43653fc"
     },
     {
+      "path": "site/campus-atlas.html",
+      "bytes": 625,
+      "sha256": "78f732c70b74d7bf452936701d3d4a275cbc8f3b963d65fa8db1cf9290b438d0"
+    },
+    {
       "path": "site/demo-v2/demo.css",
       "bytes": 13038,
       "sha256": "ce6ad3f2b1486cc2b0f884b6afa73c69ad48e2bafa42a0ddc1a019d164f1d759"
     },
     {
       "path": "site/demo-v2/demo.js",
-      "bytes": 30023,
-      "sha256": "70987c93fcef3634da58d3f44c25755f88a21b108acecd7943c513de400227ca"
+      "bytes": 31014,
+      "sha256": "1eab1f08ba2560cd3d7d73e159781403cf38917b00511981ce578f54975548ac"
     },
     {
       "path": "site/demo-v2/index.html",
-      "bytes": 10272,
-      "sha256": "0d4dc5b9fd27bb0497f06a3fe2f0d8364ce55f8e5c0f420cecfdc4be41d283df"
+      "bytes": 10899,
+      "sha256": "f5ca42d415fc5c5134612ddefe02766f9f1d8becf9fb0a729c32f071333f268c"
     },
     {
       "path": "site/demo-v2/media/celebration.png",
@@ -120,22 +230,22 @@
     {
       "path": "site/demo-v2/player-telemetry.js",
       "bytes": 8635,
-      "sha256": "86c0eb0a01bb8a4550147115ab0964b2d5bd98047db0e7b24ab0a2cecac5b272"
+      "sha256": "32d18ebbcb6174650c19d5f52c10fea74f8eb4afd40193654bcdd26e77c22844"
     },
     {
       "path": "site/demo-v2/player-ui.js",
       "bytes": 107225,
-      "sha256": "d7cb4b73999ea252bdf32df37d9cfc172be2f162d7ab7b74d4ac622b346b7efb"
+      "sha256": "b957ba47843694739a0435ada0f735b4b3e6e9ddb6c9aaa689a8552c7fe14eb2"
     },
     {
       "path": "site/demo-v2/player.html",
-      "bytes": 46237,
-      "sha256": "696d9e1152d8d200c4ac92a47872510e4e125b0154b8e74ccb5c0157b0138e0a"
+      "bytes": 46410,
+      "sha256": "32d36c0207308241cdfdb77f4f1e972ebc5d52136481cca15183dd8260129112"
     },
     {
       "path": "site/demo-v2/share.html",
       "bytes": 8113,
-      "sha256": "aa36ba3323ff27464fa7d67f22397b32d118d25613d5cbd8e5b2db0c958a48e1"
+      "sha256": "1d774e7661c1230d59874286811fb50cbfa65ae857bbd4fc4d74bdc484b38d31"
     },
     {
       "path": "site/index.html",
@@ -154,18 +264,18 @@
     },
     {
       "path": "site/scenes-v4.js",
-      "bytes": 53815,
-      "sha256": "6a05b9d5aa4329f2de96d76a26ebee9a2c9528fa247622f4736f73652190a7ca"
+      "bytes": 54323,
+      "sha256": "d144181265525c963188e2c88b0e41bce15115e3730e169b56836362ac1115e9"
     },
     {
       "path": "site/share.html",
       "bytes": 8099,
-      "sha256": "d7f441eaedd286883a27aee08084b37e3576a4d88d83a24fb633b6833a96c4c0"
+      "sha256": "07c7487a14cc51418f6594488eff94dd58599680fba8f2582b53418d8e666ce4"
     },
     {
       "path": "site/telemetry.js",
       "bytes": 8585,
-      "sha256": "bfd7f87c1b442f8d54af0b45e755bb703a5e48c6256ee4a4f421f08bfc3db954"
+      "sha256": "c88b572de6c6be5b9aa767bd3c363f6e65e8990f967b0f2cb853911e244b10ea"
     }
   ],
   "public_access_authorized": true,

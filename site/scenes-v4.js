@@ -13,6 +13,10 @@
   const propImg = new Image();
   const propBounds = window.MUDUO_PROP_BOUNDS || {};
   const backdropCache = new Map();
+  const campusPanels = ["haidian", "furen", "zhuhai", "changping"].map(name => {
+    const image = new Image();image.onload = () => backdropCache.clear();
+    image.src = "assets/campuses/" + name + "-panel.webp";return image;
+  });
 
   const TILE_ROWS = {
     wood: 0, stone: 4, museum: 8, grass: 12,
@@ -611,7 +615,7 @@
     R(ctx, 0, 0, W, 70, "rgba(10,20,27,.36)");
     // Three changing archive panels.
     const xs = [84, 286, 488];
-    const labels = ["1902—1938", "1949—1971", "1991—2002"];
+    const labels = ["海淀校园", variant>=2?"昌平校园":"辅仁旧址", "珠海校区"];
     xs.forEach((x, i) => {
       R(ctx, x, 28, 208, 83, "rgba(3,8,12,.46)");
       R(ctx, x + 7, 35, 194, 67, "rgba(26,38,46,.88)");
@@ -620,6 +624,8 @@
       R(ctx, x + 26, 54, 24, 20, i === 1 ? "#9d4d3f" : "#8ea2a4");
       R(ctx, x + 54, 57, 29, 3, "rgba(230,216,184,.7)");
       R(ctx, x + 54, 65, 22, 2, "rgba(190,206,202,.55)");
+      const view = campusPanels[i===1&&variant>=2?3:i];
+      if(view.complete && view.naturalWidth) ctx.drawImage(view, x+15, 43, 95, 53);
       drawText(ctx, labels[i], x + 152, 67, 9, "rgba(230,218,190,.75)");
       R(ctx, x + 7, 103, 194, 4, "#4c3524");
     });
@@ -1014,6 +1020,8 @@
     add(252, () => {
       const sway = Math.sin(T * 1.15) * .35;
       drawProp(ctx, "case", 390 + sway, 252, 1.32);
+      R(ctx,365,157,51,89,"#6e837b");
+      drawProp(ctx,"bell",390+sway,242,.93,{shadow:false});
       ctx.save();
       ctx.globalCompositeOperation = "screen";
       const glint = ctx.createLinearGradient(330, 150, 440, 260);

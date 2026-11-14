@@ -1,0 +1,357 @@
+{
+  "version": "campuses-20261114",
+  "campuses": [
+    {
+      "name": "海淀校园",
+      "source": "https://www.bnu.edu.cn/map/",
+      "date": "图件页2014，所下载图面标注2024年3月",
+      "points": [
+        {
+          "id": "main",
+          "name": "主楼",
+          "x": 78,
+          "y": 67,
+          "type": "building",
+          "positionQuality": "schematic"
+        },
+        {
+          "id": "square",
+          "name": "京师广场",
+          "x": 83,
+          "y": 86,
+          "type": "plaza",
+          "positionQuality": "schematic"
+        },
+        {
+          "id": "motto",
+          "name": "八字校训碑",
+          "x": 71,
+          "y": 85,
+          "type": "motto",
+          "positionQuality": "schematic"
+        },
+        {
+          "id": "bell",
+          "name": "木铎金声",
+          "x": 89,
+          "y": 77,
+          "type": "bell",
+          "positionQuality": "schematic"
+        },
+        {
+          "id": "library",
+          "name": "图书馆",
+          "x": 76,
+          "y": 46,
+          "type": "library",
+          "positionQuality": "schematic"
+        },
+        {
+          "id": "west-field",
+          "name": "西操场",
+          "x": 28,
+          "y": 48,
+          "type": "stadium",
+          "positionQuality": "schematic"
+        },
+        {
+          "id": "east-field",
+          "name": "东操场",
+          "x": 43,
+          "y": 48,
+          "type": "stadium",
+          "positionQuality": "schematic"
+        },
+        {
+          "id": "gym",
+          "name": "邱季端体育馆",
+          "x": 36,
+          "y": 69,
+          "type": "gym",
+          "positionQuality": "schematic"
+        },
+        {
+          "id": "courtyard",
+          "name": "四合院",
+          "x": 52,
+          "y": 69,
+          "type": "courtyard",
+          "positionQuality": "schematic"
+        }
+      ],
+      "vista": "haidian-vista.webp",
+      "map": "haidian-map.png",
+      "id": "haidian",
+      "spatialAccuracy": "schematic-not-navigation"
+    },
+    {
+      "name": "昌平校园",
+      "source": "https://cpxy.bnu.edu.cn/docs/20220901142735665374.pdf",
+      "date": "2022年指南，G区，非育荣校园",
+      "points": [
+        {
+          "id": "library",
+          "name": "昌平分馆",
+          "x": 77,
+          "y": 64,
+          "type": "library",
+          "positionQuality": "schematic"
+        },
+        {
+          "id": "gym",
+          "name": "体育馆",
+          "x": 84,
+          "y": 70,
+          "type": "gym",
+          "positionQuality": "schematic"
+        },
+        {
+          "id": "corridor",
+          "name": "校园连廊",
+          "x": 55,
+          "y": 45,
+          "type": "corridor",
+          "positionQuality": "schematic"
+        },
+        {
+          "id": "garden",
+          "name": "中心庭院",
+          "x": 48,
+          "y": 47,
+          "type": "garden",
+          "positionQuality": "schematic"
+        },
+        {
+          "id": "teaching1",
+          "name": "1号教学楼",
+          "x": 38,
+          "y": 77,
+          "type": "building",
+          "positionQuality": "schematic"
+        },
+        {
+          "id": "teaching2",
+          "name": "2号教学楼",
+          "x": 66,
+          "y": 77,
+          "type": "building",
+          "positionQuality": "schematic"
+        },
+        {
+          "id": "teaching3",
+          "name": "3号教学楼",
+          "x": 32,
+          "y": 66,
+          "type": "building",
+          "positionQuality": "schematic"
+        },
+        {
+          "id": "service",
+          "name": "1号教学服务楼",
+          "x": 75,
+          "y": 28,
+          "type": "building",
+          "positionQuality": "schematic"
+        }
+      ],
+      "vista": "changping-vista.webp",
+      "map": "changping-map.png",
+      "id": "changping",
+      "spatialAccuracy": "schematic-not-navigation"
+    },
+    {
+      "name": "珠海校区",
+      "source": "https://fas.bnu.edu.cn/docs/2025-12/e8d51dfd19dd40eeb8849957b2e9b3de.pdf",
+      "date": "图面底图标注2023年8月；2026复试定位叠加页",
+      "points": [
+        {
+          "id": "stone",
+          "name": "校名石",
+          "x": 85,
+          "y": 41,
+          "type": "stone",
+          "positionQuality": "schematic"
+        },
+        {
+          "id": "library",
+          "name": "图书馆",
+          "x": 67,
+          "y": 33,
+          "type": "library",
+          "positionQuality": "schematic"
+        },
+        {
+          "id": "liyun",
+          "name": "励耘楼",
+          "x": 79,
+          "y": 38,
+          "type": "building",
+          "positionQuality": "schematic"
+        },
+        {
+          "id": "leyu",
+          "name": "乐育楼",
+          "x": 70,
+          "y": 22,
+          "type": "building",
+          "positionQuality": "schematic"
+        },
+        {
+          "id": "muduo",
+          "name": "木铎楼",
+          "x": 48,
+          "y": 49,
+          "type": "building",
+          "positionQuality": "schematic"
+        },
+        {
+          "id": "jinsheng",
+          "name": "金声楼",
+          "x": 41,
+          "y": 52,
+          "type": "building",
+          "positionQuality": "schematic"
+        },
+        {
+          "id": "lize",
+          "name": "丽泽楼",
+          "x": 32,
+          "y": 58,
+          "type": "building",
+          "positionQuality": "schematic"
+        },
+        {
+          "id": "field",
+          "name": "田径运动场",
+          "x": 54,
+          "y": 68,
+          "type": "stadium",
+          "positionQuality": "schematic"
+        },
+        {
+          "id": "nanxi",
+          "name": "南曦园",
+          "x": 75,
+          "y": 83,
+          "type": "garden",
+          "positionQuality": "schematic"
+        },
+        {
+          "id": "wenhua",
+          "name": "文化苑图书馆",
+          "x": 66,
+          "y": 89,
+          "type": "library",
+          "positionQuality": "schematic"
+        }
+      ],
+      "vista": "zhuhai-vista.webp",
+      "map": "zhuhai-map.png",
+      "id": "zhuhai",
+      "spatialAccuracy": "schematic-not-navigation"
+    },
+    {
+      "name": "辅仁旧址",
+      "source": "https://law.bnu.edu.cn/djgh/jgzj/37359648446a433b92043e28f9aad4f7.htm",
+      "date": "2023年校方建筑/园景文字，未获取完整测绘平面图",
+      "points": [
+        {
+          "id": "main",
+          "name": "辅仁主楼",
+          "x": 52,
+          "y": 28,
+          "type": "historic",
+          "positionQuality": "schematic"
+        },
+        {
+          "id": "gate",
+          "name": "旧址入口",
+          "x": 52,
+          "y": 82,
+          "type": "gate",
+          "positionQuality": "schematic"
+        },
+        {
+          "id": "court",
+          "name": "主楼院落",
+          "x": 52,
+          "y": 57,
+          "type": "courtyard",
+          "positionQuality": "schematic"
+        },
+        {
+          "id": "garden",
+          "name": "小花园",
+          "x": 24,
+          "y": 48,
+          "type": "garden",
+          "positionQuality": "schematic"
+        },
+        {
+          "id": "memorial",
+          "name": "一二·九纪念碑",
+          "x": 24,
+          "y": 30,
+          "type": "motto",
+          "positionQuality": "schematic"
+        }
+      ],
+      "vista": "furen-vista.webp",
+      "map": "furen-map.png",
+      "id": "furen",
+      "spatialAccuracy": "schematic-not-navigation"
+    }
+  ],
+  "gallery": [
+    {
+      "id": "main",
+      "campus": "haidian",
+      "name": "京师广场与主楼",
+      "image": "main.webp",
+      "kind": "handoff-final",
+      "attribution": "三猎 / CC BY-SA 4.0（衍生插画）"
+    },
+    {
+      "id": "motto",
+      "campus": "haidian",
+      "name": "八字校训",
+      "image": "motto.webp",
+      "kind": "handoff-final",
+      "attribution": "三猎 / CC BY-SA 4.0（衍生插画）"
+    },
+    {
+      "id": "bell",
+      "campus": "haidian",
+      "name": "百年木铎",
+      "image": "bell.webp",
+      "kind": "handoff-final",
+      "attribution": "三猎 / CC BY-SA 4.0（衍生插画）"
+    },
+    {
+      "id": "corridor",
+      "campus": "changping",
+      "name": "昌平连廊与雕塑",
+      "image": "corridor.webp",
+      "kind": "handoff-final",
+      "attribution": "物料交接既有插画；实景参考见来源记录"
+    },
+    {
+      "id": "furen",
+      "campus": "furen",
+      "name": "辅仁旧址",
+      "image": "furen.webp",
+      "kind": "handoff-final",
+      "attribution": "物料交接既有插画；实景参考见来源记录"
+    },
+    {
+      "id": "stone",
+      "campus": "zhuhai",
+      "name": "珠海校名石",
+      "image": "stone.webp",
+      "kind": "handoff-final",
+      "attribution": "物料交接既有插画；实景参考见来源记录"
+    }
+  ],
+  "note": "地图为像素地点示意，不含GPS或导航精度；地点可选，故事可以不定位。",
+  "referenceDate": "2026-11-14"
+}
