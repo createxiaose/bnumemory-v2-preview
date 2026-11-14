@@ -314,8 +314,8 @@
     },
     {
       "path": "site/demo-v2/admin.html",
-      "bytes": 1225,
-      "sha256": "2a610ce537c82b0ac443aea6fe59980666a432d9564418b6aa62f911d8761b6d"
+      "bytes": 1293,
+      "sha256": "f2c228def7ff27da8e2b042d34f136941ed56d10e23ff562e78aa499169a7a54"
     },
     {
       "path": "site/demo-v2/admin.js",
@@ -339,8 +339,8 @@
     },
     {
       "path": "site/demo-v2/index.html",
-      "bytes": 13718,
-      "sha256": "d0d23c69e7bffb2531a77e99209c9a5d62d644d1da7910cd832c54ca16035e88"
+      "bytes": 13785,
+      "sha256": "02f4f5f63094f0c08ff655b5151815042ff333c5a4a506758e2ab9d7f5c3030c"
     },
     {
       "path": "site/demo-v2/media/celebration.png",
@@ -384,8 +384,8 @@
     },
     {
       "path": "site/index.html",
-      "bytes": 288,
-      "sha256": "461eb864c2f695956ff183f2af01620bae69d2f84c72058e4b8b848b56fdf4bd"
+      "bytes": 331,
+      "sha256": "73cd43aa288f1a275f5119c8e7b5f201b4f9df98cf3394902d1283052cc688d3"
     },
     {
       "path": "site/manifest.webmanifest",
