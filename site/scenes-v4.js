@@ -1140,9 +1140,370 @@
     ctx.fillRect(0, 0, W, H);
   }
 
+  // Twenty-seven authored, playable compositions. Raster illustrations remain covers.
+  const scene27 = {};
+  const P27 = (prop,x,y,scale=1) => ({prop,x,y,scale});
+  const A27 = (label,prop,x,drawY,scale=1) => {
+    const b=propBounds[prop]||{sw:40,sh:40};
+    const projected=prop==='paper'||prop==='label'&&!['新的校牌','门里的新校牌'].includes(label),height=projected?17*scale:b.sh*scale;
+    return {label,name:label,prop,x,y:Math.round(drawY-height*.5),drawY,scale,projected,r:Math.max(21,Math.min(38,Math.max(b.sw,b.sh)*scale*.42))};
+  };
+  const C27 = (role,action,x,y,scale=1,range=0) => ({role,action,x,y,scale,range});
+  const D27 = (role,x,y,scale=1) => ({role,x,y,scale});
+  function add27(era,view,title,setting,theme,props,actors,anchors,desks=[],detail={}) {
+    const id=era+':'+view;
+    scene27[id]={id,era,view,title,setting,theme,props,actors,desks,detail,anchors:anchors.map((a,i)=>({...a,id:'a'+(i+1)}))};
+  }
+  add27('y1902',1,'第一课 · 师范馆教室','classroom','day',
+    [P27('bookshelf',64,197,.9),P27('globe',675,199,.7),P27('plant',731,229,.8),P27('teacher_desk',392,182,.9),P27('door',727,137,.95)],
+    [C27('teacher','point',400,156,1.1),C27('student_brown','walk',590,250,1,25)],
+    [A27('一页讲义','paper',390,151,.55),A27('课堂黑板','blackboard',390,105,1.15),A27('经史与新学','books',215,216,.55)],
+    [D27('student_blue',214,250,1.05),D27('student_female',340,250,1.05),D27('student_green',477,250,1.05)]);
+  add27('y1902',2,'放学以后 · 回廊留课','corridor','sunset',
+    [P27('bench',211,226,1),P27('bookshelf',689,220,.76),P27('door',503,150,1.05),P27('plant',57,224,.9),P27('clock',685,61,.45)],
+    [C27('teacher','read',382,214,1.12),C27('student_female','walk',576,251,1.03,48),C27('student_green','carry',126,238,1.04)],
+    [A27('放学讲义','paper',226,198,.65),A27('回廊门扇','door',503,150,1.05),A27('明日课表','poster',619,124,.69)],[],{rail:true});
+  add27('y1902',3,'熄灯以前 · 旧课桌','study','night',
+    [P27('bookshelf',116,220,1.05),P27('bench',676,250,.8),P27('chair',555,248,.85),P27('thermos',666,252,.55),P27('clock',352,64,.5)],
+    [C27('student_blue','read',465,224,1.1),C27('student_brown','walk',249,253,1,20)],
+    [A27('桌肚里的旧讲义','paper',492,203,.65),A27('熄灯前的台灯','lamp',588,202,.82),A27('留给后来者的课桌','desk',512,245,1.4)],[],{window:'left',curtain:true});
+  add27('y1919',1,'那一天 · 北京街头','street','day',
+    [P27('cart',121,244,.9),P27('tree',719,218,1.25),P27('poster',98,133,.8),P27('bench',664,252,.7)],
+    [C27('student_1919','walk',294,246,1.1,45),C27('student_female','carry',418,242,1.1),C27('student_brown','walk',547,254,1.07,31),C27('teacher','point',650,221,.94)],
+    [A27('待写的标语','banner',214,177,.85),A27('学校旗帜','flag',432,183,.8),A27('递向同学的传单','paper',578,236,.65)],[],{gate:'center'});
+  add27('y1919',2,'灯亮以后 · 校门守候','gate','night',
+    [P27('bench',578,244,.96),P27('plant',713,227,.85),P27('poster',664,128,.8),P27('bamboo',55,229,.78)],
+    [C27('student_1919','carry',421,244,1.12),C27('student_green','walk',299,250,1.03,27),C27('teacher','point',531,214,1)],
+    [A27('抱回来的传单','paper',582,211,.72),A27('校门灯笼','lantern',324,130,.8),A27('尚未关上的校门','door',190,187,1.25)],[],{gate:'left',stars:true});
+  add27('y1919',3,'散去以后 · 清晨操场','field','dawn',
+    [P27('tree',86,215,1.15),P27('bench',647,242,.95),P27('flag',707,165,.7),P27('cart',549,246,.75)],
+    [C27('student_1919','point',354,246,1.12),C27('student_female','walk',180,251,1.05,37),C27('student_green','read',634,224,1.03)],
+    [A27('空白标语','banner',370,247,.62),A27('写给家里的信纸','paper',650,212,.65),A27('收拢纸页的箱子','crate',520,255,.65)],[],{tracks:true});
+  add27('y1938',1,'一箱书 · 临时课堂','temple','day',
+    [P27('blackboard',411,111,1.06),P27('stove',697,236,.82),P27('cabinet',79,224,.92),P27('lantern',92,117,.6)],
+    [C27('teacher','write',402,166,1.07),C27('worker_1938','carry',541,253,1.07,17)],
+    [A27('要留下的书箱','crate',164,250,.85),A27('维持课堂的米粮','bowl',665,229,.75),A27('今天的讲义','paper',440,217,.65)],
+    [D27('student_blue',307,248,1.02),D27('student_brown',435,248,1.02)],{beams:true});
+  add27('y1938',2,'七天 · 雨后守课','wet-court','rain',
+    [P27('stove',93,226,.77),P27('cart',652,247,1.05),P27('bench',488,249,.85),P27('bamboo',721,218,.9)],
+    [C27('worker_1938','carry',271,251,1.18,29),C27('student_female','point',451,249,1.1),C27('student_green','carry',616,229,1.02)],
+    [A27('从泥里抬出的书箱','crate',336,258,.9),A27('照亮门槛的油灯','lantern',142,186,.7),A27('包裹书页的干布','cloth',493,221,.75)],[],{puddles:true});
+  add27('y1938',3,'天亮以前 · 补书处','repair-room','dawn',
+    [P27('bookshelf',76,223,1.04),P27('teacher_desk',430,249,1.65),P27('crate',652,237,.8),P27('books',610,230,.35),P27('lantern',144,114,.58),P27('chair',438,267,.9)],
+    [C27('teacher','write',432,219,1.13),C27('worker_1938','walk',604,253,1.02,22)],
+    [A27('摊平的受潮书页','paper',382,194,.77),A27('补书用的笔与线','brush',464,197,.72),A27('包住书脊的干布','cloth',541,210,.65)],[],{window:'right',repair:true});
+  add27('y1949',1,'复名 · 把新校牌挂正','gate','day',
+    [P27('tree',62,222,1.17),P27('bench',685,248,.85),P27('plant',720,220,.82)],
+    [C27('student_green','point',287,249,1.12),C27('teacher','read',558,243,1.1),C27('visitor','walk',657,263,1.05,25)],
+    [A27('新的校牌','label',390,95,1.1),A27('门前的木梯','ladder',455,228,1.05),A27('校牌上的红绸','cloth',260,216,.8)],[],{gate:'center',schoolSign:true});
+  add27('y1949',2,'挂好以后 · 红绸庭院','courtyard','sunset',
+    [P27('tree',702,220,1.16),P27('teacher_desk',267,242,1.05),P27('plant',73,234,.8),P27('radio',591,211,.55)],
+    [C27('teacher','point',436,235,1.08),C27('student_blue','walk',561,253,1.05,31),C27('visitor','read',664,231,1.05)],
+    [A27('风里的红绸','cloth',266,198,.83),A27('校门边的公告','poster',390,123,.85),A27('停留片刻的长椅','bench',595,248,1.04)],[],{building:'left'});
+  add27('y1949',3,'风停下来 · 门里与门外','threshold','dawn',
+    [P27('cabinet',77,240,.85),P27('tree',697,222,1.18),P27('bench',641,248,.75),P27('chair',214,254,.8)],
+    [C27('teacher','read',293,237,1.08),C27('student_brown','walk',469,254,1.08,36)],
+    [A27('门里的新校牌','label',179,93,.96),A27('课堂仍要用的书','books',213,226,.57),A27('门边的一盏灯','lantern',370,135,.7)],[],{threshold:true});
+  add27('y1952',1,'两校合一 · 书的迁徙','transfer','day',
+    [P27('tree',62,225,1.1),P27('bench',690,246,.9),P27('bookshelf',562,212,.8),P27('banner',390,91,.85)],
+    [C27('cadre_1952','carry',437,245,1.12,25),C27('student_female','point',204,237,1.04),C27('student_green','carry',622,252,1.07)],
+    [A27('文史书箱','crate',273,249,.78),A27('待辨认的另一箱书','crate',507,252,.78),A27('送书的推车','cart',128,254,.92)],[],{signs:true});
+  add27('y1952',2,'书搬完以后 · 空出来的位置','archive','sunset',
+    [P27('bookshelf',94,218,1.12),P27('bookshelf',277,218,1.12),P27('cabinet',699,236,1),P27('teacher_desk',486,249,1.03)],
+    [C27('cadre_1952','read',427,226,1.12),C27('student_brown','walk',589,253,1.06,22)],
+    [A27('空出一排的书架','bookshelf',277,218,1.12),A27('留下来的旧书签','label',489,209,.6),A27('新库房的书箱','crate',642,257,.82)],[],{emptyShelf:277});
+  add27('y1952',3,'新课本发下来 · 同一首诗','classroom','day',
+    [P27('bookshelf',697,210,.9),P27('globe',79,174,.62),P27('teacher_desk',278,181,.9),P27('door',729,138,.93)],
+    [C27('teacher','point',281,165,1.08),C27('cadre_1952','walk',611,253,1.08,25)],
+    [A27('新发的课本','books',367,217,.6),A27('新贴的课程表','poster',559,103,.75),A27('仍是那一首诗','blackboard',313,104,1.1)],
+    [D27('student_blue',222,250,1.08),D27('student_female',370,250,1.08),D27('student_green',511,250,1.08)],{windows:'left'});
+  add27('y1971',1,'一个字 · 校样对读','proof-room','day',
+    [P27('bookshelf',90,224,1.05),P27('cabinet',704,243,.95),P27('lamp',606,207,.76),P27('clock',578,61,.53)],
+    [C27('editor_1971','read',331,221,1.14),C27('qigong','write',490,222,1.16),C27('student_green','walk',203,256,1.04,18)],
+    [A27('查对的原书','books',290,203,.67),A27('待订正的校样','paper',493,203,.75),A27('记录疑问的卡片','label',586,229,.63)],[],{worktable:true});
+  add27('y1971',2,'灯灭以后 · 雨窗留字','rain-study','night',
+    [P27('bookshelf',79,233,1),P27('desk',320,250,1.55),P27('chair',325,266,.85),P27('radio',467,243,.55),P27('cabinet',688,249,.82)],
+    [C27('qigong','read',320,221,1.13),C27('editor_1971','walk',487,259,1.06,18)],
+    [A27('白天没有查完的疑问','paper',337,205,.75),A27('还温热的台灯','lamp',236,204,.85),A27('雨声里的窗','window',600,135,1.06)],[],{window:'right',rain:true});
+  add27('y1971',3,'天亮以前 · 最后一行','proof-dawn','dawn',
+    [P27('bookshelf',88,222,1.08),P27('desk',521,248,1.6),P27('chair',521,264,.86),P27('thermos',698,251,.61),P27('clock',365,63,.53)],
+    [C27('qigong','write',520,221,1.15),C27('editor_1971','carry',292,255,1.06,24)],
+    [A27('最后一行批注','paper',539,201,.76),A27('核字的字书','books',447,203,.64),A27('收拢校样的纸夹','label',622,221,.64)],[],{window:'left'});
+  add27('y1991',1,'励耘 · 留给后来的人','studio','day',
+    [P27('bookshelf',84,223,1.02),P27('teacher_desk',422,244,1.44),P27('plant',713,234,.9),P27('scroll',664,120,.95),P27('chair',419,260,.86)],
+    [C27('qigong','read',423,215,1.17),C27('student_blue','walk',251,253,1.08,22)],
+    [A27('捐资记录','paper',420,189,.78),A27('为育人而作的画','frame',570,134,.95),A27('案边的小印','inkstone',502,202,.69)],[],{calligraphy:true});
+  add27('y1991',2,'墨迹干了 · 画作归箱','packing','sunset',
+    [P27('bookshelf',692,221,.96),P27('teacher_desk',313,232,1.35),P27('cart',592,258,1.12),P27('stool',96,250,.8),P27('bamboo',745,226,.7)],
+    [C27('qigong','point',429,235,1.12),C27('student_brown','carry',512,255,1.08,24),C27('student_female','read',170,231,1.03)],
+    [A27('需要卷起的画轴','scroll',299,188,.83),A27('写着励耘的签条','label',359,202,.65),A27('保护画作的书画箱','crate',642,257,.92)],[],{packing:true});
+  add27('y1991',3,'送到下一位 · 校园递书','book-route','day',
+    [P27('tree',46,224,1.2),P27('bench',371,244,.85),P27('bamboo',711,211,.8),P27('cart',256,253,.91)],
+    [C27('student_blue','carry',189,250,1.16,49),C27('student_female','walk',477,253,1.05,25),C27('teacher','point',663,236,1.08)],
+    [A27('要送出的书箱','crate',153,252,.9),A27('途中核对的送书条','paper',417,218,.7),A27('接收处的签收夹','label',633,221,.7)],[],{delivery:true});
+  add27('y1996',1,'八个字 · 提笔之前','calligraphy','day',
+    [P27('bookshelf',83,223,1),P27('teacher_desk',419,248,1.73),P27('chair',419,266,.88),P27('bamboo',715,228,.91),P27('scroll',654,111,.9)],
+    [C27('qigong','write',420,219,1.17),C27('student_female','walk',240,253,1.06,22)],
+    [A27('慢慢研开的墨','inkstone',351,195,.83),A27('提起的毛笔','brush',430,193,.86),A27('待写八字的白纸','paper',493,198,.96)],[],{ink:true});
+  add27('y1996',2,'风干以后 · 纸上的八个字','drying','sunset',
+    [P27('teacher_desk',311,243,1.42),P27('bamboo',695,234,.91),P27('stool',495,256,.74),P27('cabinet',83,231,.91)],
+    [C27('qigong','read',429,220,1.13),C27('student_female','point',579,247,1.08),C27('student_green','walk',171,251,1.03,20)],
+    [A27('需要压住的纸角','paper',292,196,.96),A27('守住纸面的镇纸','inkstone',360,204,.7),A27('风干后卷起的题字','scroll',583,154,.94)],[],{drying:true});
+  add27('y1996',3,'风过纸面 · 把字留住','studio-wind','day',
+    [P27('cabinet',68,234,.95),P27('desk',507,250,1.9),P27('chair',510,266,.9),P27('bamboo',715,224,.85),P27('scroll',243,126,.9)],
+    [C27('qigong','point',377,237,1.1),C27('student_female','write',511,220,1.13),C27('student_green','walk',201,254,1.03,24)],
+    [A27('掀起的纸角','paper',490,191,1.05),A27('压稳纸面的镇纸','inkstone',572,207,.73),A27('写好的八字题签','label',647,221,.7)],[],{wind:true});
+  add27('y2002',1,'百年 · 同一片阳光','celebration','day',
+    [P27('tree',56,224,1.2),P27('tree',736,218,1.14),P27('bench',95,252,.8),P27('plant',637,242,.8)],
+    [C27('photographer_2002','point',249,255,1.15),C27('student_blue','walk',574,259,1.1,24),C27('visitor','idle',516,225,1.03),C27('student_female','idle',462,231,1.06)],
+    [A27('定格相聚的相机','camera',198,214,.95),A27('镜头里的校训碑','monument',391,231,1.37),A27('百年校庆的旗帜','flag',660,185,.85)],[],{pennants:true});
+  add27('y2002',2,'人群散去 · 碑前的一束花','quiet-garden','sunset',
+    [P27('tree',699,220,1.22),P27('tree',66,228,1.14),P27('monument',299,235,1.42),P27('poster',154,127,.67)],
+    [C27('visitor','read',364,256,1.12),C27('student_female','walk',625,260,1.08,24)],
+    [A27('人群留下的一束花','plant',365,252,.8),A27('空下来的长椅','bench',577,252,1.13),A27('口袋里的合影','paper',589,220,.66)],[],{flowers:true});
+  add27('y2002',3,'照片洗出来 · 画面的另一半','darkroom','night',
+    [P27('cabinet',84,235,1.01),P27('teacher_desk',432,248,1.64),P27('chair',436,266,.85),P27('camera',675,236,.72),P27('clock',699,61,.55)],
+    [C27('photographer_2002','write',433,219,1.15),C27('student_blue','walk',235,256,1.07,19)],
+    [A27('刚洗出的照片','paper',436,194,.9),A27('挂起晾干的底片','cloth',520,112,.82),A27('留住这一刻的相框','frame',607,226,.85)],[],{photos:true});
+
+  // Work surfaces share the exact sprite crop geometry with the seated wrists.
+  const desk27=(id,index,x,y,scale)=>{const c=scene27[id];c.actors[index].desk={x,y,scale};c.actors[index].x=x;
+    const top=y-propBounds.desk.sh*scale;for(const a of c.anchors)if(Math.abs(a.x-x)<88&&['paper','books','brush','inkstone','lamp'].includes(a.prop)){a.drawY=Math.round(top+5);a.y=Math.round(a.drawY-(a.projected?17*a.scale:propBounds[a.prop].sh*a.scale)*.5)}};
+  for(const c of Object.values(scene27))if(c.setting!=='classroom')for(const p of c.props)if(p.prop==='teacher_desk'){p.prop='desk';p.scale=p.scale>1.4?p.scale:1.5}
+  desk27('y1902:3',0,512,245,1.4);desk27('y1938:3',0,430,249,1.65);
+  desk27('y1971:1',0,338,248,1.3);desk27('y1971:1',1,482,248,1.3);
+  desk27('y1971:2',0,320,250,1.55);desk27('y1971:3',0,521,248,1.6);
+  desk27('y1991:1',0,422,244,1.44);desk27('y1996:1',0,419,248,1.73);
+  desk27('y1996:3',1,507,250,1.9);desk27('y2002:3',0,432,248,1.64);
+  scene27['y1938:3'].props.push(P27('bench',564,248,.75));scene27['y1971:1'].props.push(P27('bench',596,245,.8));scene27['y1971:3'].props.push(P27('bench',653,251,.7));
+  const layouts27 = Object.values(scene27);
+  window.MuduoScene27={version:'27-authored-layouts-v1',count:layouts27.length,
+    getLayout(era,view){const c=scene27[era+':'+view];return c?{id:c.id,era:c.era,view:c.view,title:c.title,setting:c.setting,anchors:c.anchors.map(a=>({...a}))}:null},
+    layouts:layouts27.map(c=>({id:c.id,era:c.era,view:c.view,title:c.title,setting:c.setting,anchors:c.anchors.map(a=>({...a}))}))};
+
+  function wallPanel27(ctx,x,y,w,h,material='plaster') {
+    tileFill(ctx,material,x,y,w,h,2);R(ctx,x,y,w,5,'#d1af77');R(ctx,x,y+h-4,w,4,'#5c402e');
+    for(let xx=x+7;xx<x+w;xx+=38){R(ctx,xx,y+8,1,h-17,'#7b634019');R(ctx,xx+2,y+8,1,h-17,'#fff2cc12')}
+  }
+  function pitchedRoof27(ctx,x,y,w,h=24,dark=false){
+    const c=dark?'#384b4d':'#6c6250',edge=dark?'#263b41':'#514434';
+    poly(ctx,[[x-12,y+h],[x+w*.18,y],[x+w*.82,y],[x+w+12,y+h]],c);
+    for(let row=0;row<5;row++){const yy=y+5+row*4,inset=(h-(yy-y))*.7;line(ctx,x+inset,yy,x+w-inset,yy,dark?'#82918b44':'#c6b68a66')}
+    R(ctx,x-14,y+h,w+28,4,edge);R(ctx,x-10,y+h+4,w+20,2,'#ad9363');
+  }
+  function building27(ctx,x,y,w,h,{roof=true,gate=false,night=false,label=''}={}){
+    wallPanel27(ctx,x,y,w,h,'brick');R(ctx,x+4,y+6,w-8,h-12,night?'#797c6f':'#d5c6a2');
+    for(let yy=y+11;yy<y+h-16;yy+=25)for(let xx=x+16;xx<x+w-15;xx+=39){R(ctx,xx,yy,21,17,'#594d3c');R(ctx,xx+3,yy+3,15,11,night?'#cfa76b':'#86a8a4');R(ctx,xx+10,yy+2,2,14,'#a1916f')}
+    if(gate)drawDoorway(ctx,x+w*.35,y+h*.36,w*.3,h*.64);
+    if(roof)pitchedRoof27(ctx,x-3,y-24,w+6,25,night);
+    if(label){R(ctx,x+w*.2,y+6,w*.6,21,'#614b34');R(ctx,x+w*.2+3,y+9,w*.6-6,15,'#e9ddbc');drawText(ctx,label,x+w*.5,y+17,10,'#5a4b36')}
+    R(ctx,x-9,y+h,w+18,6,'#988568');R(ctx,x-14,y+h+6,w+28,4,'#bdad8b');
+  }
+  function indoorBackdrop27(ctx,c){
+    const night=c.theme==='night',dawn=c.theme==='dawn';
+    const temple=['temple','temple-dawn'].includes(c.setting),darkroom=c.setting==='darkroom';
+    const wall=temple?'whitewash':darkroom?'dark':c.setting==='archive'?'brick':'plaster';
+    drawWall(ctx,wall,0,132,temple?'beam':'panel',{offset:c.view});
+    drawPerspectiveFloor(ctx,temple?'stone':'wood',132,{seam:temple?'#725c4144':'#6c422348'});
+    if(night)R(ctx,0,0,780,132,darkroom?'#432e3b88':'#28414c55');
+    if(temple){
+      R(ctx,0,8,780,14,'#543924');R(ctx,0,22,780,3,'#b68c57');
+      for(const x of [22,754]){R(ctx,x,19,14,130,'#62472c');R(ctx,x+2,23,3,122,'#a7844f');R(ctx,x-4,145,22,5,'#463825')}
+      for(let x=84;x<737;x+=130){R(ctx,x,27,9,12,'#a18154');R(ctx,x-8,36,25,5,'#684c2e')}
+    }
+    let windows=[];
+    switch(c.setting){
+      case'classroom': windows=c.detail.windows==='left'?[[30,18,125,78]]:[[30,18,121,78],[608,18,115,78]];break;
+      case'study':windows=[[291,20,151,87]];break;
+      case'temple': windows=[[48,35,125,70],[609,35,119,70]];break;
+      case'temple-dawn':windows=[[490,26,221,83]];break;
+      case'repair-room':windows=[[179,27,171,87]];break;
+      case'archive':windows=[[418,19,149,76]];break;
+      case'proof-room':windows=[[226,20,176,83]];break;
+      case'rain-study':windows=[[510,19,184,103]];break;
+      case'proof-dawn':windows=[[211,17,184,90]];break;
+      case'studio':windows=[[216,18,156,84]];break;
+      case'packing':windows=[[455,20,144,84]];break;
+      case'dining':windows=[[167,21,166,86]];break;
+      case'calligraphy':windows=[[205,20,169,82]];break;
+      case'drying':windows=[[445,18,224,94]];break;
+      case'darkroom':windows=[];break;
+      case'studio-wind':windows=[[411,16,229,96]];break;
+    }
+    for(const [x,y,w,h]of windows){drawWindow(ctx,x,y,w,h,false,['study','dining'].includes(c.setting));
+      if(night){R(ctx,x+1,y+1,w/2-5,h*.45-2,'#253d51');R(ctx,x+w/2+3,y+1,w/2-5,h*.45-2,'#2d485c');R(ctx,x+1,y+h*.46+7,w/2-5,h*.54-10,'#466474');R(ctx,x+w/2+3,y+h*.46+7,w/2-5,h*.54-10,'#37596c');R(ctx,x+22,y+16,4,4,'#dce1bf')}
+      if(dawn){poly(ctx,[[x+3,y+h-1],[x+w-4,y+h-1],[x+w+127,280],[x-61,280]],'#f8d68c19')}
+    }
+    if(c.setting==='classroom'){
+      for(let x=220;x<580;x+=12)R(ctx,x,128,9,2,'#cfae7b');R(ctx,190,126,402,6,'#644a2e');
+    }
+    if(c.setting==='proof-room'){
+      drawProp(ctx,'desk',338,248,1.3);drawProp(ctx,'desk',482,248,1.3);R(ctx,269,193,282,4,'#bda36d');R(ctx,272,194,276,2,'#dfcea2');
+      for(let x=300;x<515;x+=29)R(ctx,x,199,18,1,'#a5875b');
+    }
+    if(c.setting==='archive'){
+      for(const x of [76,259]){R(ctx,x-24,128,48,72,'#744c2a');for(let y=134;y<198;y+=21){R(ctx,x-23,y,46,3,'#bc8b4d');R(ctx,x-20,y+3,40,13,'#392f2166')}}
+    }
+    if(c.setting==='drying'){
+      R(ctx,144,45,3,93,'#6a4d32');R(ctx,141,44,270,4,'#563e2e');
+      for(let i=0;i<4;i++){const x=164+i*57;R(ctx,x,48,42,64,'#e9dfc0');R(ctx,x+2,50,38,60,'#f3e9ca');R(ctx,x+15,53,12,2,'#78543b');for(let y=64;y<105;y+=9)R(ctx,x+8,y,25,1,'#7e765b44')}
+    }
+    if(c.setting==='packing'){
+      for(let i=0;i<4;i++){R(ctx,28+i*5,159-i*3,104,53,'#684b36');R(ctx,32+i*5,163-i*3,96,44,'#c3ae7a');R(ctx,39+i*5,172-i*3,82,2,'#7b684a')}
+    }
+    if(c.setting==='repair-room'){
+      for(let i=0;i<4;i++){R(ctx,319+i*17,182,61,7,'#d7c9a3');R(ctx,322+i*17,184,55,1,'#9c8e66')}line(ctx,449,192,477,197,'#b5ac8e',1);
+      R(ctx,591,126,131,7,'#735438');R(ctx,596,133,5,106,'#927044');R(ctx,711,133,5,106,'#765236');
+      R(ctx,600,237,117,7,'#9c8259');R(ctx,604,235,111,3,'#d1b98a');R(ctx,604,245,108,4,'#5d4b35');
+      R(ctx,620,137,80,17,'#d4c398');drawText(ctx,'垫高 · 避潮',660,145,9,'#5c513a');
+    }
+    if(c.setting==='studio-wind'){drawDoorway(ctx,112,25,93,124);R(ctx,0,147,241,3,'#e8ce9866');poly(ctx,[[422,110],[634,109],[741,280],[340,280]],'#f4dfb01d')}
+    if(c.setting==='darkroom'){
+      R(ctx,38,14,704,6,'#1c2226');R(ctx,100,16,3,45,'#352f31');ellipse(ctx,102,66,15,5,'#c44e42');
+      for(let i=0;i<5;i++){const x=184+i*82;R(ctx,x,38,55,52,'#211e24');R(ctx,x+4,42,47,44,'#c7bfa6');R(ctx,x+8,55,39,24,'#7a9793');R(ctx,x+12,62,31,17,'#beb494');R(ctx,x+21,50,7,30,'#565e58');R(ctx,x+25,35,6,9,'#8a765b')}
+      line(ctx,165,35,635,35,'#a4987a',1);R(ctx,204,192,344,18,'#48444a');R(ctx,211,195,95,11,'#8b8580');R(ctx,323,195,97,11,'#776d72');R(ctx,438,195,100,11,'#a19886');
+    }
+    // Individually positioned paper borders and bookplates keep room walls lived-in.
+    if(!darkroom){R(ctx,183,22,27,37,'#72533a');R(ctx,186,25,21,31,'#d4bf8f');R(ctx,193,31,7,1,'#9e7650');R(ctx,190,36,12,1,'#9e7650');R(ctx,190,42,12,1,'#9e7650')}
+    R(ctx,0,274,780,6,'#4d392a');R(ctx,0,273,780,1,'#d7ae7655');
+  }
+  function corridorBackdrop27(ctx,c){
+    drawSky(ctx,0,'campus',119);drawPerspectiveFloor(ctx,'stone',143,{seam:'#7d795e66'});
+    wallPanel27(ctx,320,0,460,144,'plaster');R(ctx,323,0,15,147,'#734a2f');
+    R(ctx,0,5,780,12,'#6e482d');R(ctx,0,17,780,3,'#bb965c');
+    for(const x of [22,156,291]){R(ctx,x,17,10,131,'#785433');R(ctx,x+3,19,2,127,'#c0a06b');R(ctx,x-4,143,18,5,'#5e4931')}
+    R(ctx,0,120,318,6,'#b79968');R(ctx,0,139,318,5,'#6d593b');
+    for(let x=10;x<316;x+=29)R(ctx,x,124,4,18,'#86683e');
+    R(ctx,340,142,440,7,'#c3a06d');
+  }
+  function outdoorBackdrop27(ctx,c){
+    const night=c.theme==='night',dawn=c.theme==='dawn';drawSky(ctx,night?3:dawn?2:0,'campus',137);
+    if(night){R(ctx,0,0,780,148,'#16374c9c');for(let i=0;i<25;i++)R(ctx,(i*97+37)%780,(i*17+11)%79,1+(i%3===0),1,'#e4ddbb');ellipse(ctx,639,34,10,10,'#e0dfb6')}
+    if(c.theme==='sunset')R(ctx,0,0,780,143,'#e4b87d33');
+    drawPerspectiveFloor(ctx,c.setting==='wet-court'?'stone':'pavement',145,{seam:'#73786744'});
+    if(['street','gate'].includes(c.setting)){
+      const x=c.detail.gate==='left'?91:286,w=c.detail.gate==='left'?198:208;
+      wallPanel27(ctx,12,83,756,64,'brick');pitchedRoof27(ctx,0,69,780,17,night);
+      building27(ctx,x,56,w,96,{gate:true,night,label:c.era==='y1919'?'北京高等师范学校':'北京师范大学'});
+      if(c.setting==='street'){R(ctx,15,69,143,77,'#b79d72');pitchedRoof27(ctx,8,54,158,22);drawDoorway(ctx,49,94,47,54);R(ctx,27,80,119,16,'#756146');drawText(ctx,'书 · 茶',86,88,9,'#ecddb4')}
+    }else if(c.setting==='field'){
+      building27(ctx,217,68,355,74,{roof:true,label:'课堂 · 操场'});tileFill(ctx,'grass',0,149,780,78,0);
+      for(let i=0;i<5;i++){ctx.strokeStyle=i===0?'#dfd5ad':'#d6c6a0';ctx.lineWidth=2;ctx.beginPath();ctx.ellipse(390,231,290+i*21,38+i*9,0,0,Math.PI*2);ctx.stroke()}
+      R(ctx,110,138,4,50,'#6a674e');R(ctx,110,138,75,2,'#b5a884');
+    }else if(c.setting==='wet-court'){
+      building27(ctx,-13,56,283,92,{roof:true,gate:true,label:'临时课堂'});wallPanel27(ctx,286,83,476,65,'whitewash');pitchedRoof27(ctx,278,65,491,20);
+      R(ctx,3,147,293,8,'#8d8064');R(ctx,10,155,284,7,'#aa9978');
+      for(let i=0;i<7;i++)ellipse(ctx,320+(i*87)%390,171+(i*19)%89,19+i%3*8,3+i%2,'#788f8d88');
+      for(let i=0;i<5;i++)R(ctx,300+i*39,153+i*17,29,8,'#b5ad91');
+    }else if(c.setting==='courtyard'){
+      building27(ctx,82,54,251,90,{gate:true,label:'北京师范大学'});building27(ctx,450,78,254,65,{roof:true});
+      tileFill(ctx,'grass',334,145,111,65,2);R(ctx,342,149,94,5,'#c3b28d');
+    }else if(c.setting==='transfer'){
+      building27(ctx,151,67,214,77,{label:'辅仁 · 师大'});building27(ctx,424,54,210,90,{gate:true});
+      for(let i=0;i<8;i++)R(ctx,313+i*21,160+i*10,27,3,'#cfbd8e66');
+    }else if(c.setting==='book-route'){
+      building27(ctx,66,66,212,78,{gate:true,label:'出发 · 书屋'});building27(ctx,507,46,232,98,{gate:true,label:'送达 · 课堂'});
+      tileFill(ctx,'grass',290,147,190,65,2);for(let i=0;i<10;i++){const x=201+i*46,y=214+Math.sin(i*.6)*21;R(ctx,x,y,24,4,'#e4c99966')}
+      R(ctx,336,149,120,5,'#d5c4a3');
+    }else{
+      // Three distinct garden arrangements: central ceremony, side court, and a grove.
+      const side=c.setting==='quiet-garden';building27(ctx,side?382:147,76,side?274:486,65,{label:c.setting==='celebration'?'1902 — 2002':'学 为 人 师 · 行 为 世 范'});
+      tileFill(ctx,'grass',0,146,128,69,0);tileFill(ctx,'grass',650,146,130,69,1);
+      for(const x of [42,716]){drawProp(ctx,'tree',x,207,1.2);drawProp(ctx,'plant',x+28,230,.7)}
+      if(c.setting==='motto-garden'){R(ctx,277,226,228,9,'#a3977e');R(ctx,286,218,210,8,'#c0b79b');R(ctx,303,214,176,4,'#ded3b2')}
+      if(c.setting==='celebration'){for(let i=0;i<13;i++){const x=44+i*57,y=39+Math.sin(i*.55)*9;poly(ctx,[[x,y],[x+19,y+1],[x+9,y+18]],i%3===0?'#b5563f':i%3===1?'#d9ab52':'#789879')};line(ctx,30,39,751,41,'#74674d')}
+      if(side){R(ctx,207,231,180,6,'#b8a98a');R(ctx,214,225,166,6,'#d3c6a5')}
+    }
+    R(ctx,0,274,780,6,'#6a6553');R(ctx,0,272,780,2,'#ccc49a55');
+  }
+  function thresholdBackdrop27(ctx,c){
+    drawSky(ctx,2,'campus',139);drawPerspectiveFloor(ctx,'stone',143,{seam:'#7b796344'});
+    building27(ctx,474,73,242,72,{label:'北京师范大学'});
+    wallPanel27(ctx,0,0,344,150,'plaster');drawPerspectiveFloor(ctx,'wood',151,{seam:'#78552e55'});
+    R(ctx,345,0,27,275,'#66492e');R(ctx,350,0,5,275,'#bf945b');R(ctx,362,0,5,275,'#443627');
+    R(ctx,0,144,343,6,'#c5a06a');R(ctx,0,151,343,6,'#735738');
+    poly(ctx,[[373,151],[780,145],[780,280],[386,280]],'#d5d0b029');
+  }
+  function background27(c){
+    const key='27:'+c.id;if(backdropCache.has(key))return backdropCache.get(key);
+    const canvas=document.createElement('canvas');canvas.width=W;canvas.height=H;const g=canvas.getContext('2d');g.imageSmoothingEnabled=false;
+    if(c.setting==='corridor')corridorBackdrop27(g,c);
+    else if(c.setting==='threshold')thresholdBackdrop27(g,c);
+    else if(['street','gate','field','wet-court','courtyard','transfer','book-route','motto-garden','celebration','quiet-garden'].includes(c.setting))outdoorBackdrop27(g,c);
+    else indoorBackdrop27(g,c);
+    backdropCache.set(key,canvas);return canvas;
+  }
+  function glow27(ctx,x,y,r,color,strength){
+    const g=ctx.createRadialGradient(x,y,2,x,y,r);g.addColorStop(0,`rgba(${color},${strength})`);g.addColorStop(1,`rgba(${color},0)`);ctx.fillStyle=g;ctx.fillRect(x-r,y-r,r*2,r*2);
+  }
+  function weather27(ctx,c){
+    if(c.detail.rain){
+      ctx.save();ctx.beginPath();ctx.rect(511,20,182,101);ctx.clip();for(let i=0;i<28;i++){const x=509+(i*23+T*9)%186,y=8+(i*37+T*65)%129;line(ctx,x,y,x-4,y+13,'#c8e5e766')}ctx.restore();
+    }
+    if(c.detail.puddles){for(let i=0;i<7;i++){const x=320+(i*87)%390,y=171+(i*19)%89;ctx.strokeStyle='#c1d8d17a';ctx.lineWidth=1;ctx.beginPath();ctx.ellipse(x,y,5+((T*4+i)%8),1+((T+i)%2),0,0,Math.PI*2);ctx.stroke()}}
+    if(c.theme==='night'){
+      const lamp=c.anchors.find(a=>a.prop==='lamp'||a.prop==='lantern')||{x:c.setting==='darkroom'?102:650,y:c.setting==='darkroom'?66:150};
+      glow27(ctx,lamp.x,lamp.y,145,c.setting==='darkroom'?'231,99,83':'255,216,132',.15+.015*Math.sin(T*2));
+    }
+    if(c.detail.steam){for(let i=0;i<4;i++){const x=393+Math.sin(T*1.8+i)*6,y=181-((T*9+i*8)%29);R(ctx,x,y,2,5,'#f4e6c055')}}
+    if(c.detail.wind){for(let i=0;i<5;i++){const x=410+((T*46+i*71)%277),y=83+(i*29)%122;line(ctx,x,y,x+20,y+Math.sin(T*2+i)*2,'#ebe4bf55')}R(ctx,489,169+Math.round(Math.sin(T*3)*2),12,2,'#f5e8bf')}
+    if(c.setting==='field'||c.setting.includes('garden')||c.setting==='celebration'){
+      for(let i=0;i<5;i++){const x=(T*12+i*163)%780,y=115+((T*7+i*29)%147);R(ctx,x,y,3,2,'#cca45b88');R(ctx,x+2,y-1,2,2,'#e3c77d66')}
+    }
+    if(c.setting==='darkroom')glow27(ctx,102,66,255,'211,77,65',.12);
+  }
+  function paint27(ctx,c,state){
+    ctx.drawImage(background27(c),0,0);const world=[];const push=(y,fn)=>world.push({y,fn});
+    const feedback=state.historyFeedback||{},step=Math.max(0,Math.min(3,Number(feedback.step)||0));
+    for(const p of c.props)push(p.y,()=>drawProp(ctx,p.prop,p.x,p.y,p.scale));
+    for(const d of c.desks)push(d.y,()=>deskActor(ctx,d.role,Math.sin(T*1.6+d.x)>.5?'write':'read',d.x,d.y,d.scale,d.x,d.scale*.8,'write'));
+    for(const [i,a] of c.actors.entries()){
+      const moving=a.range>0,x=a.x+(moving?Math.sin(T*.65+i)*a.range:0);
+      const frame=a.action==='walk'?walkFrame(i):a.action==='sit'?idleFrame(i,true):a.action==='idle'?idleFrame(i):a.action;
+      if(a.desk){const top=a.desk.y-propBounds.desk.sh*a.desk.scale,feet=top+2+14*a.scale;push(a.desk.y+.1,()=>{ctx.save();ctx.beginPath();ctx.rect(a.x-23*a.scale,0,46*a.scale,top+5);ctx.clip();drawChar(ctx,a.role,frame,a.x,feet,a.scale,{noShadow:true});ctx.restore()})}
+      else push(a.y,()=>drawChar(ctx,a.role,frame,x,a.y,a.scale,{flip:moving&&Math.cos(T*.65+i)<0}));
+    }
+    for(const [i,a]of c.anchors.entries()){
+      const done=step>i||feedback.completed;
+      push(a.drawY,()=>{
+        let y=a.drawY;
+        if(a.prop==='cloth'||a.prop==='banner'||a.prop==='flag'||a.prop==='scroll')y+=Math.round(Math.sin(T*1.8+i)*1.2);
+        if(a.projected){const w=(a.prop==='label'?59:75)*a.scale,h=17*a.scale;poly(ctx,[[a.x-w*.43,y-h],[a.x+w*.45,y-h+1],[a.x+w*.53,y],[a.x-w*.5,y]],'#ede1be');line(ctx,a.x-w*.35,y-h+4,a.x+w*.35,y-h+5,'#a69a7566');line(ctx,a.x-w*.35,y-h+8,a.x+w*.2,y-h+9,'#8e826361')}
+        else drawProp(ctx,a.prop,a.x,y,a.scale);
+        if(done&&['paper','books','label'].includes(a.prop)){
+          R(ctx,a.x+4,a.y-3,8,8,'#a74c3680');drawText(ctx,'记',a.x+8,a.y+1,6,'#f5e5be');
+        }
+      });
+    }
+    world.sort((a,b)=>a.y-b.y);for(const item of world)item.fn();
+    if(c.detail.emptyShelf){R(ctx,248,166,58,13,'#463521');R(ctx,249,180,56,2,'#ad8551');R(ctx,248,189,58,12,'#4c3b27');R(ctx,252,191,10,8,'#ab8c5a')}
+    if(c.detail.motto){drawText(ctx,'学为人师',391,145,11,'#4e554d');drawText(ctx,'行为世范',391,160,11,'#4e554d')}
+    if(c.detail.flowers||c.detail.motto){const x=c.detail.flowers?365:453,y=c.detail.flowers?231:239;for(let i=0;i<9;i++){R(ctx,x-11+(i*11)%25,y-12+(i*7)%16,4,4,i%3===0?'#f1c86a':i%3===1?'#dda582':'#f4dfaa')}}
+    if(c.detail.ink&&step>0){drawText(ctx,step>1?'学为人师':'学',486,181,10,'#4b4238')}
+    if(c.setting==='drying'&&step>1)drawText(ctx,'学为人师 · 行为世范',298,187,8,'#4b4238');
+    if(c.detail.photos){const y=175;R(ctx,415,y,39,23,'#f0e1bf');R(ctx,419,y+3,31,17,'#73918b');R(ctx,427,y+6,15,11,'#cabca0');R(ctx,430,y+4,9,2,'#5f655b')}
+    weather27(ctx,c);
+    if(state.historyView){
+      for(const [i,a]of c.anchors.entries()){
+        const done=step>i||feedback.completed,chosen=feedback.selected===a.id;
+        const mx=a.x+Math.min(25,a.r*.7),my=a.y-Math.min(25,a.r*.7);
+        if(chosen)glow27(ctx,a.x,a.y,Math.max(30,a.r+8),'239,204,124',.25);
+        R(ctx,mx-5,my-5,11,11,done?'#648368':'#9f4b38');R(ctx,mx-4,my-4,9,9,done?'#8fa16e':'#f1dab1');drawText(ctx,done?'✓':String(i+1),mx+.5,my+.5,7,done?'#f4edcc':'#7b4f36');
+      }
+      R(ctx,11,9,Math.min(285,c.title.length*13+19),22,'#fff0dacc');R(ctx,11,9,3,22,'#a04c39');drawText(ctx,c.title,22,20,12,'#61503b','left');
+      if(feedback.completed){R(ctx,711,239,48,27,'#a64935');R(ctx,714,242,42,21,'#f0d6a4');drawText(ctx,'已记',735,252,12,'#9e4936')}
+    }
+    const night=c.theme==='night',shade=night?.08:.025;R(ctx,0,0,780,280,`rgba(19,32,38,${shade})`);
+    vignette(ctx);window.__muduoActiveScene27={id:c.id,era:c.era,view:c.view,setting:c.setting,step,completed:!!feedback.completed};
+  }
+
+
   function drawNew(ctx, id, state) {
     const sceneId = id === "intro" ? "y2026" : id;
-    const variant = state.mode === "free" ? Math.min(3, state.eraVisits?.[sceneId] || 1) : 1;
+    const variant = Math.max(1,Math.min(3,Number(state.historyView) || (state.mode === "free" ? state.eraVisits?.[sceneId] || 1 : 1)));
+    const authored=state.historyView ? scene27[sceneId+":"+variant] : null;
+    if(authored){paint27(ctx,authored,state);return;}
+    window.__muduoActiveScene27=null;
     const stateKey = sceneId === "y2026" ? String(state.filledGroups || 0) : "";
     const backdrop = buildBackdrop(sceneId, state, stateKey, variant);
     ctx.save();

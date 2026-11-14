@@ -1,0 +1,856 @@
+{
+  "version": 1,
+  "release": "2.0.1",
+  "updatedAt": "2026-11-14",
+  "notice": "9个年代、27个访问视角与27张档案卡为两套独立进度。每章具有独立动作目标；人物对白、具体器物和微观场景均为情境创作。日期与基础事实按所附资料核对，专业逐幕审校仍待完成。",
+  "eras": [
+    {
+      "id": "y1902",
+      "year": "1902",
+      "title": "京师大学堂师范馆",
+      "reward": "bell",
+      "cover": "assets/scene-covers/y1902.webp",
+      "cards": [
+        {
+          "id": "y1902:classics",
+          "key": "classics",
+          "title": "读书人",
+          "text": "先生说：“根柢要深。”你在讲义背面写下：先做一个读书人。",
+          "dialogueLabel": "情境创作，非史料原话"
+        },
+        {
+          "id": "y1902:pedagogy",
+          "key": "pedagogy",
+          "title": "教书人",
+          "text": "先生说：“知道怎么教，才不辜负讲台。”你在讲义背面写下：先做一个教书人。",
+          "dialogueLabel": "情境创作，非史料原话"
+        },
+        {
+          "id": "y1902:west",
+          "key": "west",
+          "title": "开眼看世界",
+          "text": "先生说：“眼睛要往外看。”你在讲义背面写下：先做一个开眼看世界的人。",
+          "dialogueLabel": "情境创作，非史料原话"
+        }
+      ],
+      "views": [
+        {
+          "id": 1,
+          "variant": 1,
+          "title": "一页讲义",
+          "narration": "课堂里，一页讲义还没有写满。经史、教育与西学，正在这间教室里相遇。你先把课本与用途对照，再替这一课留下题签。",
+          "objective": "把三份讲义与对应的学习用途配对。",
+          "cardKeys": [
+            "classics"
+          ],
+          "mechanic": {
+            "type": "match"
+          },
+          "viewId": "y1902:1",
+          "artLayout": "y1902:1",
+          "dialogueLabel": "情境创作，非史料原文",
+          "estimatedMinutes": 1
+        },
+        {
+          "id": 2,
+          "variant": 2,
+          "title": "放学以后的备课桌",
+          "narration": "人群散了，走廊里的小桌还堆着备课纸。教一堂课，除了知道答案，还需要想好怎样让别人听懂。你替下一位走上讲台的人理清顺序。",
+          "objective": "把备课环节排成能实际开展的一堂课。",
+          "cardKeys": [
+            "pedagogy"
+          ],
+          "mechanic": {
+            "type": "sequence"
+          },
+          "viewId": "y1902:2",
+          "artLayout": "y1902:2",
+          "dialogueLabel": "情境创作，非史料原文",
+          "estimatedMinutes": 1
+        },
+        {
+          "id": 3,
+          "variant": 3,
+          "title": "熄灯以前的新知",
+          "narration": "灯下摊开一张新旧知识对照页。窗外安静下来，纸上的世界却还在向外延伸。把观察、提问和验证留在这里。",
+          "objective": "从杂乱纸页中找到三项通向新知的线索。",
+          "cardKeys": [
+            "west"
+          ],
+          "mechanic": {
+            "type": "collect"
+          },
+          "viewId": "y1902:3",
+          "artLayout": "y1902:3",
+          "dialogueLabel": "情境创作，非史料原文",
+          "estimatedMinutes": 1
+        }
+      ],
+      "sources": [
+        {
+          "title": "北师大官网《校史沿革》",
+          "url": "https://www.bnu.edu.cn/xxgk/xsyg/"
+        },
+        {
+          "title": "北京师范大学章程（2024 年修订）",
+          "url": "https://zwb.bnu.edu.cn/gzzd/xxgz/1412cb80af0947f98f6595c3c28d0ab4.htm"
+        }
+      ],
+      "reviewStatus": "基础资料已附；专业审校待完成",
+      "dialogueLabel": "情境创作，非史料逐字复现"
+    },
+    {
+      "id": "y1919",
+      "year": "1919",
+      "title": "北京街头",
+      "reward": "window",
+      "cover": "assets/scene-covers/y1919.webp",
+      "cards": [
+        {
+          "id": "y1919:march",
+          "key": "march",
+          "title": "走上街头",
+          "text": "你和同学一起走出校门。那天之后，很多事都不一样了。",
+          "dialogueLabel": "情境创作，非史料原话"
+        },
+        {
+          "id": "y1919:stay",
+          "key": "stay",
+          "title": "留在学校",
+          "text": "你留在教室，把讲义收好。后来你才知道，缺的那一课，在街上。",
+          "dialogueLabel": "情境创作，非史料原话"
+        },
+        {
+          "id": "y1919:letter",
+          "key": "letter",
+          "title": "写信回乡",
+          "text": "你给家里写信，说北京的春天很乱。信寄出后，你在校门口站了很久。",
+          "dialogueLabel": "情境创作，非史料原话"
+        }
+      ],
+      "views": [
+        {
+          "id": 1,
+          "variant": 1,
+          "title": "街头的一页传单",
+          "narration": "街口的旗子在风里展开。你帮同学把传单送到几处约好的接应点，先看清路线，再迈出校门。道路与接应点为游戏情境。",
+          "objective": "规划传单路线，依次抵达三个接应点。",
+          "cardKeys": [
+            "march"
+          ],
+          "mechanic": {
+            "type": "route"
+          },
+          "viewId": "y1919:1",
+          "artLayout": "y1919:1",
+          "dialogueLabel": "情境创作，非史料原文",
+          "estimatedMinutes": 1
+        },
+        {
+          "id": 2,
+          "variant": 2,
+          "title": "夜里仍亮着的课堂",
+          "narration": "校门里留着一道光。有人回来，也有人还没有回来。你照看讲义、收好窗边的纸，让回来的同学有一处能够坐下的地方。",
+          "objective": "按课堂检查单收窗、护纸、留灯。",
+          "cardKeys": [
+            "stay"
+          ],
+          "mechanic": {
+            "type": "switches"
+          },
+          "viewId": "y1919:2",
+          "artLayout": "y1919:2",
+          "dialogueLabel": "情境创作，非史料原文",
+          "estimatedMinutes": 1
+        },
+        {
+          "id": 3,
+          "variant": 3,
+          "title": "寄往家乡的信",
+          "narration": "清晨的操场空了。你在长凳边展开信纸，想把昨天看到的事、心里的疑问和给家人的问候写清楚。不是替所有人总结，只留下自己的那一页。",
+          "objective": "把一封家书的三段话放回合适的位置。",
+          "cardKeys": [
+            "letter"
+          ],
+          "mechanic": {
+            "type": "letter"
+          },
+          "viewId": "y1919:3",
+          "artLayout": "y1919:3",
+          "dialogueLabel": "情境创作，非史料原文",
+          "estimatedMinutes": 1
+        }
+      ],
+      "sources": [
+        {
+          "title": "北师大官网·五四纪念碑",
+          "url": "https://www.bnu.edu.cn/tt/87490.htm"
+        }
+      ],
+      "reviewStatus": "基础资料已附；专业审校待完成",
+      "dialogueLabel": "情境创作，非史料逐字复现"
+    },
+    {
+      "id": "y1938",
+      "year": "1938",
+      "title": "城固临时课堂",
+      "reward": "paper",
+      "cover": "assets/scene-covers/y1938.webp",
+      "cards": [
+        {
+          "id": "y1938:move",
+          "key": "move",
+          "title": "带走书箱",
+          "text": "你带着学生和书箱走进夜色。第二天，课在另一间祠堂继续。",
+          "dialogueLabel": "情境创作，非史料原话"
+        },
+        {
+          "id": "y1938:teach",
+          "key": "teach",
+          "title": "最后一课",
+          "text": "你把最后一段讲完。学生没有走。警报声里，黑板上的字还在。",
+          "dialogueLabel": "情境创作，非史料原话"
+        },
+        {
+          "id": "y1938:hide",
+          "key": "hide",
+          "title": "把书藏起来",
+          "text": "你们把书箱藏进祠堂后院，用稻草盖好。有些东西留了下来，等以后再取。",
+          "dialogueLabel": "情境创作，非史料原话"
+        }
+      ],
+      "views": [
+        {
+          "id": 1,
+          "variant": 1,
+          "title": "一箱书的分量",
+          "narration": "临时课堂要转移。书箱不多，搬运的力气也有限。你先整理箱里的书，再把最需要的一箱稳稳带到门外。",
+          "objective": "在容量限制内整理书箱，完成搬运。",
+          "cardKeys": [
+            "move"
+          ],
+          "mechanic": {
+            "type": "capacity"
+          },
+          "viewId": "y1938:1",
+          "artLayout": "y1938:1",
+          "dialogueLabel": "情境创作，非史料原文",
+          "estimatedMinutes": 1
+        },
+        {
+          "id": 2,
+          "variant": 2,
+          "title": "七天，课还要继续",
+          "narration": "雨停了，临时课堂重新开课。接下来七天，你要在讲课、搬书、补给和休息之间作安排。警报、资源数字与具体活动均为情境创作。",
+          "objective": "走完七天，每天两次行动，保住书、粮与课堂士气。",
+          "cardKeys": [
+            "teach"
+          ],
+          "mechanic": {
+            "type": "resource",
+            "days": 7,
+            "actionsPerDay": 2,
+            "alarmDay": 3
+          },
+          "viewId": "y1938:2",
+          "artLayout": "y1938:2",
+          "dialogueLabel": "情境创作，非史料原文",
+          "estimatedMinutes": 3
+        },
+        {
+          "id": 3,
+          "variant": 3,
+          "title": "天亮以前的藏书处",
+          "narration": "天快亮时，后院还有几只怕潮的书箱。先找到避雨的地方，再垫高、包裹、遮好。把暂时无法带走的东西，认真留下。",
+          "objective": "完成防潮藏书的三个步骤。",
+          "cardKeys": [
+            "hide"
+          ],
+          "mechanic": {
+            "type": "shelter"
+          },
+          "viewId": "y1938:3",
+          "artLayout": "y1938:3",
+          "dialogueLabel": "情境创作，非史料原文",
+          "estimatedMinutes": 1
+        }
+      ],
+      "sources": [
+        {
+          "title": "北师大官网《校史沿革》",
+          "url": "https://www.bnu.edu.cn/xxgk/xsyg/"
+        },
+        {
+          "title": "西北大学·西北联大城固办学旧址",
+          "url": "https://news.nwu.edu.cn/info/1002/1209.htm"
+        }
+      ],
+      "reviewStatus": "基础资料已附；专业审校待完成",
+      "dialogueLabel": "情境创作，非史料逐字复现"
+    },
+    {
+      "id": "y1949",
+      "year": "1949",
+      "title": "新校牌",
+      "reward": "plant",
+      "cover": "assets/scene-covers/y1949.webp",
+      "cards": [
+        {
+          "id": "y1949:center",
+          "key": "center",
+          "title": "校牌挂正",
+          "text": "你停在了正中。校牌挂正了，红布被风吹得猎猎响。",
+          "dialogueLabel": "情境创作，非史料原话"
+        },
+        {
+          "id": "y1949:close",
+          "key": "close",
+          "title": "歪一点也真实",
+          "text": "校牌稍微歪了一点。大家仰头看了看，笑出了声。它还是挂上去了，像这段故事里不完美却值得记住的一刻。",
+          "dialogueLabel": "情境创作，非史料原话"
+        },
+        {
+          "id": "y1949:off",
+          "key": "off",
+          "title": "改天再挂",
+          "text": "你们试着把校牌举上去，还差一点。有人说改天再挂。红绸在风里一直响。",
+          "dialogueLabel": "情境创作，非史料原话"
+        }
+      ],
+      "views": [
+        {
+          "id": 1,
+          "variant": 1,
+          "title": "把名字挂正",
+          "narration": "门前的校牌还没有挂稳。你和同伴一起挪动支架，抬头核对中线，让这个名字落在合适的位置。挂牌现场为叙事创作。",
+          "objective": "左右调整校牌，对准中线后确认挂牌。",
+          "cardKeys": [
+            "center"
+          ],
+          "mechanic": {
+            "type": "align"
+          },
+          "viewId": "y1949:1",
+          "artLayout": "y1949:1",
+          "dialogueLabel": "情境创作，非史料原文",
+          "estimatedMinutes": 1
+        },
+        {
+          "id": 2,
+          "variant": 2,
+          "title": "风里的红绸",
+          "narration": "校牌挂好以后，红绸仍被风吹乱。几处绸结需要重新整理，留一点自然的褶皱，也留一点这群人亲手做过的痕迹。",
+          "objective": "整理三处红绸，让绸结稳固而不遮挡校名。",
+          "cardKeys": [
+            "close"
+          ],
+          "mechanic": {
+            "type": "ribbon"
+          },
+          "viewId": "y1949:2",
+          "artLayout": "y1949:2",
+          "dialogueLabel": "情境创作，非史料原文",
+          "estimatedMinutes": 1
+        },
+        {
+          "id": 3,
+          "variant": 3,
+          "title": "门里与门外的记录",
+          "narration": "你在门边的记录簿里发现一张较早的试挂清单：支架未稳，曾决定暂缓。把来访记录与检查结果对上，保留这次没有一次完成的尝试。",
+          "objective": "核对检查记录，补齐暂缓挂牌的来访备注。",
+          "cardKeys": [
+            "off"
+          ],
+          "mechanic": {
+            "type": "record"
+          },
+          "viewId": "y1949:3",
+          "artLayout": "y1949:3",
+          "dialogueLabel": "情境创作，非史料原文",
+          "estimatedMinutes": 1
+        }
+      ],
+      "sources": [
+        {
+          "title": "北师大官网《校史沿革》",
+          "url": "https://www.bnu.edu.cn/xxgk/xsyg/"
+        },
+        {
+          "title": "北京师范大学章程（2024 年修订）",
+          "url": "https://zwb.bnu.edu.cn/gzzd/xxgz/1412cb80af0947f98f6595c3c28d0ab4.htm"
+        }
+      ],
+      "reviewStatus": "基础资料已附；专业审校待完成",
+      "dialogueLabel": "情境创作，非史料逐字复现"
+    },
+    {
+      "id": "y1952",
+      "year": "1952",
+      "title": "辅仁并入",
+      "reward": "bookshelf",
+      "cover": "assets/scene-covers/y1952.webp",
+      "cards": [
+        {
+          "id": "y1952:fuyin",
+          "key": "fuyin",
+          "title": "辅仁校刊",
+          "text": "辅仁校刊被放进了辅仁书箱。纸页上还有旧图书馆的印章。",
+          "dialogueLabel": "情境创作，非史料原话"
+        },
+        {
+          "id": "y1952:beishi",
+          "key": "beishi",
+          "title": "师大讲义",
+          "text": "北师大讲义被放进了北师大书箱。封面上是新的课程表。",
+          "dialogueLabel": "情境创作，非史料原话"
+        },
+        {
+          "id": "y1952:common",
+          "key": "common",
+          "title": "共通经典",
+          "text": "《诗经》注被放进了共通书箱。两所学校都要讲同一首诗。",
+          "dialogueLabel": "情境创作，非史料原话"
+        }
+      ],
+      "views": [
+        {
+          "id": 1,
+          "variant": 1,
+          "title": "三只书箱",
+          "narration": "书箱放到院子里，封面上的名字不同，书页里的学问却仍要传下去。辅仁校刊、师大讲义和共通经典，各有该去的位置。",
+          "objective": "将三本书分别归入辅仁、师大与共通书箱。",
+          "cardKeys": [
+            "fuyin",
+            "beishi",
+            "common"
+          ],
+          "mechanic": {
+            "type": "sort"
+          },
+          "viewId": "y1952:1",
+          "artLayout": "y1952:1",
+          "dialogueLabel": "情境创作，非史料原文",
+          "estimatedMinutes": 1
+        },
+        {
+          "id": 2,
+          "variant": 2,
+          "title": "空出来的书架",
+          "narration": "书搬走以后，旧书架留下几张夹着的书签。你按书脊、目录和借阅页找回它们的位置，让后来的人还能顺着线索找到书。",
+          "objective": "对照目录，把三枚书签归回对应书本。",
+          "cardKeys": [
+            "fuyin",
+            "beishi",
+            "common"
+          ],
+          "mechanic": {
+            "type": "bookmarks"
+          },
+          "viewId": "y1952:2",
+          "artLayout": "y1952:2",
+          "dialogueLabel": "情境创作，非史料原文",
+          "estimatedMinutes": 1
+        },
+        {
+          "id": 3,
+          "variant": 3,
+          "title": "新课表上的一首诗",
+          "narration": "新的课表贴上墙，教室里又坐满了人。你把课程、讲义和上课位置一一对上。整理完成，第一堂课就能接着上。",
+          "objective": "安排三节课，避免时间和讲义错配。",
+          "cardKeys": [
+            "fuyin",
+            "beishi",
+            "common"
+          ],
+          "mechanic": {
+            "type": "timetable"
+          },
+          "viewId": "y1952:3",
+          "artLayout": "y1952:3",
+          "dialogueLabel": "情境创作，非史料原文",
+          "estimatedMinutes": 1
+        }
+      ],
+      "sources": [
+        {
+          "title": "北师大官网《校史沿革》",
+          "url": "https://www.bnu.edu.cn/xxgk/xsyg/"
+        },
+        {
+          "title": "北京师范大学章程（2024 年修订）",
+          "url": "https://zwb.bnu.edu.cn/gzzd/xxgz/1412cb80af0947f98f6595c3c28d0ab4.htm"
+        },
+        {
+          "title": "北师大图书馆·京师学人：启功",
+          "url": "https://wenku.bnu.edu.cn/xrinfo.action?num=bnuqig1912"
+        }
+      ],
+      "reviewStatus": "基础资料已附；专业审校待完成",
+      "dialogueLabel": "情境创作，非史料逐字复现"
+    },
+    {
+      "id": "y1971",
+      "year": "1971",
+      "title": "点校",
+      "reward": "frame",
+      "cover": "assets/scene-covers/y1971.webp",
+      "cards": [
+        {
+          "id": "y1971:check",
+          "key": "check",
+          "title": "一个字",
+          "text": "你翻到原书那一页，发现抄本漏了一个字。启功先生说：“一个字，也是一段历史。”",
+          "dialogueLabel": "情境创作，非史料原话"
+        },
+        {
+          "id": "y1971:doubt",
+          "key": "doubt",
+          "title": "存疑",
+          "text": "你在卡片上写下疑问，夹进书里。先生说：“存疑，也是一种认真。”",
+          "dialogueLabel": "情境创作，非史料原话"
+        },
+        {
+          "id": "y1971:rest",
+          "key": "rest",
+          "title": "书没校完",
+          "text": "他笑了笑：“书还没校完，休息什么。”",
+          "dialogueLabel": "情境创作，非史料原话"
+        }
+      ],
+      "views": [
+        {
+          "id": 1,
+          "variant": 1,
+          "title": "一个字的用法",
+          "narration": "书稿与原书并排放着。这里以1971作叙事坐标，具体点校日期仍待核查。你不急着落笔，先把两页不同的地方找出来。",
+          "objective": "对照原书与校样，找到并标注漏字。",
+          "cardKeys": [
+            "check"
+          ],
+          "mechanic": {
+            "type": "compare"
+          },
+          "viewId": "y1971:1",
+          "artLayout": "y1971:1",
+          "dialogueLabel": "情境创作，非史料原文",
+          "estimatedMinutes": 1
+        },
+        {
+          "id": 2,
+          "variant": 2,
+          "title": "灯灭以前，先存疑",
+          "narration": "窗外的雨声更清楚了。桌面上还有不能立即定下的字句。写清疑问、出处与待查理由，让下一次翻页有迹可循。",
+          "objective": "完成一张可继续查证的存疑注记。",
+          "cardKeys": [
+            "doubt"
+          ],
+          "mechanic": {
+            "type": "annotate"
+          },
+          "viewId": "y1971:2",
+          "artLayout": "y1971:2",
+          "dialogueLabel": "情境创作，非史料原文",
+          "estimatedMinutes": 1
+        },
+        {
+          "id": 3,
+          "variant": 3,
+          "title": "天亮以前，收好稿纸",
+          "narration": "天色在窗边变浅。书还没有全部校完，但眼前几页需要先核对、排序、收好。把没做完的地方留得明白，也是一种认真。",
+          "objective": "核对页码、顺序和待办标记后收稿。",
+          "cardKeys": [
+            "rest"
+          ],
+          "mechanic": {
+            "type": "proof"
+          },
+          "viewId": "y1971:3",
+          "artLayout": "y1971:3",
+          "dialogueLabel": "情境创作，非史料原文",
+          "estimatedMinutes": 1
+        }
+      ],
+      "sources": [
+        {
+          "title": "北师大图书馆·京师学人：启功",
+          "url": "https://wenku.bnu.edu.cn/xrinfo.action?num=bnuqig1912"
+        }
+      ],
+      "reviewStatus": "点校事实有据；1971 具体年份待核",
+      "dialogueLabel": "情境创作，非史料逐字复现"
+    },
+    {
+      "id": "y1991",
+      "year": "1991",
+      "title": "励耘",
+      "reward": "rug",
+      "cover": "assets/scene-covers/y1991.webp",
+      "cards": [
+        {
+          "id": "y1991:ask",
+          "key": "ask",
+          "title": "钱够吃饭",
+          "text": "他说：“钱够吃饭就行。”桌上是一碗面条，几根黄瓜。",
+          "dialogueLabel": "情境创作，非史料原话"
+        },
+        {
+          "id": "y1991:scrolls",
+          "key": "scrolls",
+          "title": "励耘签条",
+          "text": "每一卷的签条上，都写着陈垣先生的书斋名：励耘。",
+          "dialogueLabel": "情境创作，非史料原话"
+        },
+        {
+          "id": "y1991:student",
+          "key": "student",
+          "title": "第一个受助生",
+          "text": "你骑车去学生宿舍。那年的冬天，有人第一次不必为下个月的饭钱发愁。",
+          "dialogueLabel": "情境创作，非史料原话"
+        }
+      ],
+      "views": [
+        {
+          "id": 1,
+          "variant": 1,
+          "title": "一份助学心意",
+          "narration": "书桌上摆着捐资说明与助学票。按年谱，义展在1990年，捐资设基金在1991年。票据与分配动作是游戏概括，不对应真实会计记录。",
+          "objective": "将助学票分到对应用途，并核对总数。",
+          "cardKeys": [
+            "ask"
+          ],
+          "mechanic": {
+            "type": "allocate"
+          },
+          "viewId": "y1991:1",
+          "artLayout": "y1991:1",
+          "dialogueLabel": "情境创作，非史料原文",
+          "estimatedMinutes": 1
+        },
+        {
+          "id": 2,
+          "variant": 2,
+          "title": "画卷上的励耘签条",
+          "narration": "墨迹干了，画卷也装了箱。你把写着励耘的签条与画卷重新对应，检查纸张、绳结和外包装，才把它们郑重收好。",
+          "objective": "为三卷作品匹配签条并完成包装。",
+          "cardKeys": [
+            "scrolls"
+          ],
+          "mechanic": {
+            "type": "labels"
+          },
+          "viewId": "y1991:2",
+          "artLayout": "y1991:2",
+          "dialogueLabel": "情境创作，非史料原文",
+          "estimatedMinutes": 1
+        },
+        {
+          "id": 3,
+          "variant": 3,
+          "title": "送到宿舍的一只包裹",
+          "narration": "晚饭以后，一只装着材料的包裹还等着送出。你沿校园里的虚构路线找到接收地点，把这份帮助交到后来的人手中。",
+          "objective": "避开错误岔路，将包裹送达三处确认点。",
+          "cardKeys": [
+            "student"
+          ],
+          "mechanic": {
+            "type": "delivery"
+          },
+          "viewId": "y1991:3",
+          "artLayout": "y1991:3",
+          "dialogueLabel": "情境创作，非史料原文",
+          "estimatedMinutes": 1
+        }
+      ],
+      "sources": [
+        {
+          "title": "北师大民俗典籍文字研究中心·启功年谱",
+          "url": "https://mdw.bnu.edu.cn/xzcq/34e82e1773bf427984d26f173f38e896.htm"
+        }
+      ],
+      "reviewStatus": "基础资料已附；专业审校待完成",
+      "dialogueLabel": "情境创作，非史料逐字复现"
+    },
+    {
+      "id": "y1996",
+      "year": "1996",
+      "title": "校训",
+      "reward": "plaque",
+      "cover": "assets/scene-covers/y1996.webp",
+      "cards": [
+        {
+          "id": "y1996:ink",
+          "key": "ink",
+          "title": "研墨",
+          "text": "墨在水里慢慢化开。他提笔，先写“学”，再写“行”。",
+          "dialogueLabel": "情境创作，非史料原话"
+        },
+        {
+          "id": "y1996:meaning",
+          "key": "meaning",
+          "title": "所学所行",
+          "text": "他说：“所学足为后辈之师，所行应为世人之范。”",
+          "dialogueLabel": "情境创作，非史料原话"
+        },
+        {
+          "id": "y1996:paper",
+          "key": "paper",
+          "title": "压住纸角",
+          "text": "你压住纸角。最后一笔落下，窗外正好起风。",
+          "dialogueLabel": "情境创作，非史料原话"
+        }
+      ],
+      "views": [
+        {
+          "id": 1,
+          "variant": 1,
+          "title": "墨在水里慢慢化开",
+          "narration": "案上准备好纸笔。砚台里的水与墨，需要一点耐心才能调到合适。你把研好的墨留给即将落下的第一笔。",
+          "objective": "控制水墨比例，让三次研墨都进入合适区间。",
+          "cardKeys": [
+            "ink"
+          ],
+          "mechanic": {
+            "type": "ink"
+          },
+          "viewId": "y1996:1",
+          "artLayout": "y1996:1",
+          "dialogueLabel": "情境创作，非史料原文",
+          "estimatedMinutes": 1
+        },
+        {
+          "id": 2,
+          "variant": 2,
+          "title": "把八个字放在一起",
+          "narration": "纸上几组字被临时分开。把学与行、为人与为世重新读懂，再将它们放回连贯的位置。校训的八个字有来源，现场动作与问答为创作。",
+          "objective": "把学为人师、行为世范正确拼合。",
+          "cardKeys": [
+            "meaning"
+          ],
+          "mechanic": {
+            "type": "motto"
+          },
+          "viewId": "y1996:2",
+          "artLayout": "y1996:2",
+          "dialogueLabel": "情境创作，非史料原文",
+          "estimatedMinutes": 1
+        },
+        {
+          "id": 3,
+          "variant": 3,
+          "title": "压住纸角，留给后来的人",
+          "narration": "窗边又起风了。你按住几处纸角，校训纸页平稳下来。最后把它交到展台，望见这些字也将走进校园的风里。",
+          "objective": "按顺序压住四角，让纸页稳定后确认。",
+          "cardKeys": [
+            "paper"
+          ],
+          "mechanic": {
+            "type": "corners"
+          },
+          "viewId": "y1996:3",
+          "artLayout": "y1996:3",
+          "dialogueLabel": "情境创作，非史料原文",
+          "estimatedMinutes": 1
+        }
+      ],
+      "sources": [
+        {
+          "title": "北师大官网·校训的演变经过",
+          "url": "https://www.bnu.edu.cn/bsgs/ehw/87244.htm"
+        }
+      ],
+      "reviewStatus": "基础资料已附；专业审校待完成",
+      "dialogueLabel": "情境创作，非史料逐字复现"
+    },
+    {
+      "id": "y2002",
+      "year": "2002",
+      "title": "百年",
+      "reward": "camera",
+      "cover": "assets/scene-covers/y2002.webp",
+      "cards": [
+        {
+          "id": "y2002:center",
+          "key": "center",
+          "title": "正中构图",
+          "text": "咔嚓。校训碑正好在画面正中。",
+          "dialogueLabel": "情境创作，非史料原话"
+        },
+        {
+          "id": "y2002:close",
+          "key": "close",
+          "title": "手一抖也真实",
+          "text": "咔嚓。画面偏了一点，旁边的人笑出了声。照片没有完美，却记住了那天的风。",
+          "dialogueLabel": "情境创作，非史料原话"
+        },
+        {
+          "id": "y2002:off",
+          "key": "off",
+          "title": "只拍到半块碑",
+          "text": "咔嚓。校训碑只拍到了一半。你还是把照片留下了，因为另一半在人群里。",
+          "dialogueLabel": "情境创作，非史料原话"
+        }
+      ],
+      "views": [
+        {
+          "id": 1,
+          "variant": 1,
+          "title": "百年校庆的一张合影",
+          "narration": "校训碑前，人群慢慢站定。你调整相机的取景框，让碑与身边的人都进入画面。这个拍照时刻是根据校庆记忆创作的情境。",
+          "objective": "调整构图，在中心范围拍下一张照片。",
+          "cardKeys": [
+            "center"
+          ],
+          "mechanic": {
+            "type": "camera"
+          },
+          "viewId": "y2002:1",
+          "artLayout": "y2002:1",
+          "dialogueLabel": "情境创作，非史料原文",
+          "estimatedMinutes": 1
+        },
+        {
+          "id": 2,
+          "variant": 2,
+          "title": "人群散去以后",
+          "narration": "拍照的人散了，碑前还留着花束、纸片与脚步。照片可以有一点偏，但你想把这几样东西留在同一页纪念拼贴里。",
+          "objective": "将三件纪念元素放进拼贴的合适位置。",
+          "cardKeys": [
+            "close"
+          ],
+          "mechanic": {
+            "type": "collage"
+          },
+          "viewId": "y2002:2",
+          "artLayout": "y2002:2",
+          "dialogueLabel": "情境创作，非史料原文",
+          "estimatedMinutes": 1
+        },
+        {
+          "id": 3,
+          "variant": 3,
+          "title": "照片的另一半",
+          "narration": "照片慢慢显出来。碑只占了画面的一半，另一半是人群和风。按顺序完成显影，不急着裁掉这些没被计划好的细节。",
+          "objective": "完成显影顺序，留下带着人群的半幅碑影。",
+          "cardKeys": [
+            "off"
+          ],
+          "mechanic": {
+            "type": "develop"
+          },
+          "viewId": "y2002:3",
+          "artLayout": "y2002:3",
+          "dialogueLabel": "情境创作，非史料原文",
+          "estimatedMinutes": 1
+        }
+      ],
+      "sources": [
+        {
+          "title": "北京师范大学章程（2024 年修订）",
+          "url": "https://zwb.bnu.edu.cn/gzzd/xxgz/1412cb80af0947f98f6595c3c28d0ab4.htm"
+        }
+      ],
+      "reviewStatus": "基础资料已附；专业审校待完成",
+      "dialogueLabel": "情境创作，非史料逐字复现"
+    }
+  ]
+}
