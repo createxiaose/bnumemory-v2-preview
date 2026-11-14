@@ -1,5 +1,5 @@
 {
-  "version": "campuses-20261114",
+  "version": "real-map-pixels-20261114",
   "campuses": [
     {
       "name": "海淀校园",
@@ -9,297 +9,311 @@
         {
           "id": "main",
           "name": "主楼",
-          "x": 78,
-          "y": 67,
+          "x": 78.6,
+          "y": 77.2,
           "type": "building",
-          "positionQuality": "schematic"
+          "positionQuality": "located-in-source-map"
         },
         {
           "id": "square",
           "name": "京师广场",
-          "x": 83,
-          "y": 86,
+          "x": 88.1,
+          "y": 92.8,
           "type": "plaza",
-          "positionQuality": "schematic"
+          "positionQuality": "located-in-source-map"
         },
         {
           "id": "motto",
           "name": "八字校训碑",
-          "x": 71,
-          "y": 85,
+          "x": null,
+          "y": null,
           "type": "motto",
-          "positionQuality": "schematic"
+          "positionQuality": "name-confirmed-pin-unverified"
         },
         {
           "id": "bell",
           "name": "木铎金声",
-          "x": 89,
-          "y": 77,
+          "x": null,
+          "y": null,
           "type": "bell",
-          "positionQuality": "schematic"
+          "positionQuality": "name-confirmed-pin-unverified"
         },
         {
           "id": "library",
           "name": "图书馆",
-          "x": 76,
-          "y": 46,
+          "x": 78.5,
+          "y": 60.6,
           "type": "library",
-          "positionQuality": "schematic"
+          "positionQuality": "located-in-source-map"
         },
         {
           "id": "west-field",
           "name": "西操场",
-          "x": 28,
-          "y": 48,
+          "x": 17.5,
+          "y": 53.6,
           "type": "stadium",
-          "positionQuality": "schematic"
+          "positionQuality": "located-in-source-map"
         },
         {
           "id": "east-field",
           "name": "东操场",
-          "x": 43,
-          "y": 48,
+          "x": 31,
+          "y": 53.4,
           "type": "stadium",
-          "positionQuality": "schematic"
+          "positionQuality": "located-in-source-map"
         },
         {
           "id": "gym",
           "name": "邱季端体育馆",
-          "x": 36,
-          "y": 69,
+          "x": 31.4,
+          "y": 77.4,
           "type": "gym",
-          "positionQuality": "schematic"
+          "positionQuality": "located-in-source-map"
         },
         {
           "id": "courtyard",
           "name": "四合院",
-          "x": 52,
-          "y": 69,
+          "x": 49.4,
+          "y": 77.6,
           "type": "courtyard",
-          "positionQuality": "schematic"
+          "positionQuality": "located-in-source-map"
         }
       ],
       "vista": "haidian-vista.webp",
-      "map": "haidian-map.png",
+      "map": "haidian-map-real.png",
       "id": "haidian",
-      "spatialAccuracy": "schematic-not-navigation"
+      "spatialAccuracy": "source-geometry-preserved",
+      "sourceMap": "haidian-map-source.webp",
+      "mapMethod": "official-map deterministic pixel sampling"
     },
     {
       "name": "昌平校园",
-      "source": "https://cpxy.bnu.edu.cn/docs/20220901142735665374.pdf",
-      "date": "2022年指南，G区，非育荣校园",
+      "source": "https://cpxy.bnu.edu.cn/fwzn/xydt/index.html",
+      "date": "官方校园地图页，原图路径2019-09",
       "points": [
         {
           "id": "library",
           "name": "昌平分馆",
-          "x": 77,
-          "y": 64,
+          "x": 81.3,
+          "y": 35.2,
           "type": "library",
-          "positionQuality": "schematic"
+          "positionQuality": "located-in-source-map"
         },
         {
           "id": "gym",
           "name": "体育馆",
-          "x": 84,
-          "y": 70,
+          "x": 79.9,
+          "y": 14.9,
           "type": "gym",
-          "positionQuality": "schematic"
+          "positionQuality": "located-in-source-map"
         },
         {
           "id": "corridor",
           "name": "校园连廊",
-          "x": 55,
-          "y": 45,
+          "x": 46.8,
+          "y": 24.5,
           "type": "corridor",
-          "positionQuality": "schematic"
+          "positionQuality": "located-in-source-map"
         },
         {
           "id": "garden",
           "name": "中心庭院",
-          "x": 48,
-          "y": 47,
+          "x": 49,
+          "y": 42.8,
           "type": "garden",
-          "positionQuality": "schematic"
+          "positionQuality": "located-in-source-map"
         },
         {
           "id": "teaching1",
           "name": "1号教学楼",
-          "x": 38,
-          "y": 77,
+          "x": 80,
+          "y": 77.5,
           "type": "building",
-          "positionQuality": "schematic"
+          "positionQuality": "located-in-source-map"
         },
         {
           "id": "teaching2",
           "name": "2号教学楼",
-          "x": 66,
-          "y": 77,
+          "x": 80.6,
+          "y": 54.9,
           "type": "building",
-          "positionQuality": "schematic"
+          "positionQuality": "located-in-source-map"
         },
         {
           "id": "teaching3",
           "name": "3号教学楼",
-          "x": 32,
-          "y": 66,
+          "x": 59,
+          "y": 63.5,
           "type": "building",
-          "positionQuality": "schematic"
+          "positionQuality": "located-in-source-map"
         },
         {
           "id": "service",
           "name": "1号教学服务楼",
-          "x": 75,
-          "y": 28,
+          "x": 47.6,
+          "y": 21.7,
           "type": "building",
-          "positionQuality": "schematic"
+          "positionQuality": "located-in-source-map"
         }
       ],
       "vista": "changping-vista.webp",
-      "map": "changping-map.png",
+      "map": "changping-map-real.png",
       "id": "changping",
-      "spatialAccuracy": "schematic-not-navigation"
+      "spatialAccuracy": "source-geometry-preserved",
+      "sourceMap": "changping-map-source.webp",
+      "mapMethod": "official-map deterministic pixel sampling"
     },
     {
       "name": "珠海校区",
-      "source": "https://fas.bnu.edu.cn/docs/2025-12/e8d51dfd19dd40eeb8849957b2e9b3de.pdf",
-      "date": "图面底图标注2023年8月；2026复试定位叠加页",
+      "source": "https://www.bnuzh.edu.cn/xqjj/xydt/index.htm",
+      "date": "官方校园地图页，图面2023年8月",
       "points": [
         {
           "id": "stone",
           "name": "校名石",
-          "x": 85,
-          "y": 41,
+          "x": null,
+          "y": null,
           "type": "stone",
-          "positionQuality": "schematic"
+          "positionQuality": "name-confirmed-pin-unverified"
         },
         {
           "id": "library",
           "name": "图书馆",
-          "x": 67,
-          "y": 33,
+          "x": 70.7,
+          "y": 34.9,
           "type": "library",
-          "positionQuality": "schematic"
+          "positionQuality": "located-in-source-map"
         },
         {
           "id": "liyun",
           "name": "励耘楼",
-          "x": 79,
-          "y": 38,
+          "x": 78.2,
+          "y": 36.9,
           "type": "building",
-          "positionQuality": "schematic"
+          "positionQuality": "located-in-source-map"
         },
         {
           "id": "leyu",
           "name": "乐育楼",
-          "x": 70,
-          "y": 22,
+          "x": 72.1,
+          "y": 26.2,
           "type": "building",
-          "positionQuality": "schematic"
+          "positionQuality": "located-in-source-map"
         },
         {
           "id": "muduo",
           "name": "木铎楼",
-          "x": 48,
-          "y": 49,
+          "x": 54.3,
+          "y": 43.8,
           "type": "building",
-          "positionQuality": "schematic"
+          "positionQuality": "located-in-source-map"
         },
         {
           "id": "jinsheng",
           "name": "金声楼",
-          "x": 41,
-          "y": 52,
+          "x": 52.1,
+          "y": 46.1,
           "type": "building",
-          "positionQuality": "schematic"
+          "positionQuality": "located-in-source-map"
         },
         {
           "id": "lize",
           "name": "丽泽楼",
-          "x": 32,
-          "y": 58,
+          "x": 47.6,
+          "y": 50.3,
           "type": "building",
-          "positionQuality": "schematic"
+          "positionQuality": "located-in-source-map"
         },
         {
           "id": "field",
           "name": "田径运动场",
-          "x": 54,
-          "y": 68,
+          "x": 50.8,
+          "y": 58.3,
           "type": "stadium",
-          "positionQuality": "schematic"
+          "positionQuality": "located-in-source-map"
         },
         {
           "id": "nanxi",
           "name": "南曦园",
-          "x": 75,
-          "y": 83,
+          "x": 76.3,
+          "y": 72.3,
           "type": "garden",
-          "positionQuality": "schematic"
+          "positionQuality": "located-in-source-map"
         },
         {
           "id": "wenhua",
           "name": "文化苑图书馆",
-          "x": 66,
-          "y": 89,
+          "x": null,
+          "y": null,
           "type": "library",
-          "positionQuality": "schematic"
+          "positionQuality": "name-confirmed-pin-unverified"
         }
       ],
       "vista": "zhuhai-vista.webp",
-      "map": "zhuhai-map.png",
+      "map": "zhuhai-map-real.png",
       "id": "zhuhai",
-      "spatialAccuracy": "schematic-not-navigation"
+      "spatialAccuracy": "source-geometry-preserved",
+      "sourceMap": "zhuhai-map-source.webp",
+      "mapMethod": "official-map deterministic pixel sampling"
     },
     {
       "name": "辅仁旧址",
-      "source": "https://law.bnu.edu.cn/djgh/jgzj/37359648446a433b92043e28f9aad4f7.htm",
-      "date": "2023年校方建筑/园景文字，未获取完整测绘平面图",
+      "source": "https://www.openstreetmap.org/way/162380529",
+      "date": "OpenStreetMap实际校园边界与建筑；© OpenStreetMap contributors / ODbL；非官方校内导览图",
       "points": [
         {
           "id": "main",
           "name": "辅仁主楼",
-          "x": 52,
-          "y": 28,
+          "x": 54.25,
+          "y": 66.66666666666666,
           "type": "historic",
-          "positionQuality": "schematic"
+          "positionQuality": "located-in-source-map"
         },
         {
           "id": "gate",
           "name": "旧址入口",
-          "x": 52,
-          "y": 82,
+          "x": null,
+          "y": null,
           "type": "gate",
-          "positionQuality": "schematic"
+          "positionQuality": "name-confirmed-pin-unverified"
         },
         {
           "id": "court",
           "name": "主楼院落",
-          "x": 52,
-          "y": 57,
+          "x": null,
+          "y": null,
           "type": "courtyard",
-          "positionQuality": "schematic"
+          "positionQuality": "name-confirmed-pin-unverified"
         },
         {
           "id": "garden",
           "name": "小花园",
-          "x": 24,
-          "y": 48,
+          "x": null,
+          "y": null,
           "type": "garden",
-          "positionQuality": "schematic"
+          "positionQuality": "name-confirmed-pin-unverified"
         },
         {
           "id": "memorial",
           "name": "一二·九纪念碑",
-          "x": 24,
-          "y": 30,
+          "x": null,
+          "y": null,
           "type": "motto",
-          "positionQuality": "schematic"
+          "positionQuality": "name-confirmed-pin-unverified"
         }
       ],
       "vista": "furen-vista.webp",
-      "map": "furen-map.png",
+      "map": "furen-map-real.png",
       "id": "furen",
-      "spatialAccuracy": "schematic-not-navigation"
+      "spatialAccuracy": "source-geometry-preserved",
+      "sourceMap": "furen-map-source.webp",
+      "mapMethod": "OpenStreetMap actual building and road geometry",
+      "osmBounds": [
+        116.37606410000001,
+        39.9338841,
+        116.3795753,
+        39.936202400000006
+      ]
     }
   ],
   "gallery": [
@@ -352,6 +366,6 @@
       "attribution": "物料交接既有插画；实景参考见来源记录"
     }
   ],
-  "note": "地图为像素地点示意，不含GPS或导航精度；地点可选，故事可以不定位。",
+  "note": "底图来自真实平面图或OSM实际几何，像素处理保留空间关系；未核准点位不绘制图钉；非实时导航。",
   "referenceDate": "2026-11-14"
 }

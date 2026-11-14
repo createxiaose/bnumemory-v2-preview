@@ -1,0 +1,1700 @@
+{
+  "version": "chibi-v6-20261114",
+  "cell": [
+    48,
+    64
+  ],
+  "rows": [
+    "student_blue",
+    "student_brown",
+    "student_green",
+    "student_female",
+    "teacher",
+    "qigong",
+    "visitor",
+    "archivist",
+    "student_1919",
+    "worker_1938",
+    "cadre_1952",
+    "editor_1971",
+    "photographer_2002"
+  ],
+  "frames": [
+    "idle_1",
+    "idle_2",
+    "blink",
+    "walk_1",
+    "walk_2",
+    "walk_3",
+    "walk_4",
+    "point",
+    "write",
+    "carry",
+    "read",
+    "sit_1",
+    "sit_2",
+    "sit_blink"
+  ],
+  "frameData": [
+    {
+      "name": "student_blue_idle_1",
+      "character": "student_blue",
+      "frame": "idle_1",
+      "x": 0,
+      "y": 0,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "student_blue_idle_2",
+      "character": "student_blue",
+      "frame": "idle_2",
+      "x": 48,
+      "y": 0,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "student_blue_blink",
+      "character": "student_blue",
+      "frame": "blink",
+      "x": 96,
+      "y": 0,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "student_blue_walk_1",
+      "character": "student_blue",
+      "frame": "walk_1",
+      "x": 144,
+      "y": 0,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "student_blue_walk_2",
+      "character": "student_blue",
+      "frame": "walk_2",
+      "x": 192,
+      "y": 0,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "student_blue_walk_3",
+      "character": "student_blue",
+      "frame": "walk_3",
+      "x": 240,
+      "y": 0,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "student_blue_walk_4",
+      "character": "student_blue",
+      "frame": "walk_4",
+      "x": 288,
+      "y": 0,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "student_blue_point",
+      "character": "student_blue",
+      "frame": "point",
+      "x": 336,
+      "y": 0,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "student_blue_write",
+      "character": "student_blue",
+      "frame": "write",
+      "x": 384,
+      "y": 0,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "student_blue_carry",
+      "character": "student_blue",
+      "frame": "carry",
+      "x": 432,
+      "y": 0,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "student_blue_read",
+      "character": "student_blue",
+      "frame": "read",
+      "x": 480,
+      "y": 0,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "student_blue_sit_1",
+      "character": "student_blue",
+      "frame": "sit_1",
+      "x": 528,
+      "y": 0,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "student_blue_sit_2",
+      "character": "student_blue",
+      "frame": "sit_2",
+      "x": 576,
+      "y": 0,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "student_blue_sit_blink",
+      "character": "student_blue",
+      "frame": "sit_blink",
+      "x": 624,
+      "y": 0,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "student_brown_idle_1",
+      "character": "student_brown",
+      "frame": "idle_1",
+      "x": 0,
+      "y": 64,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "student_brown_idle_2",
+      "character": "student_brown",
+      "frame": "idle_2",
+      "x": 48,
+      "y": 64,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "student_brown_blink",
+      "character": "student_brown",
+      "frame": "blink",
+      "x": 96,
+      "y": 64,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "student_brown_walk_1",
+      "character": "student_brown",
+      "frame": "walk_1",
+      "x": 144,
+      "y": 64,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "student_brown_walk_2",
+      "character": "student_brown",
+      "frame": "walk_2",
+      "x": 192,
+      "y": 64,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "student_brown_walk_3",
+      "character": "student_brown",
+      "frame": "walk_3",
+      "x": 240,
+      "y": 64,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "student_brown_walk_4",
+      "character": "student_brown",
+      "frame": "walk_4",
+      "x": 288,
+      "y": 64,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "student_brown_point",
+      "character": "student_brown",
+      "frame": "point",
+      "x": 336,
+      "y": 64,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "student_brown_write",
+      "character": "student_brown",
+      "frame": "write",
+      "x": 384,
+      "y": 64,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "student_brown_carry",
+      "character": "student_brown",
+      "frame": "carry",
+      "x": 432,
+      "y": 64,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "student_brown_read",
+      "character": "student_brown",
+      "frame": "read",
+      "x": 480,
+      "y": 64,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "student_brown_sit_1",
+      "character": "student_brown",
+      "frame": "sit_1",
+      "x": 528,
+      "y": 64,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "student_brown_sit_2",
+      "character": "student_brown",
+      "frame": "sit_2",
+      "x": 576,
+      "y": 64,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "student_brown_sit_blink",
+      "character": "student_brown",
+      "frame": "sit_blink",
+      "x": 624,
+      "y": 64,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "student_green_idle_1",
+      "character": "student_green",
+      "frame": "idle_1",
+      "x": 0,
+      "y": 128,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "student_green_idle_2",
+      "character": "student_green",
+      "frame": "idle_2",
+      "x": 48,
+      "y": 128,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "student_green_blink",
+      "character": "student_green",
+      "frame": "blink",
+      "x": 96,
+      "y": 128,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "student_green_walk_1",
+      "character": "student_green",
+      "frame": "walk_1",
+      "x": 144,
+      "y": 128,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "student_green_walk_2",
+      "character": "student_green",
+      "frame": "walk_2",
+      "x": 192,
+      "y": 128,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "student_green_walk_3",
+      "character": "student_green",
+      "frame": "walk_3",
+      "x": 240,
+      "y": 128,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "student_green_walk_4",
+      "character": "student_green",
+      "frame": "walk_4",
+      "x": 288,
+      "y": 128,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "student_green_point",
+      "character": "student_green",
+      "frame": "point",
+      "x": 336,
+      "y": 128,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "student_green_write",
+      "character": "student_green",
+      "frame": "write",
+      "x": 384,
+      "y": 128,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "student_green_carry",
+      "character": "student_green",
+      "frame": "carry",
+      "x": 432,
+      "y": 128,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "student_green_read",
+      "character": "student_green",
+      "frame": "read",
+      "x": 480,
+      "y": 128,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "student_green_sit_1",
+      "character": "student_green",
+      "frame": "sit_1",
+      "x": 528,
+      "y": 128,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "student_green_sit_2",
+      "character": "student_green",
+      "frame": "sit_2",
+      "x": 576,
+      "y": 128,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "student_green_sit_blink",
+      "character": "student_green",
+      "frame": "sit_blink",
+      "x": 624,
+      "y": 128,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "student_female_idle_1",
+      "character": "student_female",
+      "frame": "idle_1",
+      "x": 0,
+      "y": 192,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "student_female_idle_2",
+      "character": "student_female",
+      "frame": "idle_2",
+      "x": 48,
+      "y": 192,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "student_female_blink",
+      "character": "student_female",
+      "frame": "blink",
+      "x": 96,
+      "y": 192,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "student_female_walk_1",
+      "character": "student_female",
+      "frame": "walk_1",
+      "x": 144,
+      "y": 192,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "student_female_walk_2",
+      "character": "student_female",
+      "frame": "walk_2",
+      "x": 192,
+      "y": 192,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "student_female_walk_3",
+      "character": "student_female",
+      "frame": "walk_3",
+      "x": 240,
+      "y": 192,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "student_female_walk_4",
+      "character": "student_female",
+      "frame": "walk_4",
+      "x": 288,
+      "y": 192,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "student_female_point",
+      "character": "student_female",
+      "frame": "point",
+      "x": 336,
+      "y": 192,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "student_female_write",
+      "character": "student_female",
+      "frame": "write",
+      "x": 384,
+      "y": 192,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "student_female_carry",
+      "character": "student_female",
+      "frame": "carry",
+      "x": 432,
+      "y": 192,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "student_female_read",
+      "character": "student_female",
+      "frame": "read",
+      "x": 480,
+      "y": 192,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "student_female_sit_1",
+      "character": "student_female",
+      "frame": "sit_1",
+      "x": 528,
+      "y": 192,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "student_female_sit_2",
+      "character": "student_female",
+      "frame": "sit_2",
+      "x": 576,
+      "y": 192,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "student_female_sit_blink",
+      "character": "student_female",
+      "frame": "sit_blink",
+      "x": 624,
+      "y": 192,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "teacher_idle_1",
+      "character": "teacher",
+      "frame": "idle_1",
+      "x": 0,
+      "y": 256,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "teacher_idle_2",
+      "character": "teacher",
+      "frame": "idle_2",
+      "x": 48,
+      "y": 256,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "teacher_blink",
+      "character": "teacher",
+      "frame": "blink",
+      "x": 96,
+      "y": 256,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "teacher_walk_1",
+      "character": "teacher",
+      "frame": "walk_1",
+      "x": 144,
+      "y": 256,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "teacher_walk_2",
+      "character": "teacher",
+      "frame": "walk_2",
+      "x": 192,
+      "y": 256,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "teacher_walk_3",
+      "character": "teacher",
+      "frame": "walk_3",
+      "x": 240,
+      "y": 256,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "teacher_walk_4",
+      "character": "teacher",
+      "frame": "walk_4",
+      "x": 288,
+      "y": 256,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "teacher_point",
+      "character": "teacher",
+      "frame": "point",
+      "x": 336,
+      "y": 256,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "teacher_write",
+      "character": "teacher",
+      "frame": "write",
+      "x": 384,
+      "y": 256,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "teacher_carry",
+      "character": "teacher",
+      "frame": "carry",
+      "x": 432,
+      "y": 256,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "teacher_read",
+      "character": "teacher",
+      "frame": "read",
+      "x": 480,
+      "y": 256,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "teacher_sit_1",
+      "character": "teacher",
+      "frame": "sit_1",
+      "x": 528,
+      "y": 256,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "teacher_sit_2",
+      "character": "teacher",
+      "frame": "sit_2",
+      "x": 576,
+      "y": 256,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "teacher_sit_blink",
+      "character": "teacher",
+      "frame": "sit_blink",
+      "x": 624,
+      "y": 256,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "qigong_idle_1",
+      "character": "qigong",
+      "frame": "idle_1",
+      "x": 0,
+      "y": 320,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "qigong_idle_2",
+      "character": "qigong",
+      "frame": "idle_2",
+      "x": 48,
+      "y": 320,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "qigong_blink",
+      "character": "qigong",
+      "frame": "blink",
+      "x": 96,
+      "y": 320,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "qigong_walk_1",
+      "character": "qigong",
+      "frame": "walk_1",
+      "x": 144,
+      "y": 320,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "qigong_walk_2",
+      "character": "qigong",
+      "frame": "walk_2",
+      "x": 192,
+      "y": 320,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "qigong_walk_3",
+      "character": "qigong",
+      "frame": "walk_3",
+      "x": 240,
+      "y": 320,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "qigong_walk_4",
+      "character": "qigong",
+      "frame": "walk_4",
+      "x": 288,
+      "y": 320,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "qigong_point",
+      "character": "qigong",
+      "frame": "point",
+      "x": 336,
+      "y": 320,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "qigong_write",
+      "character": "qigong",
+      "frame": "write",
+      "x": 384,
+      "y": 320,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "qigong_carry",
+      "character": "qigong",
+      "frame": "carry",
+      "x": 432,
+      "y": 320,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "qigong_read",
+      "character": "qigong",
+      "frame": "read",
+      "x": 480,
+      "y": 320,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "qigong_sit_1",
+      "character": "qigong",
+      "frame": "sit_1",
+      "x": 528,
+      "y": 320,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "qigong_sit_2",
+      "character": "qigong",
+      "frame": "sit_2",
+      "x": 576,
+      "y": 320,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "qigong_sit_blink",
+      "character": "qigong",
+      "frame": "sit_blink",
+      "x": 624,
+      "y": 320,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "visitor_idle_1",
+      "character": "visitor",
+      "frame": "idle_1",
+      "x": 0,
+      "y": 384,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "visitor_idle_2",
+      "character": "visitor",
+      "frame": "idle_2",
+      "x": 48,
+      "y": 384,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "visitor_blink",
+      "character": "visitor",
+      "frame": "blink",
+      "x": 96,
+      "y": 384,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "visitor_walk_1",
+      "character": "visitor",
+      "frame": "walk_1",
+      "x": 144,
+      "y": 384,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "visitor_walk_2",
+      "character": "visitor",
+      "frame": "walk_2",
+      "x": 192,
+      "y": 384,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "visitor_walk_3",
+      "character": "visitor",
+      "frame": "walk_3",
+      "x": 240,
+      "y": 384,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "visitor_walk_4",
+      "character": "visitor",
+      "frame": "walk_4",
+      "x": 288,
+      "y": 384,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "visitor_point",
+      "character": "visitor",
+      "frame": "point",
+      "x": 336,
+      "y": 384,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "visitor_write",
+      "character": "visitor",
+      "frame": "write",
+      "x": 384,
+      "y": 384,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "visitor_carry",
+      "character": "visitor",
+      "frame": "carry",
+      "x": 432,
+      "y": 384,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "visitor_read",
+      "character": "visitor",
+      "frame": "read",
+      "x": 480,
+      "y": 384,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "visitor_sit_1",
+      "character": "visitor",
+      "frame": "sit_1",
+      "x": 528,
+      "y": 384,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "visitor_sit_2",
+      "character": "visitor",
+      "frame": "sit_2",
+      "x": 576,
+      "y": 384,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "visitor_sit_blink",
+      "character": "visitor",
+      "frame": "sit_blink",
+      "x": 624,
+      "y": 384,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "archivist_idle_1",
+      "character": "archivist",
+      "frame": "idle_1",
+      "x": 0,
+      "y": 448,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "archivist_idle_2",
+      "character": "archivist",
+      "frame": "idle_2",
+      "x": 48,
+      "y": 448,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "archivist_blink",
+      "character": "archivist",
+      "frame": "blink",
+      "x": 96,
+      "y": 448,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "archivist_walk_1",
+      "character": "archivist",
+      "frame": "walk_1",
+      "x": 144,
+      "y": 448,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "archivist_walk_2",
+      "character": "archivist",
+      "frame": "walk_2",
+      "x": 192,
+      "y": 448,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "archivist_walk_3",
+      "character": "archivist",
+      "frame": "walk_3",
+      "x": 240,
+      "y": 448,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "archivist_walk_4",
+      "character": "archivist",
+      "frame": "walk_4",
+      "x": 288,
+      "y": 448,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "archivist_point",
+      "character": "archivist",
+      "frame": "point",
+      "x": 336,
+      "y": 448,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "archivist_write",
+      "character": "archivist",
+      "frame": "write",
+      "x": 384,
+      "y": 448,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "archivist_carry",
+      "character": "archivist",
+      "frame": "carry",
+      "x": 432,
+      "y": 448,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "archivist_read",
+      "character": "archivist",
+      "frame": "read",
+      "x": 480,
+      "y": 448,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "archivist_sit_1",
+      "character": "archivist",
+      "frame": "sit_1",
+      "x": 528,
+      "y": 448,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "archivist_sit_2",
+      "character": "archivist",
+      "frame": "sit_2",
+      "x": 576,
+      "y": 448,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "archivist_sit_blink",
+      "character": "archivist",
+      "frame": "sit_blink",
+      "x": 624,
+      "y": 448,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "student_1919_idle_1",
+      "character": "student_1919",
+      "frame": "idle_1",
+      "x": 0,
+      "y": 512,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "student_1919_idle_2",
+      "character": "student_1919",
+      "frame": "idle_2",
+      "x": 48,
+      "y": 512,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "student_1919_blink",
+      "character": "student_1919",
+      "frame": "blink",
+      "x": 96,
+      "y": 512,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "student_1919_walk_1",
+      "character": "student_1919",
+      "frame": "walk_1",
+      "x": 144,
+      "y": 512,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "student_1919_walk_2",
+      "character": "student_1919",
+      "frame": "walk_2",
+      "x": 192,
+      "y": 512,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "student_1919_walk_3",
+      "character": "student_1919",
+      "frame": "walk_3",
+      "x": 240,
+      "y": 512,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "student_1919_walk_4",
+      "character": "student_1919",
+      "frame": "walk_4",
+      "x": 288,
+      "y": 512,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "student_1919_point",
+      "character": "student_1919",
+      "frame": "point",
+      "x": 336,
+      "y": 512,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "student_1919_write",
+      "character": "student_1919",
+      "frame": "write",
+      "x": 384,
+      "y": 512,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "student_1919_carry",
+      "character": "student_1919",
+      "frame": "carry",
+      "x": 432,
+      "y": 512,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "student_1919_read",
+      "character": "student_1919",
+      "frame": "read",
+      "x": 480,
+      "y": 512,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "student_1919_sit_1",
+      "character": "student_1919",
+      "frame": "sit_1",
+      "x": 528,
+      "y": 512,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "student_1919_sit_2",
+      "character": "student_1919",
+      "frame": "sit_2",
+      "x": 576,
+      "y": 512,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "student_1919_sit_blink",
+      "character": "student_1919",
+      "frame": "sit_blink",
+      "x": 624,
+      "y": 512,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "worker_1938_idle_1",
+      "character": "worker_1938",
+      "frame": "idle_1",
+      "x": 0,
+      "y": 576,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "worker_1938_idle_2",
+      "character": "worker_1938",
+      "frame": "idle_2",
+      "x": 48,
+      "y": 576,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "worker_1938_blink",
+      "character": "worker_1938",
+      "frame": "blink",
+      "x": 96,
+      "y": 576,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "worker_1938_walk_1",
+      "character": "worker_1938",
+      "frame": "walk_1",
+      "x": 144,
+      "y": 576,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "worker_1938_walk_2",
+      "character": "worker_1938",
+      "frame": "walk_2",
+      "x": 192,
+      "y": 576,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "worker_1938_walk_3",
+      "character": "worker_1938",
+      "frame": "walk_3",
+      "x": 240,
+      "y": 576,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "worker_1938_walk_4",
+      "character": "worker_1938",
+      "frame": "walk_4",
+      "x": 288,
+      "y": 576,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "worker_1938_point",
+      "character": "worker_1938",
+      "frame": "point",
+      "x": 336,
+      "y": 576,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "worker_1938_write",
+      "character": "worker_1938",
+      "frame": "write",
+      "x": 384,
+      "y": 576,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "worker_1938_carry",
+      "character": "worker_1938",
+      "frame": "carry",
+      "x": 432,
+      "y": 576,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "worker_1938_read",
+      "character": "worker_1938",
+      "frame": "read",
+      "x": 480,
+      "y": 576,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "worker_1938_sit_1",
+      "character": "worker_1938",
+      "frame": "sit_1",
+      "x": 528,
+      "y": 576,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "worker_1938_sit_2",
+      "character": "worker_1938",
+      "frame": "sit_2",
+      "x": 576,
+      "y": 576,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "worker_1938_sit_blink",
+      "character": "worker_1938",
+      "frame": "sit_blink",
+      "x": 624,
+      "y": 576,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "cadre_1952_idle_1",
+      "character": "cadre_1952",
+      "frame": "idle_1",
+      "x": 0,
+      "y": 640,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "cadre_1952_idle_2",
+      "character": "cadre_1952",
+      "frame": "idle_2",
+      "x": 48,
+      "y": 640,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "cadre_1952_blink",
+      "character": "cadre_1952",
+      "frame": "blink",
+      "x": 96,
+      "y": 640,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "cadre_1952_walk_1",
+      "character": "cadre_1952",
+      "frame": "walk_1",
+      "x": 144,
+      "y": 640,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "cadre_1952_walk_2",
+      "character": "cadre_1952",
+      "frame": "walk_2",
+      "x": 192,
+      "y": 640,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "cadre_1952_walk_3",
+      "character": "cadre_1952",
+      "frame": "walk_3",
+      "x": 240,
+      "y": 640,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "cadre_1952_walk_4",
+      "character": "cadre_1952",
+      "frame": "walk_4",
+      "x": 288,
+      "y": 640,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "cadre_1952_point",
+      "character": "cadre_1952",
+      "frame": "point",
+      "x": 336,
+      "y": 640,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "cadre_1952_write",
+      "character": "cadre_1952",
+      "frame": "write",
+      "x": 384,
+      "y": 640,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "cadre_1952_carry",
+      "character": "cadre_1952",
+      "frame": "carry",
+      "x": 432,
+      "y": 640,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "cadre_1952_read",
+      "character": "cadre_1952",
+      "frame": "read",
+      "x": 480,
+      "y": 640,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "cadre_1952_sit_1",
+      "character": "cadre_1952",
+      "frame": "sit_1",
+      "x": 528,
+      "y": 640,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "cadre_1952_sit_2",
+      "character": "cadre_1952",
+      "frame": "sit_2",
+      "x": 576,
+      "y": 640,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "cadre_1952_sit_blink",
+      "character": "cadre_1952",
+      "frame": "sit_blink",
+      "x": 624,
+      "y": 640,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "editor_1971_idle_1",
+      "character": "editor_1971",
+      "frame": "idle_1",
+      "x": 0,
+      "y": 704,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "editor_1971_idle_2",
+      "character": "editor_1971",
+      "frame": "idle_2",
+      "x": 48,
+      "y": 704,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "editor_1971_blink",
+      "character": "editor_1971",
+      "frame": "blink",
+      "x": 96,
+      "y": 704,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "editor_1971_walk_1",
+      "character": "editor_1971",
+      "frame": "walk_1",
+      "x": 144,
+      "y": 704,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "editor_1971_walk_2",
+      "character": "editor_1971",
+      "frame": "walk_2",
+      "x": 192,
+      "y": 704,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "editor_1971_walk_3",
+      "character": "editor_1971",
+      "frame": "walk_3",
+      "x": 240,
+      "y": 704,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "editor_1971_walk_4",
+      "character": "editor_1971",
+      "frame": "walk_4",
+      "x": 288,
+      "y": 704,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "editor_1971_point",
+      "character": "editor_1971",
+      "frame": "point",
+      "x": 336,
+      "y": 704,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "editor_1971_write",
+      "character": "editor_1971",
+      "frame": "write",
+      "x": 384,
+      "y": 704,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "editor_1971_carry",
+      "character": "editor_1971",
+      "frame": "carry",
+      "x": 432,
+      "y": 704,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "editor_1971_read",
+      "character": "editor_1971",
+      "frame": "read",
+      "x": 480,
+      "y": 704,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "editor_1971_sit_1",
+      "character": "editor_1971",
+      "frame": "sit_1",
+      "x": 528,
+      "y": 704,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "editor_1971_sit_2",
+      "character": "editor_1971",
+      "frame": "sit_2",
+      "x": 576,
+      "y": 704,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "editor_1971_sit_blink",
+      "character": "editor_1971",
+      "frame": "sit_blink",
+      "x": 624,
+      "y": 704,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "photographer_2002_idle_1",
+      "character": "photographer_2002",
+      "frame": "idle_1",
+      "x": 0,
+      "y": 768,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "photographer_2002_idle_2",
+      "character": "photographer_2002",
+      "frame": "idle_2",
+      "x": 48,
+      "y": 768,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "photographer_2002_blink",
+      "character": "photographer_2002",
+      "frame": "blink",
+      "x": 96,
+      "y": 768,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "photographer_2002_walk_1",
+      "character": "photographer_2002",
+      "frame": "walk_1",
+      "x": 144,
+      "y": 768,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "photographer_2002_walk_2",
+      "character": "photographer_2002",
+      "frame": "walk_2",
+      "x": 192,
+      "y": 768,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "photographer_2002_walk_3",
+      "character": "photographer_2002",
+      "frame": "walk_3",
+      "x": 240,
+      "y": 768,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "photographer_2002_walk_4",
+      "character": "photographer_2002",
+      "frame": "walk_4",
+      "x": 288,
+      "y": 768,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "photographer_2002_point",
+      "character": "photographer_2002",
+      "frame": "point",
+      "x": 336,
+      "y": 768,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "photographer_2002_write",
+      "character": "photographer_2002",
+      "frame": "write",
+      "x": 384,
+      "y": 768,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "photographer_2002_carry",
+      "character": "photographer_2002",
+      "frame": "carry",
+      "x": 432,
+      "y": 768,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "photographer_2002_read",
+      "character": "photographer_2002",
+      "frame": "read",
+      "x": 480,
+      "y": 768,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "photographer_2002_sit_1",
+      "character": "photographer_2002",
+      "frame": "sit_1",
+      "x": 528,
+      "y": 768,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "photographer_2002_sit_2",
+      "character": "photographer_2002",
+      "frame": "sit_2",
+      "x": 576,
+      "y": 768,
+      "w": 48,
+      "h": 64
+    },
+    {
+      "name": "photographer_2002_sit_blink",
+      "character": "photographer_2002",
+      "frame": "sit_blink",
+      "x": 624,
+      "y": 768,
+      "w": 48,
+      "h": 64
+    }
+  ],
+  "status": "full-cast-candidate",
+  "source": "tools/art/build_chibi_cast.py",
+  "changedRows": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "preservedR2Rows": [
+    0,
+    4,
+    6
+  ]
+}

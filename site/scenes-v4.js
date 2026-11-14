@@ -66,9 +66,9 @@
   tileImg.onload = markLoaded;
   propImg.onload = markLoaded;
   charImg.onerror = tileImg.onerror = propImg.onerror = failedAsset;
-  charImg.src = "assets/characters-v5-full-20261109.png";
-  tileImg.src = "assets/tileset-v3.png";
-  propImg.src = "assets/props-v3.png";
+  charImg.src = "assets/characters-chibi-v6.png";
+  tileImg.src = "assets/tileset-cozy-v4.png";
+  propImg.src = "assets/props-chibi-v4.png";
   if (document.fonts && document.fonts.ready) {
     document.fonts.ready.then(() => backdropCache.clear());
   }
@@ -139,6 +139,8 @@
     light.addColorStop(1, "rgba(20,10,5,.16)");
     ctx.fillStyle = light;
     ctx.fillRect(0, y0, W, y1 - y0);
+    R(ctx,0,y0,W,3,"#d2b57f");
+    for(let x=0;x<W;x+=96){ R(ctx,x,y0+4,3,Math.max(0,y1-y0-8),"rgba(72,63,44,.13)"); }
     if (wainscot) {
       tileFill(ctx, wainscot, 0, y1 - 36, W, 36, 2);
       R(ctx, 0, y1 - 38, W, 5, "#5e3b24");
@@ -317,9 +319,23 @@
     ctx.fill();
   }
 
+  const actionFrameCache = new Map();
+  function actionFrame(row,col) {
+    const phase=col===8?(Math.floor(T*4)%2):((T%5.2)<.14?1:0);
+    const key=row+":"+col+":"+phase;
+    if(actionFrameCache.has(key))return actionFrameCache.get(key);
+    const canvas=document.createElement("canvas");canvas.width=48;canvas.height=64;
+    const g=canvas.getContext("2d");g.imageSmoothingEnabled=false;
+    g.drawImage(charImg,col*48,row*64,48,64,0,0,48,64);
+    if(col===8&&phase){g.clearRect(34,34,12,15);g.drawImage(charImg,col*48+34,row*64+34,12,15,35,34,12,15);}
+    if(col===10&&phase)g.drawImage(charImg,2*48+10,row*64+3,26,25,10,3,26,25);
+    canvas.__muduoCharacterFrame={row,col,phase};actionFrameCache.set(key,canvas);return canvas;
+  }
   function drawChar(ctx, rowName, frame, x, y, scale = 1, opts = {}) {
     const row = CHAR_ROWS[rowName] == null ? 0 : CHAR_ROWS[rowName];
     const col = FRAME_COL[frame] == null ? 0 : FRAME_COL[frame];
+    const source=(col===8||col===10)?actionFrame(row,col):charImg;
+    const sx=(col===8||col===10)?0:col*48,sy=(col===8||col===10)?0:row*64;
     const sw = 32 * scale;
     const sh = 48 * scale;
     if (!opts.noShadow) contactShadow(ctx, x, y, 21 * scale, .28);
@@ -328,10 +344,10 @@
     if (opts.flip) {
       ctx.translate(Math.round(x), 0);
       ctx.scale(-1, 1);
-      ctx.drawImage(charImg, col * 32, row * 48, 32, 48,
+      ctx.drawImage(source, sx, sy, 48, 64,
         Math.round(-sw / 2), Math.round(y - sh), Math.ceil(sw), Math.ceil(sh));
     } else {
-      ctx.drawImage(charImg, col * 32, row * 48, 32, 48,
+      ctx.drawImage(source, sx, sy, 48, 64,
         Math.round(x - sw / 2), Math.round(y - sh), Math.ceil(sw), Math.ceil(sh));
     }
     ctx.restore();
@@ -849,7 +865,7 @@
       add(208, () => drawProp(ctx, "cart", 438, 208, .67));
       add(237, () => drawChar(ctx, "qigong", "carry", 352, 237, 1.02));
       add(247, () => drawChar(ctx, "cadre_1952", "carry", 264, 247, .98));
-      add(249, () => drawChar(ctx, "worker_1938", "carry", 472, 249, 1.01));
+      add(249, () => drawChar(ctx, "worker_1938", "carry", 472+Math.sin(T*.5)*10, 249, 1.01));
       add(257, () => drawChar(ctx, "student_green", walkFrame(3), 144 + Math.sin(T * .7) * 18, 257, .9));
     } else {
       add(236, () => drawChar(ctx, "qigong", "read", 392, 237, 1.04));
@@ -1075,14 +1091,14 @@
     const g = ctx.createRadialGradient(CX, H * .45, 120, CX, H * .45, 520);
     g.addColorStop(0, "rgba(8,7,6,0)");
     g.addColorStop(.72, "rgba(8,7,6,.035)");
-    g.addColorStop(1, "rgba(6,6,6,.22)");
+    g.addColorStop(1, "rgba(6,6,6,.10)");
     ctx.fillStyle = g;
     ctx.fillRect(0, 0, W, H);
     const top = ctx.createLinearGradient(0, 0, 0, H);
     top.addColorStop(0, "rgba(0,0,0,.12)");
     top.addColorStop(.18, "rgba(0,0,0,0)");
     top.addColorStop(.82, "rgba(0,0,0,0)");
-    top.addColorStop(1, "rgba(0,0,0,.13)");
+    top.addColorStop(1, "rgba(0,0,0,.06)");
     ctx.fillStyle = top;
     ctx.fillRect(0, 0, W, H);
   }
@@ -1116,7 +1132,7 @@
     ctx.fillRect(0, 0, W, H);
     ctx.restore();
     const edge = ctx.createLinearGradient(0, 0, 0, H);
-    edge.addColorStop(0, `rgba(7,10,11,${p.shade * .55})`);
+    edge.addColorStop(0, `rgba(7,10,11,${p.shade * .35})`);
     edge.addColorStop(.25, "rgba(7,10,11,0)");
     edge.addColorStop(.76, "rgba(7,10,11,0)");
     edge.addColorStop(1, `rgba(7,10,11,${p.shade * .8})`);
@@ -1148,6 +1164,22 @@
     else if (sceneId === "y1996") scene1996(ctx, world, variant);
     else if (sceneId === "y2002") scene2002(ctx, world, variant);
     else scene2026(ctx, state, world, variant);
+    // Native furniture zones enrich every room without painting over moving people.
+    const dressing={
+      y1902:[["bookshelf",27,207,.52],["plant",748,199,.45],["books",330,271,.25]],
+      y1919:[["plant",38,208,.46],["bench",730,212,.48],["lantern",726,171,.40]],
+      y1938:[["cabinet",35,226,.48],["stove",67,259,.45],["books",639,271,.24]],
+      y1949:[["plant",41,206,.46],["bench",734,215,.48],["books",322,268,.24]],
+      y1952:[["tree",34,225,.52],["plant",730,227,.46],["crate",546,276,.37]],
+      y1971:[["bookshelf",58,232,.70],["teacher_desk",132,272,.52],["books",133,237,.25],["plant",737,249,.55]],
+      y1991:[["bookshelf",53,229,.58],["plant",726,233,.54],["bench",670,276,.45]],
+      y1996:[["bookshelf",31,226,.58],["books",98,239,.28],["plant",747,239,.54]],
+      y2002:[["bench",39,226,.50],["plant",739,226,.50],["lantern",58,173,.40]],
+      y2026:[["bookshelf",37,235,.68],["plant",718,209,.52],["books",680,248,.20]]
+    };
+    (dressing[sceneId]||[]).forEach(([name,x,y,scale])=>world.push({y,fn:()=>drawProp(ctx,name,x,y,scale)}));
+    const ambientWalkers={y1902:["student_brown",292,277,.78],y1971:["editor_1971",321,269,.80],y1991:["student_blue",495,272,.80],y1996:["visitor",646,275,.82],y2026:["visitor",510,276,.86]};
+    const walker=ambientWalkers[sceneId];if(walker){const [name,x,y,scale]=walker,phase=T*.65+variant;world.push({y,fn:()=>drawChar(ctx,name,walkFrame(1),x+Math.sin(phase)*22,y,scale,{flip:Math.cos(phase)<0})});}
     world.sort((a, b) => a.y - b.y);
     world.forEach(item => item.fn());
     foreground(ctx, sceneId);

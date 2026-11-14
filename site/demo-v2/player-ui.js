@@ -182,8 +182,8 @@
   };
 
   const $ = id => document.getElementById(id);
-  window.MUDUO_VER = '1.2.0';
-  window.MUDUO_PRODUCT_VER = '1.2.0';
+  window.MUDUO_VER = '1.3.0';
+  window.MUDUO_PRODUCT_VER = '1.3.0';
   window.MUDUO_FEEDBACK_EMAIL = '';
 
   function feedbackQueue() {

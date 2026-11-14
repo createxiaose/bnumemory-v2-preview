@@ -1,6 +1,6 @@
 {
   "version": "v2-gray-20261114",
-  "local_base": "V1.2.0",
+  "local_base": "V1.3.0",
   "files": [
     {
       "path": ".github/workflows/pages.yml",
@@ -34,18 +34,28 @@
     },
     {
       "path": "site/assets/campuses/campus-picker.js",
-      "bytes": 6016,
-      "sha256": "760f341171328ff2be7532e6fbc1eb7097440652f03eb3ad8297da9a339ce7dc"
+      "bytes": 6742,
+      "sha256": "923391afcce0a7aa5a98ff37a0baf8f6d7cc49c4e56776b23cf1219398c31853"
     },
     {
       "path": "site/assets/campuses/campuses.json",
-      "bytes": 9387,
-      "sha256": "314cad96ed3e31d747efacf1dd0d7eda505f127c576d764b06069d3eb6ccd244"
+      "bytes": 10588,
+      "sha256": "a4f2ded4668137fd76243151cd60514d9643827fed287e0d1622bcf44da58b65"
+    },
+    {
+      "path": "site/assets/campuses/changping-map-real.png",
+      "bytes": 519653,
+      "sha256": "409fd08dc8dea68997f01b8d390441b35eaa4caca3f61327f9cc275228d82691"
+    },
+    {
+      "path": "site/assets/campuses/changping-map-source.webp",
+      "bytes": 632148,
+      "sha256": "f1926970c4b2d462981b9f94b3a72a7587351639fde52b7c5ed1a2d990cd5657"
     },
     {
       "path": "site/assets/campuses/changping-map.png",
-      "bytes": 6185,
-      "sha256": "13e1902ec94bb8f523498e2fc6d34aeb79563ab43abc645348e6c6afd9797535"
+      "bytes": 519653,
+      "sha256": "409fd08dc8dea68997f01b8d390441b35eaa4caca3f61327f9cc275228d82691"
     },
     {
       "path": "site/assets/campuses/changping-panel.webp",
@@ -63,9 +73,19 @@
       "sha256": "abbc7b5543283c2070966c39c726e2d0aafeceda844d8e10e51a4c825bd78298"
     },
     {
+      "path": "site/assets/campuses/furen-map-real.png",
+      "bytes": 89672,
+      "sha256": "ef48293d1c13bf7697aa271e59c2c93e956caf5593f2038f463b936517eb1381"
+    },
+    {
+      "path": "site/assets/campuses/furen-map-source.webp",
+      "bytes": 8620,
+      "sha256": "3270302c406f23bca9ea7edacc4851402419765d9c48efee732c1792b5f751e5"
+    },
+    {
       "path": "site/assets/campuses/furen-map.png",
-      "bytes": 5873,
-      "sha256": "c2caf6aa11091cc67dd0fd31fba4589a170f75e0ed92c01693c6e62e08384927"
+      "bytes": 89672,
+      "sha256": "ef48293d1c13bf7697aa271e59c2c93e956caf5593f2038f463b936517eb1381"
     },
     {
       "path": "site/assets/campuses/furen-panel.webp",
@@ -83,9 +103,19 @@
       "sha256": "4644203b34a6bf568065952272943b79bea075854b89ffd1a024d5be57465912"
     },
     {
+      "path": "site/assets/campuses/haidian-map-real.png",
+      "bytes": 377831,
+      "sha256": "5a26a57391282d13455dce6673f7c67516d384b0be5e19409936db508364164e"
+    },
+    {
+      "path": "site/assets/campuses/haidian-map-source.webp",
+      "bytes": 582054,
+      "sha256": "2dc3214006623c394f15d20ca62dc37c40c6181a16465db9f2db19ad22151ee4"
+    },
+    {
       "path": "site/assets/campuses/haidian-map.png",
-      "bytes": 7324,
-      "sha256": "028fc29b055d9b08bf2623a09226c0780fe43b4610c07e12bf4b731d3278e5cb"
+      "bytes": 377831,
+      "sha256": "5a26a57391282d13455dce6673f7c67516d384b0be5e19409936db508364164e"
     },
     {
       "path": "site/assets/campuses/haidian-panel.webp",
@@ -113,9 +143,19 @@
       "sha256": "982b84557452a8ddb4cf1d99eda208cead8c0d5c2055ce71ed8f82b058c65d20"
     },
     {
+      "path": "site/assets/campuses/zhuhai-map-real.png",
+      "bytes": 459265,
+      "sha256": "d7cb81a47c01e2a422aa9e74a564755e2ac62b5e660c620c740e217cb2523dfb"
+    },
+    {
+      "path": "site/assets/campuses/zhuhai-map-source.webp",
+      "bytes": 1127656,
+      "sha256": "5d9e4f84c5c37a148dcf180fc7e8d1b0b57e79872a0cc607b5601f78c3025a8f"
+    },
+    {
       "path": "site/assets/campuses/zhuhai-map.png",
-      "bytes": 9885,
-      "sha256": "f3b1ff1e7ffc608646daf0860df4c7eb9ea7c30287370d2ba5be985743e49c37"
+      "bytes": 459265,
+      "sha256": "d7cb81a47c01e2a422aa9e74a564755e2ac62b5e660c620c740e217cb2523dfb"
     },
     {
       "path": "site/assets/campuses/zhuhai-panel.webp",
@@ -126,6 +166,16 @@
       "path": "site/assets/campuses/zhuhai-vista.webp",
       "bytes": 885032,
       "sha256": "98afd902dd04e2628fbbbcc1346cec1f8f13c4b0e53f400b6fe6fda0207fbc84"
+    },
+    {
+      "path": "site/assets/characters-chibi-v6.json",
+      "bytes": 33010,
+      "sha256": "6be214f84e056fc835c3dc003a002e0454e3c6c5d197c5fac5ff345cb85b33f4"
+    },
+    {
+      "path": "site/assets/characters-chibi-v6.png",
+      "bytes": 49621,
+      "sha256": "e86650b9f53eb4491c3e324c9f90ea31060d2d33b5a68c8ea1ef88b4be519365"
     },
     {
       "path": "site/assets/characters-v5-full-20261109.json",
@@ -153,6 +203,11 @@
       "sha256": "bc518cf64b8032c07690f33cc270c35c179255a6ac8efa7c165ebae7e8f76a63"
     },
     {
+      "path": "site/assets/props-chibi-v4.png",
+      "bytes": 24404,
+      "sha256": "bed2569dfc163de603fb444b960c18ff3bdf760bcf2b97e0fea6994146ecf8c4"
+    },
+    {
       "path": "site/assets/props-v3.js",
       "bytes": 3715,
       "sha256": "507228bd5416693f04232329d61750704d82dfe3d431b4d61cc01f1de9b68d89"
@@ -178,9 +233,64 @@
       "sha256": "e522d64003b332e29271fdce4993ed3ae2934c8947f41654bd324ddcfa2de301"
     },
     {
+      "path": "site/assets/scene-covers/y1902.webp",
+      "bytes": 254302,
+      "sha256": "aae9b7bf5dba79b0e98acae71c37362a29e8cdbc4b7c4c93fdfaf562a6e72ba7"
+    },
+    {
+      "path": "site/assets/scene-covers/y1919.webp",
+      "bytes": 292588,
+      "sha256": "ddc14be7f92a7fb3759b4bb523e84a908be2f88837fb122af8d31609b9568fc3"
+    },
+    {
+      "path": "site/assets/scene-covers/y1938.webp",
+      "bytes": 241646,
+      "sha256": "6ac2a5a92b5a4094988d5720e32f0af8025e54d26282f6522860977e835986c7"
+    },
+    {
+      "path": "site/assets/scene-covers/y1949.webp",
+      "bytes": 278262,
+      "sha256": "e7ea1dba3d3f6e504331782dda931590207f239d580e82bb5114bb378ab589f7"
+    },
+    {
+      "path": "site/assets/scene-covers/y1952.webp",
+      "bytes": 306300,
+      "sha256": "967f43ba662f89f6f2543870e146b8559a4acf04ffb083315d31642cca06b23d"
+    },
+    {
+      "path": "site/assets/scene-covers/y1971.webp",
+      "bytes": 192816,
+      "sha256": "6284b1115cf40399aa4a4736e8077c1e972afb5b6c4595e21296f5cf0514d09b"
+    },
+    {
+      "path": "site/assets/scene-covers/y1991.webp",
+      "bytes": 285886,
+      "sha256": "73d6d2ee224997c5052b78c73c70e66f23ad581fbaa4e72a8fd3cdd53eadd97a"
+    },
+    {
+      "path": "site/assets/scene-covers/y1996.webp",
+      "bytes": 223126,
+      "sha256": "2f3ad9c1e967b745a0d3820b4af39eef02dd959098e524da8791419b9e2d9bcd"
+    },
+    {
+      "path": "site/assets/scene-covers/y2002.webp",
+      "bytes": 290392,
+      "sha256": "35b7f8fd7afc95ddddc2b0d2769d7480f7962ceb58ef6cd459b8450f764e0868"
+    },
+    {
+      "path": "site/assets/scene-covers/y2026.webp",
+      "bytes": 186274,
+      "sha256": "9503bf8f18503d736aed5be3088590bb1cdeae97edc606afc32f6649111367c2"
+    },
+    {
       "path": "site/assets/THIRD-PARTY.md",
       "bytes": 391,
       "sha256": "390cc79b6e5d8e3bf2290e3a9d9c3920f03eba5ae14dfd13a5046c046c261532"
+    },
+    {
+      "path": "site/assets/tileset-cozy-v4.png",
+      "bytes": 4488,
+      "sha256": "65436b84f6e91799fd95eb2faf9fc5aed2ee08dfaabda6bf22481ee45c57a960"
     },
     {
       "path": "site/assets/tileset-v3.png",
@@ -189,8 +299,8 @@
     },
     {
       "path": "site/campus-atlas.html",
-      "bytes": 638,
-      "sha256": "3b29b3c5f88df892eb05de2a01ae282fefba1caf1cc851a0dbbfa2c94a5db0e4"
+      "bytes": 643,
+      "sha256": "c898984d1be54544d816315b14b88d439d3c1e90bc9e1b02b7faafe11a39794f"
     },
     {
       "path": "site/demo-v2/demo.css",
@@ -199,13 +309,13 @@
     },
     {
       "path": "site/demo-v2/demo.js",
-      "bytes": 31014,
-      "sha256": "1eab1f08ba2560cd3d7d73e159781403cf38917b00511981ce578f54975548ac"
+      "bytes": 31120,
+      "sha256": "a7fcaa3cf52beecbeaf0a494ba132e5a4d332d90659227b58f7c03c2ac48fe98"
     },
     {
       "path": "site/demo-v2/index.html",
-      "bytes": 10912,
-      "sha256": "bd8039236fb6e138be3df04ed4b2857c8ba7b325727df02f5062e1a00b774f7b"
+      "bytes": 10917,
+      "sha256": "abc501182c407ec0348f0784c343d1aa913d71e184f1808938b53b1cecc0d151"
     },
     {
       "path": "site/demo-v2/media/celebration.png",
@@ -230,22 +340,22 @@
     {
       "path": "site/demo-v2/player-telemetry.js",
       "bytes": 8635,
-      "sha256": "32d18ebbcb6174650c19d5f52c10fea74f8eb4afd40193654bcdd26e77c22844"
+      "sha256": "fb9e928bd90e01a9f8f83a069cadd4814aa238f039862788623752c7ef157985"
     },
     {
       "path": "site/demo-v2/player-ui.js",
       "bytes": 107225,
-      "sha256": "b957ba47843694739a0435ada0f735b4b3e6e9ddb6c9aaa689a8552c7fe14eb2"
+      "sha256": "a79ce6ff05bb3f721e53e1545daf2fa3c82de7cd0789bbee9d7fa57f0dcddb3b"
     },
     {
       "path": "site/demo-v2/player.html",
-      "bytes": 46410,
-      "sha256": "32d36c0207308241cdfdb77f4f1e972ebc5d52136481cca15183dd8260129112"
+      "bytes": 47080,
+      "sha256": "5940f63758865feac5a1128a84f6ab7c2628bd7453266be38addbfb0b1ca28f4"
     },
     {
       "path": "site/demo-v2/share.html",
       "bytes": 8113,
-      "sha256": "1d774e7661c1230d59874286811fb50cbfa65ae857bbd4fc4d74bdc484b38d31"
+      "sha256": "c978d61fd9204e180068182c2e63fdfb90d08b139acf7b21e552e2399bae788d"
     },
     {
       "path": "site/index.html",
@@ -263,19 +373,24 @@
       "sha256": "a8f31103361fca68bef71fc69cff844b7c23bd3d64d2b872d74690cbda656bfc"
     },
     {
+      "path": "site/scene-cover.js",
+      "bytes": 512,
+      "sha256": "c0ac2027e97cfdf623c35eac7423aee25c8e4aa0df0eaaeb6377db86e7581428"
+    },
+    {
       "path": "site/scenes-v4.js",
-      "bytes": 54323,
-      "sha256": "d144181265525c963188e2c88b0e41bce15115e3730e169b56836362ac1115e9"
+      "bytes": 56825,
+      "sha256": "994865c8db7c3ef4410c5c32dbb61ef94729034fcf6bfedfcf32536c49546480"
     },
     {
       "path": "site/share.html",
       "bytes": 8099,
-      "sha256": "07c7487a14cc51418f6594488eff94dd58599680fba8f2582b53418d8e666ce4"
+      "sha256": "8a29848594ee3eaf6610b0edb7e21a729e9aaeee8d74a710307c00f0405c4229"
     },
     {
       "path": "site/telemetry.js",
       "bytes": 8585,
-      "sha256": "c88b572de6c6be5b9aa767bd3c363f6e65e8990f967b0f2cb853911e244b10ea"
+      "sha256": "7b6121d2a66b1fd917953b0bf340e8d4732d8c6ec79e0777e3164db3570a9aa1"
     }
   ],
   "public_access_authorized": true,
