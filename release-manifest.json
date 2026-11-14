@@ -34,8 +34,8 @@
     },
     {
       "path": "site/assets/campuses/campus-picker.js",
-      "bytes": 5995,
-      "sha256": "bd6b366cf757214690685e450575cf7229db6a1bb693c9cbd5dae2d98f9b2aa8"
+      "bytes": 6016,
+      "sha256": "760f341171328ff2be7532e6fbc1eb7097440652f03eb3ad8297da9a339ce7dc"
     },
     {
       "path": "site/assets/campuses/campuses.json",
